@@ -204,7 +204,7 @@ if clinics and doctors:
     # ------------------ KHU VỰC NHẬP THÔNG TIN BỆNH NHÂN ------------------
     st.header("1. Nhập thông tin bệnh nhân")
     
-    patient_email = st.text_input("📩 Email nhận nhắc lịch (Yêu cầu 6):", "nguyenvandan@gmail.com")
+    patient_email = st.text_input("📩 Email nhận nhắc lịch ", placeholder="nguyenvandan@gmail.com")
     
     col1, col2 = st.columns(2)
     with col1:
@@ -212,7 +212,7 @@ if clinics and doctors:
     with col2:
         home_y = st.number_input("📍 Tọa độ Y của nhà:", value=4.0, step=0.1)
         
-    symptom_input = st.text_input("🤒 Nhập triệu chứng bệnh của bạn (Ví dụ: ho, sot, dau bung):", "dau bung")
+    symptom_input = st.text_input("🤒 Nhập triệu chứng bệnh của bạn ", placeholder="dau bung")
 
     # Bước 1: Tìm phòng khám gần nhất dựa trên tọa độ nhà
     nearest_clinic, dist = find_nearest_clinic(home_x, home_y, clinics)
