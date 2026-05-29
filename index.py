@@ -3,6 +3,51 @@ import math
 import random
 import streamlit as st
 import matplotlib.pyplot as plt
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+def send_real_email(receiver_email, clinic_name, doctor_name, experience, phone, time, date):
+    # 1. Cấu hình thông tin tài khoản gửi (Sử dụng một Gmail của bạn làm Server gửi)
+    sender_email = "YOUR_EMAIL@gmail.com"
+    sender_password = "YOUR_APP_PASSWORD"  # Mật khẩu ứng dụng 16 ký tự của Google
+    
+    # 2. Tạo bố cục Email dạng HTML cho đẹp mắt
+    message = MIMEMultipart("alternative")
+    message["Subject"] = f"🏥 [ĐẠI HỌC ĐẠI NAM] - XÁC NHẬN LỊCH HẸN KHÁM THÀNH CÔNG"
+    message["From"] = sender_email
+    message["To"] = receiver_email
+
+    html_content = f"""
+    <html>
+      <body>
+        <div style="background-color: #f8f9fa; padding: 20px; border-left: 5px solid #007bff; border-radius: 5px;">
+            <h3 style="color: #007bff;">📧 XÁC NHẬN ĐẶT LỊCH KHÁM THÀNH CÔNG</h3>
+            <p>Xin chào <b>{receiver_email}</b>, lịch hẹn khám bệnh của bạn đã được phê duyệt:</p>
+            <hr>
+            <p>🏥 <b>Địa điểm:</b> {clinic_name}</p>
+            <p>👨‍⚕️ <b>Bác sĩ phụ trách:</b> BS. {doctor_name} ({experience})</p>
+            <p>📞 <b>Hotline bác sĩ:</b> {phone}</p>
+            <p>📅 <b>Thời gian:</b> <span style="color: #dc3545; font-weight: bold;">{time} ngày {date}</span></p>
+            <hr>
+            <p style="color: #6c757d; font-style: italic;">Vui lòng đến đúng giờ để tiến hành kiểm tra sức khỏe tốt nhất!</p>
+        </div>
+      </body>
+    </html>
+    """
+    message.attach(MIMEText(html_content, "html", "utf-8"))
+
+    # 3. Tiến hành kết nối Server SMTP Gmail và gửi đi
+    try:
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()  # Bảo mật kết nối
+        server.login(sender_email, sender_password)
+        server.sendmail(sender_email, receiver_email, message.as_string())
+        server.quit()
+        return True
+    except Exception as e:
+        print(f"Lỗi gửi email: {e}")
+        return False
 
 # Cấu hình trang web Streamlit
 st.set_page_config(page_title="Đại Học Đại Nam - Đặt Lịch Khám", page_icon="🏥", layout="centered")
@@ -258,61 +303,78 @@ if clinics and doctors:
         </script>
         """
         components.html(validation_js, height=0)
-
 # Nút bấm tiến hành đặt lịch
         if st.button("🏥 TIẾN HÀNH ĐẶT LỊCH"):
             # Kiểm tra xem khung giờ đã qua chưa bằng thời gian thực Việt Nam (GMT+7)
             from datetime import datetime
             import pytz
             
-            # Lấy thời gian thực theo múi giờ Việt Nam và loại bỏ thuộc tính tzinfo để so sánh trực tiếp
             vietnam_tz = pytz.timezone('Asia/Ho_Chi_Minh')
             current_datetime = datetime.now(vietnam_tz).replace(tzinfo=None)
             
-            # Khung giờ người dùng chọn
             selected_datetime = datetime.strptime(f"{desired_date} {desired_time}", "%Y-%m-%d %H:%M")
             
             if selected_datetime < current_datetime:
                 st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} đã qua so với thời gian thực! Vui lòng chọn thời gian trong tương lai.")
                 st.info("👉 Vui lòng chọn lại ngày và khung giờ phù hợp.")
             else:
-                # Kiểm tra xem khung giờ đã được đặt chưa
                 is_free = check_and_schedule(selected_doctor['id'], desired_date, desired_time, appointments)
                 
                 if is_free:
-                    st.balloons()
-                    st.success(f"✔️ Đặt lịch thành công lúc {desired_time} ngày {desired_date}!")
-                    
-                    # Lưu vào database CSV
+                    # 1. Lưu dữ liệu vào file CSV
                     new_app_id = len(appointments) + 1
                     write_appointment_to_csv('appointments.csv', [new_app_id, patient_email, selected_doctor['id'], desired_date, desired_time])
                     
-                    # Hiển thị thông báo nhắc lịch qua Email chi tiết thông tin mở rộng (Yêu cầu 6)
-                    st.markdown(f"""
-    <div style="background-color: #f8f9fa; padding: 20px; border-left: 5px solid #007bff; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.05);">
-        <h5 style="color: #007bff; margin-top: 0;">📧 HỆ THỐNG EMAIL TỰ ĐỘNG — GỬI TỚI: {patient_email}</h5>
-        <p>Xin chào! Lịch hẹn khám bệnh của bạn đã được phê duyệt thành công trên hệ thống:</p>
-        <hr style="border-top: 1px solid #dee2e6;">
-        <p>🏥 <b>Địa điểm:</b> {nearest_clinic['name']}</p>
-        <p>👨‍⚕️ <b>Bác sĩ phụ trách:</b> BS. {selected_doctor['name']} ({selected_doctor['experience']})</p>
-        <p>📞 <b>Hotline liên hệ bác sĩ:</b> {selected_doctor['phone']}</p>
-        <p>📅 <b>Thời gian:</b> <span style="color: #dc3545; font-weight: bold;">{desired_time} ngày {desired_date}</span></p>
-        <hr style="border-top: 1px solid #dee2e6;">
-        <p style="font-size: 0.9em; color: #6c757d; font-style: italic;">👉 Vui lòng đến đúng giờ để tiến hành kiểm tra sức khỏe tốt nhất!</p>
-    </div>
-    <br>
-    """, unsafe_allow_html=True)
+                    # 2. Gọi hàm gửi thư thật (Hệ thống chạy ngầm gửi tới hòm thư người dùng)
+                    # Lưu ý: Đảm bảo bạn đã định nghĩa hàm send_real_email ở phía trên đầu file index.py
+                    send_real_email(
+                        patient_email, 
+                        nearest_clinic['name'], 
+                        selected_doctor['name'], 
+                        selected_doctor['experience'], 
+                        selected_doctor['phone'], 
+                        desired_time, 
+                        desired_date
+                    )
                     
-                    # Khởi động lại app để nạp lại bảng dữ liệu lịch hẹn mới lập tức
+                    # 3. Lưu nội dung HTML Email vào session_state để giữ lại giao diện sau khi rerun
+                    st.session_state['booking_success_email'] = f"""
+                    <div style="background-color: #f8f9fa; padding: 20px; border-left: 5px solid #007bff; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.05);">
+                        <h5 style="color: #007bff; margin-top: 0;">📧 HỆ THỐNG EMAIL TỰ ĐỘNG — GỬI TỚI: {patient_email}</h5>
+                        <p>Xin chào! Lịch hẹn khám bệnh của bạn đã được phê duyệt thành công trên hệ thống và một bản sao đã được gửi tới hòm thư của bạn:</p>
+                        <hr style="border-top: 1px solid #dee2e6;">
+                        <p>🏥 <b>Địa điểm:</b> {nearest_clinic['name']}</p>
+                        <p>👨‍⚕️ <b>Bác sĩ phụ trách:</b> BS. {selected_doctor['name']} ({selected_doctor['experience']})</p>
+                        <p>📞 <b>Hotline liên hệ bác sĩ:</b> {selected_doctor['phone']}</p>
+                        <p>📅 <b>Thời gian:</b> <span style="color: #dc3545; font-weight: bold;">{desired_time} ngày {desired_date}</span></p>
+                        <hr style="border-top: 1px solid #dee2e6;">
+                        <p style="font-size: 0.9em; color: #6c757d; font-style: italic;">👉 Vui lòng đến đúng giờ để tiến hành kiểm tra sức khỏe tốt nhất!</p>
+                    </div>
+                    <br>
+                    """
+                    # Bật cờ kích hoạt hiệu ứng bóng bay sau khi reload
+                    st.session_state['show_balloons'] = True
+                    
+                    # 4. Khởi động lại app để nạp lại bảng dữ liệu lịch hẹn mới lập tức
                     st.rerun()
                 
                 else:
                     st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} của Bác sĩ {selected_doctor['name']} đã bị trùng lịch!")
-                    
-                    # Đề xuất khung giờ khác (Yêu cầu 5)
                     suggestions = suggest_alternative_slots(selected_doctor['id'], desired_date, appointments)
                     if suggestions:
                         st.warning(f"💡 Đề xuất các khung giờ thay thế còn trống trong ngày: {', '.join(suggestions)}")
                         st.info(f"👉 Vui lòng chọn lại một trong các khung giờ trống phía trên để đặt lịch.")
                     else:
                         st.error("Rất tiếc, bác sĩ này đã kín lịch hoàn toàn trong ngày hôm nay. Vui lòng chọn ngày khác.")
+
+    # ==============================================================================
+    # NƠI HIỂN THỊ EMAIL TRÊN WEB SAU KHI RERUN
+    # (Đoạn này đặt ngay phía trên subheader "Danh sách lịch hẹn đã đăng ký")
+    # ==============================================================================
+    if 'booking_success_email' in st.session_state:
+        if st.session_state.get('show_balloons', False):
+            st.balloons()
+            st.success("✔️ Đặt lịch thành công! Chi tiết lịch hẹn đã được đồng bộ vào hệ thống dữ liệu.")
+            st.session_state['show_balloons'] = False # Tắt cờ hiệu để tránh lặp lại hiệu ứng
+            
+        st.markdown(st.session_state['booking_success_email'], unsafe_allow_html=True)
