@@ -7,6 +7,10 @@ import matplotlib.pyplot as plt
 # Cấu hình trang web Streamlit
 st.set_page_config(page_title="Đại Học Đại Nam - Đặt Lịch Khám", page_icon="🏥", layout="centered")
 
+# Cấu hình matplotlib để tránh lỗi font tiếng Việt hiển thị thành ô vuông
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams['axes.unicode_minus'] = False
+
 # ==============================================================================
 # HÀM ĐỌC / GHI DỮ LIỆU CSV (YÊU CẦU 1)
 # ==============================================================================
@@ -45,7 +49,9 @@ def find_doctors_by_symptom(symptom, clinic_id, doctors):
     matched_doctors = []
     for doc in doctors:
         if doc['clinic_id'] == clinic_id:
-            doc_symptoms = [s.strip().lower() for s in doc['symptoms'].split(',')]
+            # Xử lý trường hợp symptoms có dấu ngoặc kép
+            symptoms_str = doc['symptoms'].strip('"')
+            doc_symptoms = [s.strip().lower() for s in symptoms_str.split(',')]
             for s in symptom_list:
                 s = s.strip()
                 if any(s in ds or ds in s for ds in doc_symptoms):
@@ -65,7 +71,7 @@ def suggest_alternative_slots(doctor_id, date_str, appointments):
 
 # Hàm vẽ bản đồ giả lập đường đi
 def draw_simulation_map(home_x, home_y, target_clinic, all_clinics):
-    fig, ax = plt.subplots(figsize=(10, 8))
+    fig, ax = plt.subplots(figsize=(10, 7))
     
     # Tìm giới hạn bản đồ dựa trên tất cả các phòng khám
     all_x = [float(clinic['x']) for clinic in all_clinics] + [home_x]
@@ -82,73 +88,57 @@ def draw_simulation_map(home_x, home_y, target_clinic, all_clinics):
     for i in range(int(min_y), int(max_y) + 1):
         ax.axhline(y=i, color='#bdbdbd', linestyle='-', linewidth=0.5, alpha=0.5)
     
-    # 3. Vẽ các khu vực/địa danh giả lập
-    ax.text((min_x + max_x)/2, max_y - 0.5, 'HÀ NỘI - BẢN ĐỒ GIẢ LẬP', 
-            fontsize=14, fontweight='bold', ha='center', color='#1b5e20')
-    
-    # 4. Vẽ tất cả các phòng khám khác (Màu cam)
+    # 3. Vẽ tất cả các phòng khám khác (Màu cam) - Loại bỏ dấu tiếng Việt trên nhãn bản đồ để tuyệt đối không lỗi font
     for clinic in all_clinics:
         cx, cy = float(clinic['x']), float(clinic['y'])
         if clinic['id'] != target_clinic['id']:
             ax.scatter(cx, cy, color='#ff9800', s=120, zorder=3, edgecolors='black', linewidth=1)
-            # Hiển thị tên phòng khám ngắn gọn
-            short_name = clinic['name'].replace('Phòng Khám ', '').replace('Bệnh Viện ', 'BV ')
+            short_name = clinic['name'].replace('Phòng Khám ', 'PK ').replace('Bệnh Viện ', 'BV ')
             ax.text(cx, cy + 0.4, short_name, fontsize=7, ha='center', color='#e65100', fontweight='bold')
             
-    # 5. Vẽ vị trí nhà của bạn (Điểm màu Đỏ với ngôi sao)
-    ax.scatter(home_x, home_y, color='#f44336', s=200, marker='*', 
-               label='🏠 Nhà của bạn', zorder=6, edgecolors='darkred', linewidth=2)
-    ax.text(home_x, home_y - 0.7, '🏠 Vị trí của bạn', fontsize=9, fontweight='bold', 
-            color='#b71c1c', ha='center')
+    # 4. Vẽ vị trí nhà của bạn (Điểm màu Đỏ với ngôi sao)
+    ax.scatter(home_x, home_y, color='#f44336', s=200, marker='*', label='Nha cua ban', zorder=6, edgecolors='darkred', linewidth=2)
+    ax.text(home_x, home_y - 0.7, 'Ban o day', fontsize=9, fontweight='bold', color='#b71c1c', ha='center')
     
-    # 6. Vẽ phòng khám gần nhất được chọn (Điểm màu Xanh lá với marker P)
+    # 5. Vẽ phòng khám gần nhất được chọn (Điểm màu Xanh lá với marker P)
     target_x, target_y = float(target_clinic['x']), float(target_clinic['y'])
-    ax.scatter(target_x, target_y, color='#4caf50', s=200, marker='P', 
-               label='🏥 Phòng khám gần nhất', zorder=6, edgecolors='darkgreen', linewidth=2)
-    ax.text(target_x, target_y + 0.6, f'🏥 {target_clinic["name"]}', fontsize=8, 
-            fontweight='bold', color='#1b5e20', ha='center')
+    ax.scatter(target_x, target_y, color='#4caf50', s=200, marker='P', label='Phong kham gan nhat', zorder=6, edgecolors='darkgreen', linewidth=2)
+    target_short = target_clinic["name"].replace('Phòng Khám ', 'PK ').replace('Bệnh Viện ', 'BV ')
+    ax.text(target_x, target_y + 0.6, target_short, fontsize=8, fontweight='bold', color='#1b5e20', ha='center')
     
-    # 7. Vẽ đường đi giả lập với các điểm trung gian
+    # 6. Vẽ đường đi giả lập lộ trình tối ưu
     mid_points = []
     num_points = 3
     for i in range(1, num_points):
         ratio = i / num_points
         mid_x = home_x + (target_x - home_x) * ratio
         mid_y = home_y + (target_y - home_y) * ratio
-        mid_x += random.uniform(-0.3, 0.3)
-        mid_y += random.uniform(-0.3, 0.3)
+        mid_x += random.uniform(-0.15, 0.15)  # Giảm độ nhiễu một chút để lộ trình nhìn mượt mà hơn
+        mid_y += random.uniform(-0.15, 0.15)
         mid_points.append((mid_x, mid_y))
     
     route_x = [home_x] + [p[0] for p in mid_points] + [target_x]
     route_y = [home_y] + [p[1] for p in mid_points] + [target_y]
-    ax.plot(route_x, route_y, color='#2196f3', linestyle='-', linewidth=3, 
-            label='🛣️ Tuyến đường tối ưu', zorder=4, alpha=0.8)
+    ax.plot(route_x, route_y, color='#2196f3', linestyle='-', linewidth=3, label='Tuyen duong toi uu', zorder=4, alpha=0.8)
     
     for mx, my in mid_points:
         ax.scatter(mx, my, color='#2196f3', s=30, zorder=5, marker='o')
     
-    # 8. Thêm khoảng cách thông tin
+    # 7. Thêm khoảng cách thông tin
     distance = math.sqrt((target_x - home_x)**2 + (target_y - home_y)**2)
-    ax.text((home_x + target_x)/2, (home_y + target_y)/2 + 0.5, 
-            f'📏 {distance:.1f} km', fontsize=9, fontweight='bold', 
+    ax.text((home_x + target_x)/2, (home_y + target_y)/2 + 0.3, 
+            f'{distance:.2f} km', fontsize=9, fontweight='bold', 
             color='#1976d2', ha='center', 
             bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.8))
     
     # Định dạng bản đồ
-    ax.set_title("BẢN ĐỒ GIẢ LẬP LỘ TRÌNH DI CHUYỂN ĐẾN PHÒNG KHÁM", 
-                fontsize=12, fontweight='bold', pad=15, color='#1b5e20')
-    ax.set_xlabel("Tọa độ X (km)", fontsize=10, fontweight='bold')
-    ax.set_ylabel("Tọa độ Y (km)", fontsize=10, fontweight='bold')
+    ax.set_title("BAN DO GIA LAP LO TRINH DI CHUYEN", fontsize=12, fontweight='bold', pad=15, color='#1b5e20')
+    ax.set_xlabel("Toa do X (km)", fontsize=10, fontweight='bold')
+    ax.set_ylabel("Toa do Y (km)", fontsize=10, fontweight='bold')
     ax.grid(True, linestyle=':', alpha=0.3, color='#666')
-    ax.legend(loc='upper right', fontsize=9, framealpha=0.9, 
-              facecolor='white', edgecolor='#333')
+    ax.legend(loc='upper right', fontsize=9, framealpha=0.9, facecolor='white', edgecolor='#333')
     ax.set_xlim(min_x, max_x)
     ax.set_ylim(min_y, max_y)
-    
-    # Thêm tỷ lệ bản đồ giả lập
-    ax.plot([min_x + 1, min_x + 2], [min_y + 0.5, min_y + 0.5], 
-            color='black', linewidth=2)
-    ax.text(min_x + 1.5, min_y + 0.8, '1 km', ha='center', fontsize=8, fontweight='bold')
     
     plt.tight_layout()
     return fig
@@ -187,7 +177,7 @@ if clinics and doctors:
     st.header("2. Kết quả tìm kiếm & Bản đồ lộ trình")
     
     # Hiển thị phòng khám gần nhất (Yêu cầu 2)
-    st.info(f"📍 **Phòng khám gần nhất:** {nearest_clinic['name']} (Khoảng cách tính toán: {dist:.2f})")
+    st.info(f"📍 **Phòng khám gần nhất:** {nearest_clinic['name']} (Khoảng cách tính toán: {dist:.2f} km)")
     
     # Hiển thị bản đồ giả lập trực quan bằng matplotlib
     with st.spinner("Đang dựng bản đồ lộ trình..."):
@@ -199,7 +189,12 @@ if clinics and doctors:
     else:
         # Chọn bác sĩ đáp ứng triệu chứng (Yêu cầu 3)
         selected_doctor = matched_doctors[0]
-        st.success(f"👨‍⚕️ **Bác sĩ được chỉ định:** {selected_doctor['name']} | **Chuyên khoa:** {selected_doctor['specialty']}")
+        
+        # Đọc thêm thông tin mở rộng (phone, experience) nếu có, tránh crash nếu file cũ thiếu cột
+        phone_num = selected_doctor.get('phone', 'Chưa cập nhật')
+        exp_year = selected_doctor.get('experience', 'Chưa rõ')
+        
+        st.success(f"👨‍⚕️ **Bác sĩ được chỉ định:** {selected_doctor['name']} | **Chuyên khoa:** {selected_doctor['specialty']} | **Kinh nghiệm:** {exp_year}")
 
         st.markdown("---")
         st.header("3. Chọn thời gian & Đặt lịch")
@@ -215,14 +210,26 @@ if clinics and doctors:
             if is_free:
                 st.balloons()
                 st.success(f"✔️ Đặt lịch thành công lúc {desired_time} ngày {desired_date}!")
-                final_time = desired_time
                 
                 # Lưu vào database CSV
                 new_app_id = len(appointments) + 1
-                write_appointment_to_csv('appointments.csv', [new_app_id, patient_email, selected_doctor['id'], desired_date, final_time])
+                write_appointment_to_csv('appointments.csv', [new_app_id, patient_email, selected_doctor['id'], desired_date, desired_time])
                 
-                # Hiển thị thông báo nhắc lịch qua Email (Yêu cầu 6)
-                st.code(f"📧 [EMAIL SENT TO: {patient_email}]\nXin chào! Lịch hẹn của bạn tại '{nearest_clinic['name']}' với BS.{selected_doctor['name']} vào lúc {final_time} ngày {desired_date} đã được xác nhận.", language="text")
+                # Hiển thị thông báo nhắc lịch qua Email chi tiết thông tin mở rộng (Yêu cầu 6)
+                st.code(f"""
+📧 [HỆ THỐNG EMAIL TỰ ĐỘNG - GỬI TỚI: {patient_email}]
+Xin chào! Lịch hẹn khám bệnh của bạn đã được phê duyệt thành công:
+------------------------------------------------------------------
+🏥 Địa điểm: {nearest_clinic['name']}
+👨‍⚕️ Bác sĩ phụ trách: BS. {selected_doctor['name']} ({exp_year} kinh nghiệm)
+📞 Hotline liên hệ bác sĩ: {phone_num}
+📅 Thời gian: {desired_time} ngày {desired_date}
+------------------------------------------------------------------
+Vui lòng đến đúng giờ để tiến hành kiểm tra sức khỏe tốt nhất!
+""", language="text")
+                
+                # Khởi động lại app để nạp lại bảng dữ liệu lịch hẹn mới lập tức
+                st.rerun()
             
             else:
                 st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} của Bác sĩ {selected_doctor['name']} đã bị trùng lịch!")
@@ -234,5 +241,11 @@ if clinics and doctors:
                     st.info(f"👉 Vui lòng chọn lại một trong các khung giờ trống phía trên để đặt lịch.")
                 else:
                     st.error("Rất tiếc, bác sĩ này đã kín lịch hoàn toàn trong ngày hôm nay. Vui lòng chọn ngày khác.")
+
+    # Hiển thị trực quan danh sách lịch hẹn hiện có trong database
+    st.markdown("---")
+    st.subheader("📋 Danh sách lịch hẹn đã đăng ký trong hệ thống")
+    st.dataframe(appointments, use_container_width=True)
+
 else:
-    st.error("❌ Không thể tải dữ liệu. Vui lòng kiểm tra file CSV.")
+    st.error("❌ Không thể tải dữ liệu. Vui lòng kiểm tra các file dữ liệu CSV.")
