@@ -231,17 +231,7 @@ if clinics and doctors:
     st.header("1. Nhập thông tin bệnh nhân")
     
     patient_email = st.text_input("📩 Email nhận nhắc lịch ", placeholder="nguyenvandan@gmail.com")
-     
-    symptom_input = st.text_input("🤒 Nhập triệu chứng bệnh của bạn ", placeholder="đau bụng , ho")
-
-    # Bước 1: Tìm phòng khám gần nhất dựa trên tọa độ nhà
-    nearest_clinic, dist = find_nearest_clinic(home_lat, home_lng, clinics)
     
-    # Bước 2: Tìm bác sĩ phù hợp với triệu chứng TẠI phòng khám gần nhất đó
-    matched_doctors = find_doctors_by_symptom(symptom_input, nearest_clinic['id'], doctors)
-
-    st.markdown("---")
-    st.header("2. Kết quả tìm kiếm & Bản đồ lộ trình")
     # --------------------------------------------------------------------------
     # NÂNG CẤP VỊ TRÍ SỐ 2: TỰ ĐỘNG ĐỊNH VỊ GPS THỜI GIAN THỰC QUA TRÌNH DUYỆT
     # --------------------------------------------------------------------------
@@ -304,6 +294,18 @@ if clinics and doctors:
         
     st.success(f"🗺️ Hệ thống đang định vị tại: **Vĩ độ (Lat):** {home_lat} | **Kinh độ (Lng):** {home_lng}")
     # --------------------------------------------------------------------------
+        
+    symptom_input = st.text_input("🤒 Nhập triệu chứng bệnh của bạn ", placeholder="đau bụng , ho")
+
+    # Bước 1: Tìm phòng khám gần nhất dựa trên tọa độ nhà
+    nearest_clinic, dist = find_nearest_clinic(home_lat, home_lng, clinics)
+    
+    # Bước 2: Tìm bác sĩ phù hợp với triệu chứng TẠI phòng khám gần nhất đó
+    matched_doctors = find_doctors_by_symptom(symptom_input, nearest_clinic['id'], doctors)
+
+    st.markdown("---")
+    st.header("2. Kết quả tìm kiếm & Bản đồ lộ trình")
+    
     # Hiển thị phòng khám gần nhất (Yêu cầu 2)
     st.info(f"📍 **Phòng khám gần nhất:** {nearest_clinic['name']} (Khoảng cách tính toán: {dist:.2f} km)")
     
