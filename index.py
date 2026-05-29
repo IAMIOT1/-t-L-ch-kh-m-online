@@ -201,6 +201,11 @@ if clinics and doctors:
         st.markdown("---")
         st.header("3. Chọn thời gian & Đặt lịch")
         
+        # Hiển thị thời gian hiện tại
+        from datetime import datetime
+        current_time = datetime.now().strftime("%H:%M:%S - %d/%m/%Y")
+        st.info(f"🕐 Thời gian hiện tại: {current_time}")
+        
         # Chọn thời gian mong muốn (Yêu cầu 4)
         desired_date = st.date_input("📅 Chọn ngày khám:").strftime("%Y-%m-%d")
         desired_time = st.selectbox("⏰ Chọn khung giờ mong muốn:", ["08:00", "09:00", "10:00", "11:00", "14:00", "15:00", "16:00"], index=1)
