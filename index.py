@@ -207,18 +207,28 @@ if clinics and doctors:
 
         # Nút bấm tiến hành đặt lịch
         if st.button("🚀 TIẾN HÀNH ĐẶT LỊCH"):
-            is_free = check_and_schedule(selected_doctor['id'], desired_date, desired_time, appointments)
+            # Kiểm tra xem khung giờ đã qua chưa
+            from datetime import datetime, time
+            current_datetime = datetime.now()
+            selected_datetime = datetime.strptime(f"{desired_date} {desired_time}", "%Y-%m-%d %H:%M")
             
-            if is_free:
-                st.balloons()
-                st.success(f"✔️ Đặt lịch thành công lúc {desired_time} ngày {desired_date}!")
+            if selected_datetime < current_datetime:
+                st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} đã qua! Vui lòng chọn thời gian trong tương lai.")
+                st.info("👉 Vui lòng chọn lại ngày và khung giờ phù hợp.")
+            else:
+                # Kiểm tra xem khung giờ đã được đặt chưa
+                is_free = check_and_schedule(selected_doctor['id'], desired_date, desired_time, appointments)
                 
-                # Lưu vào database CSV
-                new_app_id = len(appointments) + 1
-                write_appointment_to_csv('appointments.csv', [new_app_id, patient_email, selected_doctor['id'], desired_date, desired_time])
-                
-                # Hiển thị thông báo nhắc lịch qua Email chi tiết thông tin mở rộng (Yêu cầu 6)
-                st.code(f"""
+                if is_free:
+                    st.balloons()
+                    st.success(f"✔️ Đặt lịch thành công lúc {desired_time} ngày {desired_date}!")
+                    
+                    # Lưu vào database CSV
+                    new_app_id = len(appointments) + 1
+                    write_appointment_to_csv('appointments.csv', [new_app_id, patient_email, selected_doctor['id'], desired_date, desired_time])
+                    
+                    # Hiển thị thông báo nhắc lịch qua Email chi tiết thông tin mở rộng (Yêu cầu 6)
+                    st.code(f"""
 📧 [HỆ THỐNG EMAIL TỰ ĐỘNG - GỬI TỚI: {patient_email}]
 Xin chào! Lịch hẹn khám bệnh của bạn đã được phê duyệt thành công:
 ------------------------------------------------------------------
@@ -229,20 +239,20 @@ Xin chào! Lịch hẹn khám bệnh của bạn đã được phê duyệt thà
 ------------------------------------------------------------------
 Vui lòng đến đúng giờ để tiến hành kiểm tra sức khỏe tốt nhất!
 """, language="text")
+                    
+                    # Khởi động lại app để nạp lại bảng dữ liệu lịch hẹn mới lập tức
+                    st.rerun()
                 
-                # Khởi động lại app để nạp lại bảng dữ liệu lịch hẹn mới lập tức
-                st.rerun()
-            
-            else:
-                st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} của Bác sĩ {selected_doctor['name']} đã bị trùng lịch!")
-                
-                # Đề xuất khung giờ khác (Yêu cầu 5)
-                suggestions = suggest_alternative_slots(selected_doctor['id'], desired_date, appointments)
-                if suggestions:
-                    st.warning(f"💡 Đề xuất các khung giờ thay thế còn trống trong ngày: {', '.join(suggestions)}")
-                    st.info(f"👉 Vui lòng chọn lại một trong các khung giờ trống phía trên để đặt lịch.")
                 else:
-                    st.error("Rất tiếc, bác sĩ này đã kín lịch hoàn toàn trong ngày hôm nay. Vui lòng chọn ngày khác.")
+                    st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} của Bác sĩ {selected_doctor['name']} đã bị trùng lịch!")
+                    
+                    # Đề xuất khung giờ khác (Yêu cầu 5)
+                    suggestions = suggest_alternative_slots(selected_doctor['id'], desired_date, appointments)
+                    if suggestions:
+                        st.warning(f"💡 Đề xuất các khung giờ thay thế còn trống trong ngày: {', '.join(suggestions)}")
+                        st.info(f"👉 Vui lòng chọn lại một trong các khung giờ trống phía trên để đặt lịch.")
+                    else:
+                        st.error("Rất tiếc, bác sĩ này đã kín lịch hoàn toàn trong ngày hôm nay. Vui lòng chọn ngày khác.")
 
     # Hiển thị trực quan danh sách lịch hẹn hiện có trong database
     st.markdown("---")
