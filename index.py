@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+import folium
+from streamlit_folium import st_folium
 
 def send_real_email(receiver_email, clinic_name, doctor_name, experience, phone, time, date):
     # 1. Cấu hình thông tin tài khoản gửi (Sử dụng một Gmail của bạn làm Server gửi)
@@ -115,92 +117,83 @@ def suggest_alternative_slots(doctor_id, date_str, appointments):
     return [slot for slot in working_slots if check_and_schedule(doctor_id, date_str, slot, appointments)]
 
 # Hàm vẽ bản đồ giả lập đường đi
-# Hàm vẽ bản đồ giả lập lộ trình đô thị chuyên nghiệp (Đã fix lỗi AttributeError)
 def draw_simulation_map(home_x, home_y, target_clinic, all_clinics):
-    # Tạo khung hình với tỷ lệ chuẩn và độ nét cao (DPI 120)
-    fig, ax = plt.subplots(figsize=(10, 6.5), dpi=120)
+    # Tạo một điểm gốc thực tế (Ví dụ: khu vực Hà Nội) để làm tâm chuyển đổi tọa độ phẳng sang Lat/Lng
+    BASE_LAT = 21.0285
+    BASE_LNG = 105.8542
+    SCALE = 0.01 # 1 đơn vị X, Y trong file của bạn tương đương khoảng 1.1km trên bản đồ thực
     
-    # Tính toán ranh giới bản đồ tự động
-    all_x = [float(clinic['x']) for clinic in all_clinics] + [home_x]
-    all_y = [float(clinic['y']) for clinic in all_clinics] + [home_y]
-    min_x, max_x = min(all_x) - 1.5, max(all_x) + 1.5
-    min_y, max_y = min(all_y) - 1.5, max(all_y) + 1.5
+    # Chuyển đổi tọa độ nhà của bạn
+    home_lat = BASE_LAT + (home_y * SCALE)
+    home_lng = BASE_LNG + (home_x * SCALE)
     
-    # 1. Nền bản đồ xám trắng sáng sang trọng (Chuẩn giao diện Map hiện đại)
-    ax.set_facecolor('#f8f9fa')
+    # Khởi tạo bản đồ Folium tại vị trí nhà bạn
+    m = folium.Map(
+        location=[home_lat, home_lng], 
+        zoom_start=14, 
+        control_scale=True
+    )
     
-    # 2. Tạo hệ thống các khối phố và đại lộ (Grid đường sá mô phỏng thực tế)
-    grid_intervals = [x * 0.5 for x in range(int(min_x)*2, int(max_x)*2 + 2)]
-    for vx in grid_intervals:
-        ax.axvline(x=vx, color='#cbd5e1', linestyle='-', linewidth=4, alpha=0.25, zorder=1)
-    for vy in grid_intervals:
-        ax.axhline(y=vy, color='#cbd5e1', linestyle='-', linewidth=4, alpha=0.25, zorder=1)
-        
-    # Lưới định vị phụ mỏng mảnh phía dưới
-    ax.grid(True, which='both', color='#e2e8f0', linestyle='--', linewidth=0.5, alpha=0.5, zorder=0)
+    # Thêm các lớp bản đồ (Giao diện Bản đồ đường phố và Bản đồ vệ tinh giống Google Map)
+    folium.TileLayer('openstreetmap', name="Bản đồ đường phố").add_to(m)
+    folium.TileLayer(
+        tiles='https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',
+        attr='Google',
+        name='Bản đồ Vệ tinh (Google)'
+    ).add_to(m)
+
+    # 1. Đánh dấu vị trí "Nhà của bạn" (Marker màu Đỏ, icon ngôi nhà)
+    folium.Marker(
+        location=[home_lat, home_lng],
+        popup=f"<b>Vị trí của bạn</b><br>Tọa độ gốc: ({home_x}, {home_y})",
+        tooltip="Bạn ở đây!",
+        icon=folium.Icon(color='red', icon='home', prefix='fa')
+    ).add_to(m)
     
-    # 3. Vẽ các Cơ sở y tế khác xung quanh (Các điểm vệ tinh màu xám/cam nhẹ)
+    # 2. Đánh dấu tất cả các phòng khám khác (Marker màu cam, icon bệnh viện nhỏ)
     for clinic in all_clinics:
         cx, cy = float(clinic['x']), float(clinic['y'])
-        if clinic['id'] != target_clinic['id']:
-            # Điểm đổ bóng nhẹ phía dưới icon
-            ax.scatter(cx, cy - 0.04, color='#cbd5e1', s=110, zorder=2, alpha=0.5)
-            # Icon phòng khám vệ tinh
-            ax.scatter(cx, cy, color='#94a3b8', s=90, zorder=3, edgecolors='#475569', linewidth=1, alpha=0.85)
-            short_name = clinic['name'].replace('Phòng Khám ', 'PK ').replace('Bệnh Viện ', 'BV ')
-            ax.text(cx, cy + 0.22, short_name, fontsize=7.5, ha='center', color='#64748b', weight='medium')
-            
-    # 4. Vẽ thuật toán đường đi mô phỏng GPS thực tế (Di chuyển vuông góc theo các tuyến phố)
-    target_x, target_y = float(target_clinic['x']), float(target_clinic['y'])
-    
-    # Tạo lộ trình rẽ khúc dạng xương cá/bàn cờ (Manhattan Path) tạo cảm giác đi trên đường thật
-    route_x = [home_x, target_x, target_x]
-    route_y = [home_y, home_y, target_y]
-    
-    # Vẽ đường dập bóng mờ phía dưới đường đi chính để tạo hiệu ứng 3D
-    ax.plot(route_x, route_y, color='#93c5fd', linestyle='-', linewidth=6, alpha=0.4, zorder=4)
-    # Đường line định vị động chuẩn GPS màu xanh Cyan nổi bật
-    ax.plot(route_x, route_y, color='#3b82f6', linestyle='-', linewidth=3.5, label='Lộ trình tối ưu (GPS)', zorder=5)
-    
-    # Thêm các mũi tên chỉ hướng di chuyển nhỏ trên cung đường
-    mid_idx_x = (home_x + target_x) / 2
-    mid_idx_y = (home_y + target_y) / 2
-    ax.annotate('', xy=(mid_idx_x, home_y), xytext=(home_x, home_y), arrowprops=dict(arrowstyle="->", color='#ffffff', lw=1.5, shrinkA=0, shrinkB=0), zorder=6)
-    ax.annotate('', xy=(target_x, mid_idx_y), xytext=(target_x, home_y), arrowprops=dict(arrowstyle="->", color='#ffffff', lw=1.5, shrinkA=0, shrinkB=0), zorder=6)
-
-    # 5. Thiết kế ghim vị trí "Nhà của bạn" (Vị trí xuất phát)
-    ax.scatter(home_x, home_y, color='#ef4444', s=220, marker='*', zorder=8, edgecolors='#b91c1c', linewidth=1.5, label='Vị trí của bạn')
-    ax.text(home_x, home_y - 0.35, 'BẠN Ở ĐÂY', fontsize=8, fontweight='bold', color='#ef4444', ha='center',
-            bbox=dict(boxstyle='round,pad=0.2', facecolor='#fef2f2', edgecolor='#fca5a5', alpha=0.9))
-    
-    # 6. Thiết kế ghim vị trí "Cơ sở khám được chỉ định" (Điểm đích đến)
-    ax.scatter(target_x, target_y, color='#10b981', s=250, marker='P', zorder=8, edgecolors='#047857', linewidth=1.5, label='Điểm đến chỉ định')
-    target_short = target_clinic["name"].replace('Phòng Khám ', 'PK ').replace('Bệnh Viện ', 'BV ')
-    ax.text(target_x, target_y + 0.35, target_short.upper(), fontsize=8.5, fontweight='bold', color='#065f46', ha='center',
-            bbox=dict(boxstyle='round,pad=0.25', facecolor='#ecfdf5', edgecolor='#a7f3d0', alpha=0.95))
-    
-    # 7. Khối hiển thị khoảng cách di chuyển thực tế (Floating HUD Card) - Đã xóa bỏ thuộc tính lỗi
-    distance = math.sqrt((target_x - home_x)**2 + (target_y - home_y)**2)
-    ax.text((home_x + target_x)/2, (home_y + target_y)/2, 
-            f'📊 Khoảng cách: {distance:.2f} km ', fontsize=9, fontweight='bold', 
-            color='#ffffff', ha='center', va='center',
-            bbox=dict(boxstyle='round,pad=0.5', facecolor='#1e293b', edgecolor='none', alpha=0.9))
-    
-    # Định dạng tinh chỉnh ẩn các trục tọa độ thô, chỉ giữ lại tiêu đề sạch sẽ
-    ax.set_title("🗺️ BẢN ĐỒ ĐIỀU PHỐI TUYẾN ĐƯỜNG DI CHUYỂN REAL-TIME", fontsize=11, fontweight='bold', pad=15, color='#1e293b')
-    ax.set_xlim(min_x, max_x)
-    ax.set_ylim(min_y, max_y)
-    
-    # Phong cách hóa hộp chú thích (Legend)
-    ax.legend(loc='upper right', fontsize=8.5, frameon=True, facecolor='#ffffff', edgecolor='#e2e8f0', shadow=False)
-    
-    # Ẩn bớt các gai gạch viền ngoài (Ticks) cho giao diện tối giản
-    ax.tick_params(colors='#94a3b8', labelsize=8)
-    for spine in ax.spines.values():
-        spine.set_color('#e2e8f0')
+        c_lat = BASE_LAT + (cy * SCALE)
+        c_lng = BASE_LNG + (cx * SCALE)
         
-    plt.tight_layout()
-    return fig
+        # Nếu không phải phòng khám được chọn gần nhất
+        if clinic['id'] != target_clinic['id']:
+            folium.Marker(
+                location=[c_lat, c_lng],
+                popup=f"<b>{clinic['name']}</b>",
+                tooltip=clinic['name'],
+                icon=folium.Icon(color='orange', icon='plus', prefix='fa')
+            ).add_to(m)
+
+    # 3. Đánh dấu phòng khám GẦN NHẤT ĐƯỢC CHỌN (Marker màu xanh lá, icon bệnh viện lớn)
+    target_x, target_y = float(target_clinic['x']), float(target_clinic['y'])
+    target_lat = BASE_LAT + (target_y * SCALE)
+    target_lng = BASE_LNG + (target_x * SCALE)
+    
+    distance = math.sqrt((target_x - home_x)**2 + (target_y - home_y)**2)
+    
+    folium.Marker(
+        location=[target_lat, target_lng],
+        popup=f"<div style='width:200px;'><b>🏥 {target_clinic['name']}</b><br>Đây là phòng khám gần bạn nhất!</div>",
+        tooltip=f"Đích đến: {target_clinic['name']}",
+        icon=folium.Icon(color='green', icon='hospital-o', prefix='fa')
+    ).add_to(m)
+    
+    # 4. Vẽ đường nối lộ trình di chuyển (Đường Polyline màu xanh dương đậm nét đứt như Google Maps)
+    points = [[home_lat, home_lng], [target_lat, target_lng]]
+    
+    folium.PolyLine(
+        points,
+        color="#1a73e8",       # Màu xanh đặc trưng của Google Maps
+        weight=5,              # Độ dày đường vẽ
+        opacity=0.8,
+        tooltip=f"Lộ trình tối ưu: {distance:.2f} km"
+    ).add_to(m)
+    
+    # Thêm công cụ chọn hiển thị loại bản đồ (Layer Control) ở góc trên bên phải
+    folium.LayerControl(position='topright').add_to(m)
+    
+    return m
 
 # ==============================================================================
 # GIAO DIỆN ỨNG DỤNG WEB (STREAMLIT UI)
@@ -240,10 +233,11 @@ if clinics and doctors:
     # Hiển thị phòng khám gần nhất (Yêu cầu 2)
     st.info(f"📍 **Phòng khám gần nhất:** {nearest_clinic['name']} (Khoảng cách tính toán: {dist:.2f} km)")
     
-    # Hiển thị bản đồ giả lập trực quan bằng matplotlib
-    with st.spinner("Đang dựng bản đồ lộ trình..."):
-        map_fig = draw_simulation_map(home_x, home_y, nearest_clinic, clinics)
-        st.pyplot(map_fig)
+    # Hiển thị bản đồ tương tác Google Maps thông qua Folium
+    with st.spinner("Đang tải bản đồ vệ tinh thực tế..."):
+        map_obj = draw_simulation_map(home_x, home_y, nearest_clinic, clinics)
+        # Sử dụng st_folium thay vì st.pyplot
+        st_folium(map_obj, width=700, height=450, returned_objects=[])
 
     if not matched_doctors:
         st.warning(f"❌ Không tìm thấy bác sĩ phù hợp với triệu chứng '{symptom_input}' tại phòng khám gần nhất.")
