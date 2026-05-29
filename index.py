@@ -169,8 +169,10 @@ if clinics and doctors:
         
     symptom_input = st.text_input("🤒 Nhập triệu chứng bệnh của bạn (Ví dụ: ho, sot, dau bung):", "dau bung")
 
-    # Xử lý tự động tìm Phòng khám & Bác sĩ dựa trên thông tin nhập vào
+    # Bước 1: Tìm phòng khám gần nhất dựa trên tọa độ nhà
     nearest_clinic, dist = find_nearest_clinic(home_x, home_y, clinics)
+    
+    # Bước 2: Tìm bác sĩ phù hợp với triệu chứng TẠI phòng khám gần nhất đó
     matched_doctors = find_doctors_by_symptom(symptom_input, nearest_clinic['id'], doctors)
 
     st.markdown("---")
