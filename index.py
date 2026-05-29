@@ -288,17 +288,20 @@ if clinics and doctors:
                     write_appointment_to_csv('appointments.csv', [new_app_id, patient_email, selected_doctor['id'], desired_date, desired_time])
                     
                     # Hiển thị thông báo nhắc lịch qua Email chi tiết thông tin mở rộng (Yêu cầu 6)
-                    st.code(f"""
-📧 [HỆ THỐNG EMAIL TỰ ĐỘNG - GỬI TỚI: {patient_email}]
-Xin chào! Lịch hẹn khám bệnh của bạn đã được phê duyệt thành công:
-------------------------------------------------------------------
-🏥 Địa điểm: {nearest_clinic['name']}
-👨‍⚕️ Bác sĩ phụ trách: BS. {selected_doctor['name']} ({exp_year} kinh nghiệm)
-📞 Hotline liên hệ bác sĩ: {phone_num}
-📅 Thời gian: {desired_time} ngày {desired_date}
-------------------------------------------------------------------
-Vui lòng đến đúng giờ để tiến hành kiểm tra sức khỏe tốt nhất!
-""", language="text")
+                    st.markdown(f"""
+    <div style="background-color: #f8f9fa; padding: 20px; border-left: 5px solid #007bff; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.05);">
+        <h5 style="color: #007bff; margin-top: 0;">📧 HỆ THỐNG EMAIL TỰ ĐỘNG — GỬI TỚI: {patient_email}</h5>
+        <p>Xin chào! Lịch hẹn khám bệnh của bạn đã được phê duyệt thành công trên hệ thống:</p>
+        <hr style="border-top: 1px solid #dee2e6;">
+        <p>🏥 <b>Địa điểm:</b> {nearest_clinic['name']}</p>
+        <p>👨‍⚕️ <b>Bác sĩ phụ trách:</b> BS. {selected_doctor['name']} ({selected_doctor['experience']})</p>
+        <p>📞 <b>Hotline liên hệ bác sĩ:</b> {selected_doctor['phone']}</p>
+        <p>📅 <b>Thời gian:</b> <span style="color: #dc3545; font-weight: bold;">{desired_time} ngày {desired_date}</span></p>
+        <hr style="border-top: 1px solid #dee2e6;">
+        <p style="font-size: 0.9em; color: #6c757d; font-style: italic;">👉 Vui lòng đến đúng giờ để tiến hành kiểm tra sức khỏe tốt nhất!</p>
+    </div>
+    <br>
+    """, unsafe_allow_html=True)
                     
                     # Khởi động lại app để nạp lại bảng dữ liệu lịch hẹn mới lập tức
                     st.rerun()
