@@ -80,12 +80,31 @@ def write_appointment_to_csv(file_name, appointment):
 # ==============================================================================
 # LOGIC XỬ LÝ & GIẢ LẬP BẢN ĐỒ (YÊU CẦU 2, 3, 5)
 # ==============================================================================
-def find_nearest_clinic(home_x, home_y, clinics):
+# Thay thế hàm find_nearest_clinic cũ bằng 2 hàm xử lý tọa độ GPS thực tế này:
+def haversine_distance(lat1, lon1, lat2, lon2):
+    # Bán kính Trái Đất tính bằng km
+    R = 6371.0
+    
+    rad_lat1 = math.radians(lat1)
+    rad_lon1 = math.radians(lon1)
+    rad_lat2 = math.radians(lat2)
+    rad_lon2 = math.radians(lon2)
+    
+    dlat = rad_lat2 - rad_lat1
+    dlon = rad_lon2 - rad_lon1
+    
+    a = math.sin(dlat / 2)**2 + math.cos(rad_lat1) * math.cos(rad_lat2) * math.sin(dlon / 2)**2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    
+    return R * c
+
+def find_nearest_clinic(home_lat, home_lng, clinics):
     nearest_clinic = None
     min_distance = float('inf')
     for clinic in clinics:
+        # Trong file clinics.csv: x đóng vai trò Kinh độ (Lng), y đóng vai trò Vĩ độ (Lat)
         cx, cy = float(clinic['x']), float(clinic['y'])
-        distance = math.sqrt((cx - home_x)**2 + (cy - home_y)**2)
+        distance = haversine_distance(home_lat, home_lng, cy, cx)
         if distance < min_distance:
             min_distance = distance
             nearest_clinic = clinic
@@ -213,16 +232,73 @@ if clinics and doctors:
     
     patient_email = st.text_input("📩 Email nhận nhắc lịch ", placeholder="nguyenvandan@gmail.com")
     
-    col1, col2 = st.columns(2)
-    with col1:
-        home_x = st.number_input("📍 Tọa độ X của nhà:", value=4.0, step=0.1)
-    with col2:
-        home_y = st.number_input("📍 Tọa độ Y của nhà:", value=4.0, step=0.1)
+    # --------------------------------------------------------------------------
+    # NÂNG CẤP VỊ TRÍ SỐ 2: TỰ ĐỘNG ĐỊNH VỊ GPS THỜI GIAN THỰC QUA TRÌNH DUYỆT
+    # --------------------------------------------------------------------------
+    import streamlit.components.v1 as components
+    st.write("📍 **Xác định vị trí hiện tại của bạn:**")
+    
+    # Khởi tạo giá trị mặc định trong Session State nếu chưa từng quét GPS (Mặc định ở Hà Nội)
+    if 'gps_lat' not in st.session_state: 
+        st.session_state['gps_lat'] = 21.0285 
+    if 'gps_lng' not in st.session_state: 
+        st.session_state['gps_lng'] = 105.8542
+
+    # Nhúng một cụm HTML/JavaScript để kích hoạt API định vị của thiết bị
+    loc_button_html = """
+    <div style="text-align: center; margin-bottom: 10px;">
+        <button onclick="getLocation()" style="background-color: #2196f3; color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; font-size: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            🎯 Nhấp để tự động lấy vị trí GPS từ thiết bị của bạn
+        </button>
+        <p id="status" style="color: #666; font-size: 13px; margin-top: 8px; font-style: italic;"></p>
+    </div>
+    <script>
+        function getLocation() {
+            const status = document.getElementById('status');
+            if (!navigator.geolocation) {
+                status.textContent = 'Trình duyệt này không hỗ trợ định vị GPS.';
+            } else {
+                status.textContent = 'Đang quét tìm tọa độ vệ tinh...';
+                navigator.geolocation.getCurrentPosition(success, error);
+            }
+        }
+        function success(position) {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            document.getElementById('status').innerHTML = '<span style="color: #4caf50; font-weight: bold;">✔️ Đã cập nhật tọa độ thực thành công!</span>';
+            // Đẩy ngược dữ liệu Lat,Lng từ JavaScript về widget text_input của Streamlit
+            window.parent.postMessage({
+                type: 'streamlit:set_widget_value',
+                from: 'geo_location',
+                value: lat + ',' + lng
+            }, '*');
+        }
+        function error() {
+            document.getElementById('status').innerHTML = '<span style="color: #f44336;">❌ Không lấy được GPS. Hãy chắc chắn bạn đã nhấn "Cho phép" (Allow) quyền vị trí trên trình duyệt.</span>';
+        }
+    </script>
+    """
+    # Render nút bấm lên giao diện web
+    components.html(loc_button_html, height=80)
+    
+    # Thành phần trung gian nhận chuỗi dữ liệu "Lat,Lng" từ Javascript
+    geo_data = st.text_input("Tọa độ thiết bị nhận diện (Lat,Lng):", value=f"{st.session_state['gps_lat']},{st.session_state['gps_lng']}", key="geo_location")
+    
+    # Tách chuỗi dữ liệu tọa độ ra thành 2 biến số thực để truyền xuống thuật toán xử lý phía dưới
+    try:
+        home_lat, home_lng = map(float, geo_data.split(','))
+        st.session_state['gps_lat'] = home_lat
+        st.session_state['gps_lng'] = home_lng
+    except:
+        home_lat, home_lng = st.session_state['gps_lat'], st.session_state['gps_lng']
+        
+    st.success(f"🗺️ Hệ thống đang định vị tại: **Vĩ độ (Lat):** {home_lat} | **Kinh độ (Lng):** {home_lng}")
+    # --------------------------------------------------------------------------
         
     symptom_input = st.text_input("🤒 Nhập triệu chứng bệnh của bạn ", placeholder="đau bụng , ho")
 
     # Bước 1: Tìm phòng khám gần nhất dựa trên tọa độ nhà
-    nearest_clinic, dist = find_nearest_clinic(home_x, home_y, clinics)
+    nearest_clinic, dist = find_nearest_clinic(home_lat, home_lng, clinics)
     
     # Bước 2: Tìm bác sĩ phù hợp với triệu chứng TẠI phòng khám gần nhất đó
     matched_doctors = find_doctors_by_symptom(symptom_input, nearest_clinic['id'], doctors)
@@ -235,7 +311,7 @@ if clinics and doctors:
     
     # Hiển thị bản đồ tương tác Google Maps thông qua Folium
     with st.spinner("Đang tải bản đồ vệ tinh thực tế..."):
-        map_obj = draw_simulation_map(home_x, home_y, nearest_clinic, clinics)
+        map_obj = draw_simulation_map(home_lat, home_lng, nearest_clinic, clinics)
         # Sử dụng st_folium thay vì st.pyplot
         st_folium(map_obj, width=700, height=450, returned_objects=[])
 
