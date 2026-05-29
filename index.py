@@ -201,17 +201,30 @@ if clinics and doctors:
         st.markdown("---")
         st.header("3. Chọn thời gian & Đặt lịch")
         
-        # Hiển thị đồng hồ thời gian thực chạy giây, phút, giờ
+        # Hiển thị đồng hồ thời gian thực chạy giây, phút, giờ (dùng thời gian server)
         import streamlit.components.v1 as components
-        clock_html = """
+        from datetime import datetime
+        server_time = datetime.now()
+        
+        # Hiển thị thời gian server hiện tại (để người dùng so sánh)
+        st.info(f"🕐 **Thời gian Server hiện tại:** {server_time.strftime('%H:%M:%S - %d/%m/%Y')}")
+        st.caption("⚠️ Lưu ý: Kiểm tra thời gian dựa trên đồng hồ Server để đặt lịch chính xác")
+        
+        clock_html = f"""
         <div style="background-color: #e3f2fd; padding: 15px; border-radius: 10px; border: 2px solid #2196f3; text-align: center;">
-            <h3 style="margin: 0; color: #1565c0;">🕐 Thời gian hiện tại</h3>
+            <h3 style="margin: 0; color: #1565c0;">🕐 Đồng hồ thời gian thực (Server)</h3>
             <div id="clock" style="font-size: 32px; font-weight: bold; color: #0d47a1; margin-top: 10px;">--:--:--</div>
             <div id="date" style="font-size: 18px; color: #1976d2; margin-top: 5px;">--/--/----</div>
         </div>
         <script>
-            function updateClock() {
-                const now = new Date();
+            // Khởi tạo với thời gian server (tính bằng milliseconds)
+            const serverTimestamp = {int(server_time.timestamp() * 1000)};
+            
+            function updateClock() {{
+                // Tính thời gian hiện tại dựa trên server timestamp + thời gian đã trôi qua kể từ khi load trang
+                const elapsed = Date.now() - performance.timing.navigationStart;
+                const now = new Date(serverTimestamp + elapsed);
+                
                 const hours = String(now.getHours()).padStart(2, '0');
                 const minutes = String(now.getMinutes()).padStart(2, '0');
                 const seconds = String(now.getSeconds()).padStart(2, '0');
@@ -221,7 +234,7 @@ if clinics and doctors:
                 
                 document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
                 document.getElementById('date').textContent = day + '/' + month + '/' + year;
-            }
+            }}
             updateClock();
             setInterval(updateClock, 1000);
         </script>
@@ -238,6 +251,10 @@ if clinics and doctors:
             from datetime import datetime, time
             current_datetime = datetime.now()
             selected_datetime = datetime.strptime(f"{desired_date} {desired_time}", "%Y-%m-%d %H:%M")
+            
+            # Debug: Hiển thị thông tin so sánh
+            st.write(f"🔍 **Debug:** Thời gian Server: {current_datetime.strftime('%H:%M:%S - %d/%m/%Y')}")
+            st.write(f"🔍 **Debug:** Thời gian chọn: {selected_datetime.strftime('%H:%M:%S - %d/%m/%Y')}")
             
             if selected_datetime < current_datetime:
                 st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} đã qua! Vui lòng chọn thời gian trong tương lai.")
