@@ -115,7 +115,7 @@ def suggest_alternative_slots(doctor_id, date_str, appointments):
     return [slot for slot in working_slots if check_and_schedule(doctor_id, date_str, slot, appointments)]
 
 # Hàm vẽ bản đồ giả lập đường đi
-# Hàm vẽ bản đồ giả lập lộ trình đô thị chuyên nghiệp
+# Hàm vẽ bản đồ giả lập lộ trình đô thị chuyên nghiệp (Đã fix lỗi AttributeError)
 def draw_simulation_map(home_x, home_y, target_clinic, all_clinics):
     # Tạo khung hình với tỷ lệ chuẩn và độ nét cao (DPI 120)
     fig, ax = plt.subplots(figsize=(10, 6.5), dpi=120)
@@ -179,12 +179,12 @@ def draw_simulation_map(home_x, home_y, target_clinic, all_clinics):
     ax.text(target_x, target_y + 0.35, target_short.upper(), fontsize=8.5, fontweight='bold', color='#065f46', ha='center',
             bbox=dict(boxstyle='round,pad=0.25', facecolor='#ecfdf5', edgecolor='#a7f3d0', alpha=0.95))
     
-    # 7. Khối hiển thị khoảng cách di chuyển thực tế (Floating HUD Card)
+    # 7. Khối hiển thị khoảng cách di chuyển thực tế (Floating HUD Card) - Đã xóa bỏ thuộc tính lỗi
     distance = math.sqrt((target_x - home_x)**2 + (target_y - home_y)**2)
     ax.text((home_x + target_x)/2, (home_y + target_y)/2, 
             f'📊 Khoảng cách: {distance:.2f} km ', fontsize=9, fontweight='bold', 
             color='#ffffff', ha='center', va='center',
-            bbox=dict(boxstyle='round,pad=0.5', facecolor='#1e293b', edgecolor='none', alpha=0.9, boxstyle_factory=None))
+            bbox=dict(boxstyle='round,pad=0.5', facecolor='#1e293b', edgecolor='none', alpha=0.9))
     
     # Định dạng tinh chỉnh ẩn các trục tọa độ thô, chỉ giữ lại tiêu đề sạch sẽ
     ax.set_title("🗺️ BẢN ĐỒ ĐIỀU PHỐI TUYẾN ĐƯỜNG DI CHUYỂN REAL-TIME", fontsize=11, fontweight='bold', pad=15, color='#1e293b')
