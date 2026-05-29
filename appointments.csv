@@ -1,0 +1,3 @@
+appointment_id,patient_email,doctor_id,date,time_slot
+1,user1@gmail.com,101,2026-06-01,09:00
+2,user2@gmail.com,101,2026-06-01,10:00
