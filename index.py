@@ -115,76 +115,90 @@ def suggest_alternative_slots(doctor_id, date_str, appointments):
     return [slot for slot in working_slots if check_and_schedule(doctor_id, date_str, slot, appointments)]
 
 # Hàm vẽ bản đồ giả lập đường đi
+# Hàm vẽ bản đồ giả lập lộ trình đô thị chuyên nghiệp
 def draw_simulation_map(home_x, home_y, target_clinic, all_clinics):
-    fig, ax = plt.subplots(figsize=(10, 7))
+    # Tạo khung hình với tỷ lệ chuẩn và độ nét cao (DPI 120)
+    fig, ax = plt.subplots(figsize=(10, 6.5), dpi=120)
     
-    # Tìm giới hạn bản đồ dựa trên tất cả các phòng khám
+    # Tính toán ranh giới bản đồ tự động
     all_x = [float(clinic['x']) for clinic in all_clinics] + [home_x]
     all_y = [float(clinic['y']) for clinic in all_clinics] + [home_y]
-    min_x, max_x = min(all_x) - 2, max(all_x) + 2
-    min_y, max_y = min(all_y) - 2, max(all_y) + 2
+    min_x, max_x = min(all_x) - 1.5, max(all_x) + 1.5
+    min_y, max_y = min(all_y) - 1.5, max(all_y) + 1.5
     
-    # 1. Vẽ nền bản đồ giả lập (màu xanh nhạt như đất)
-    ax.set_facecolor('#e8f5e9')
+    # 1. Nền bản đồ xám trắng sáng sang trọng (Chuẩn giao diện Map hiện đại)
+    ax.set_facecolor('#f8f9fa')
     
-    # 2. Vẽ lưới đường giả lập
-    for i in range(int(min_x), int(max_x) + 1):
-        ax.axvline(x=i, color='#bdbdbd', linestyle='-', linewidth=0.5, alpha=0.5)
-    for i in range(int(min_y), int(max_y) + 1):
-        ax.axhline(y=i, color='#bdbdbd', linestyle='-', linewidth=0.5, alpha=0.5)
+    # 2. Tạo hệ thống các khối phố và đại lộ (Grid đường sá mô phỏng thực tế)
+    grid_intervals = [x * 0.5 for x in range(int(min_x)*2, int(max_x)*2 + 2)]
+    for vx in grid_intervals:
+        ax.axvline(x=vx, color='#cbd5e1', linestyle='-', linewidth=4, alpha=0.25, zorder=1)
+    for vy in grid_intervals:
+        ax.axhline(y=vy, color='#cbd5e1', linestyle='-', linewidth=4, alpha=0.25, zorder=1)
+        
+    # Lưới định vị phụ mỏng mảnh phía dưới
+    ax.grid(True, which='both', color='#e2e8f0', linestyle='--', linewidth=0.5, alpha=0.5, zorder=0)
     
-    # 3. Vẽ tất cả các phòng khám khác (Màu cam) - Loại bỏ dấu tiếng Việt trên nhãn bản đồ để tuyệt đối không lỗi font
+    # 3. Vẽ các Cơ sở y tế khác xung quanh (Các điểm vệ tinh màu xám/cam nhẹ)
     for clinic in all_clinics:
         cx, cy = float(clinic['x']), float(clinic['y'])
         if clinic['id'] != target_clinic['id']:
-            ax.scatter(cx, cy, color='#ff9800', s=120, zorder=3, edgecolors='black', linewidth=1)
+            # Điểm đổ bóng nhẹ phía dưới icon
+            ax.scatter(cx, cy - 0.04, color='#cbd5e1', s=110, zorder=2, alpha=0.5)
+            # Icon phòng khám vệ tinh
+            ax.scatter(cx, cy, color='#94a3b8', s=90, zorder=3, edgecolors='#475569', linewidth=1, alpha=0.85)
             short_name = clinic['name'].replace('Phòng Khám ', 'PK ').replace('Bệnh Viện ', 'BV ')
-            ax.text(cx, cy + 0.4, short_name, fontsize=7, ha='center', color='#e65100', fontweight='bold')
+            ax.text(cx, cy + 0.22, short_name, fontsize=7.5, ha='center', color='#64748b', weight='medium')
             
-    # 4. Vẽ vị trí nhà của bạn (Điểm màu Đỏ với ngôi sao)
-    ax.scatter(home_x, home_y, color='#f44336', s=200, marker='*', label='Nha cua ban', zorder=6, edgecolors='darkred', linewidth=2)
-    ax.text(home_x, home_y - 0.7, 'Ban o day', fontsize=9, fontweight='bold', color='#b71c1c', ha='center')
-    
-    # 5. Vẽ phòng khám gần nhất được chọn (Điểm màu Xanh lá với marker P)
+    # 4. Vẽ thuật toán đường đi mô phỏng GPS thực tế (Di chuyển vuông góc theo các tuyến phố)
     target_x, target_y = float(target_clinic['x']), float(target_clinic['y'])
-    ax.scatter(target_x, target_y, color='#4caf50', s=200, marker='P', label='Phong kham gan nhat', zorder=6, edgecolors='darkgreen', linewidth=2)
+    
+    # Tạo lộ trình rẽ khúc dạng xương cá/bàn cờ (Manhattan Path) tạo cảm giác đi trên đường thật
+    route_x = [home_x, target_x, target_x]
+    route_y = [home_y, home_y, target_y]
+    
+    # Vẽ đường dập bóng mờ phía dưới đường đi chính để tạo hiệu ứng 3D
+    ax.plot(route_x, route_y, color='#93c5fd', linestyle='-', linewidth=6, alpha=0.4, zorder=4)
+    # Đường line định vị động chuẩn GPS màu xanh Cyan nổi bật
+    ax.plot(route_x, route_y, color='#3b82f6', linestyle='-', linewidth=3.5, label='Lộ trình tối ưu (GPS)', zorder=5)
+    
+    # Thêm các mũi tên chỉ hướng di chuyển nhỏ trên cung đường
+    mid_idx_x = (home_x + target_x) / 2
+    mid_idx_y = (home_y + target_y) / 2
+    ax.annotate('', xy=(mid_idx_x, home_y), xytext=(home_x, home_y), arrowprops=dict(arrowstyle="->", color='#ffffff', lw=1.5, shrinkA=0, shrinkB=0), zorder=6)
+    ax.annotate('', xy=(target_x, mid_idx_y), xytext=(target_x, home_y), arrowprops=dict(arrowstyle="->", color='#ffffff', lw=1.5, shrinkA=0, shrinkB=0), zorder=6)
+
+    # 5. Thiết kế ghim vị trí "Nhà của bạn" (Vị trí xuất phát)
+    ax.scatter(home_x, home_y, color='#ef4444', s=220, marker='*', zorder=8, edgecolors='#b91c1c', linewidth=1.5, label='Vị trí của bạn')
+    ax.text(home_x, home_y - 0.35, 'BẠN Ở ĐÂY', fontsize=8, fontweight='bold', color='#ef4444', ha='center',
+            bbox=dict(boxstyle='round,pad=0.2', facecolor='#fef2f2', edgecolor='#fca5a5', alpha=0.9))
+    
+    # 6. Thiết kế ghim vị trí "Cơ sở khám được chỉ định" (Điểm đích đến)
+    ax.scatter(target_x, target_y, color='#10b981', s=250, marker='P', zorder=8, edgecolors='#047857', linewidth=1.5, label='Điểm đến chỉ định')
     target_short = target_clinic["name"].replace('Phòng Khám ', 'PK ').replace('Bệnh Viện ', 'BV ')
-    ax.text(target_x, target_y + 0.6, target_short, fontsize=8, fontweight='bold', color='#1b5e20', ha='center')
+    ax.text(target_x, target_y + 0.35, target_short.upper(), fontsize=8.5, fontweight='bold', color='#065f46', ha='center',
+            bbox=dict(boxstyle='round,pad=0.25', facecolor='#ecfdf5', edgecolor='#a7f3d0', alpha=0.95))
     
-    # 6. Vẽ đường đi giả lập lộ trình tối ưu
-    mid_points = []
-    num_points = 3
-    for i in range(1, num_points):
-        ratio = i / num_points
-        mid_x = home_x + (target_x - home_x) * ratio
-        mid_y = home_y + (target_y - home_y) * ratio
-        mid_x += random.uniform(-0.15, 0.15)  # Giảm độ nhiễu một chút để lộ trình nhìn mượt mà hơn
-        mid_y += random.uniform(-0.15, 0.15)
-        mid_points.append((mid_x, mid_y))
-    
-    route_x = [home_x] + [p[0] for p in mid_points] + [target_x]
-    route_y = [home_y] + [p[1] for p in mid_points] + [target_y]
-    ax.plot(route_x, route_y, color='#2196f3', linestyle='-', linewidth=3, label='Tuyen duong toi uu', zorder=4, alpha=0.8)
-    
-    for mx, my in mid_points:
-        ax.scatter(mx, my, color='#2196f3', s=30, zorder=5, marker='o')
-    
-    # 7. Thêm khoảng cách thông tin
+    # 7. Khối hiển thị khoảng cách di chuyển thực tế (Floating HUD Card)
     distance = math.sqrt((target_x - home_x)**2 + (target_y - home_y)**2)
-    ax.text((home_x + target_x)/2, (home_y + target_y)/2 + 0.3, 
-            f'{distance:.2f} km', fontsize=9, fontweight='bold', 
-            color='#1976d2', ha='center', 
-            bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.8))
+    ax.text((home_x + target_x)/2, (home_y + target_y)/2, 
+            f'📊 Khoảng cách: {distance:.2f} km ', fontsize=9, fontweight='bold', 
+            color='#ffffff', ha='center', va='center',
+            bbox=dict(boxstyle='round,pad=0.5', facecolor='#1e293b', edgecolor='none', alpha=0.9, boxstyle_factory=None))
     
-    # Định dạng bản đồ
-    ax.set_title("BAN DO GIA LAP LO TRINH DI CHUYEN", fontsize=12, fontweight='bold', pad=15, color='#1b5e20')
-    ax.set_xlabel("Toa do X (km)", fontsize=10, fontweight='bold')
-    ax.set_ylabel("Toa do Y (km)", fontsize=10, fontweight='bold')
-    ax.grid(True, linestyle=':', alpha=0.3, color='#666')
-    ax.legend(loc='upper right', fontsize=9, framealpha=0.9, facecolor='white', edgecolor='#333')
+    # Định dạng tinh chỉnh ẩn các trục tọa độ thô, chỉ giữ lại tiêu đề sạch sẽ
+    ax.set_title("🗺️ BẢN ĐỒ ĐIỀU PHỐI TUYẾN ĐƯỜNG DI CHUYỂN REAL-TIME", fontsize=11, fontweight='bold', pad=15, color='#1e293b')
     ax.set_xlim(min_x, max_x)
     ax.set_ylim(min_y, max_y)
     
+    # Phong cách hóa hộp chú thích (Legend)
+    ax.legend(loc='upper right', fontsize=8.5, frameon=True, facecolor='#ffffff', edgecolor='#e2e8f0', shadow=False)
+    
+    # Ẩn bớt các gai gạch viền ngoài (Ticks) cho giao diện tối giản
+    ax.tick_params(colors='#94a3b8', labelsize=8)
+    for spine in ax.spines.values():
+        spine.set_color('#e2e8f0')
+        
     plt.tight_layout()
     return fig
 
@@ -212,7 +226,7 @@ if clinics and doctors:
     with col2:
         home_y = st.number_input("📍 Tọa độ Y của nhà:", value=4.0, step=0.1)
         
-    symptom_input = st.text_input("🤒 Nhập triệu chứng bệnh của bạn ", placeholder="dau bung")
+    symptom_input = st.text_input("🤒 Nhập triệu chứng bệnh của bạn ", placeholder="đau bụng , ho")
 
     # Bước 1: Tìm phòng khám gần nhất dựa trên tọa độ nhà
     nearest_clinic, dist = find_nearest_clinic(home_x, home_y, clinics)
