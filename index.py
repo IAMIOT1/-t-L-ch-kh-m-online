@@ -201,30 +201,17 @@ if clinics and doctors:
         st.markdown("---")
         st.header("3. Chọn thời gian & Đặt lịch")
         
-        # Hiển thị đồng hồ thời gian thực chạy giây, phút, giờ (dùng thời gian server)
+        # Hiển thị đồng hồ thời gian thực chạy giây, phút, giờ (dùng thời gian client)
         import streamlit.components.v1 as components
-        from datetime import datetime
-        server_time = datetime.now()
-        
-        # Hiển thị thời gian server hiện tại (để người dùng so sánh)
-        st.info(f"🕐 **Thời gian Server hiện tại:** {server_time.strftime('%H:%M:%S - %d/%m/%Y')}")
-        st.caption("⚠️ Lưu ý: Kiểm tra thời gian dựa trên đồng hồ Server để đặt lịch chính xác")
-        
-        clock_html = f"""
+        clock_html = """
         <div style="background-color: #e3f2fd; padding: 15px; border-radius: 10px; border: 2px solid #2196f3; text-align: center;">
-            <h3 style="margin: 0; color: #1565c0;">🕐 Đồng hồ thời gian thực (Server)</h3>
+            <h3 style="margin: 0; color: #1565c0;">🕐 Đồng hồ thời gian thực (Client)</h3>
             <div id="clock" style="font-size: 32px; font-weight: bold; color: #0d47a1; margin-top: 10px;">--:--:--</div>
             <div id="date" style="font-size: 18px; color: #1976d2; margin-top: 5px;">--/--/----</div>
         </div>
         <script>
-            // Khởi tạo với thời gian server (tính bằng milliseconds)
-            const serverTimestamp = {int(server_time.timestamp() * 1000)};
-            
-            function updateClock() {{
-                // Tính thời gian hiện tại dựa trên server timestamp + thời gian đã trôi qua kể từ khi load trang
-                const elapsed = Date.now() - performance.timing.navigationStart;
-                const now = new Date(serverTimestamp + elapsed);
-                
+            function updateClock() {
+                const now = new Date();
                 const hours = String(now.getHours()).padStart(2, '0');
                 const minutes = String(now.getMinutes()).padStart(2, '0');
                 const seconds = String(now.getSeconds()).padStart(2, '0');
@@ -234,7 +221,7 @@ if clinics and doctors:
                 
                 document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
                 document.getElementById('date').textContent = day + '/' + month + '/' + year;
-            }}
+            }
             updateClock();
             setInterval(updateClock, 1000);
         </script>
@@ -245,16 +232,39 @@ if clinics and doctors:
         desired_date = st.date_input("📅 Chọn ngày khám:").strftime("%Y-%m-%d")
         desired_time = st.selectbox("⏰ Chọn khung giờ mong muốn:", ["08:00", "09:00", "10:00", "11:00", "14:00", "15:00", "16:00"], index=1)
 
+        # Thêm JavaScript để kiểm tra thời gian client-side trước khi submit
+        validation_js = f"""
+        <script>
+        // Tìm nút đặt lịch và thêm validation
+        document.addEventListener('DOMContentLoaded', function() {{
+            const buttons = document.querySelectorAll('button[kind="primary"]');
+            buttons.forEach(button => {{
+                if (button.textContent.includes('TIẾN HÀNH ĐẶT LỊCH')) {{
+                    button.addEventListener('click', function(e) {{
+                        const selectedDate = '{desired_date}';
+                        const selectedTime = '{desired_time}';
+                        const selectedDateTime = new Date(selectedDate + 'T' + selectedTime + ':00');
+                        const now = new Date();
+                        
+                        if (selectedDateTime < now) {{
+                            e.preventDefault();
+                            e.stopPropagation();
+                            alert('❌ Khung giờ ' + selectedTime + ' ngày ' + selectedDate + ' đã qua!\\nVui lòng chọn thời gian trong tương lai.');
+                        }}
+                    }});
+                }}
+            }});
+        }});
+        </script>
+        """
+        components.html(validation_js, height=0)
+
         # Nút bấm tiến hành đặt lịch
-        if st.button("🚀 TIẾN HÀNH ĐẶT LỊCH"):
-            # Kiểm tra xem khung giờ đã qua chưa
+        if st.button("� TIẾN HÀNH ĐẶT LỊCH"):
+            # Kiểm tra xem khung giờ đã qua chưa (dùng server time như backup)
             from datetime import datetime, time
             current_datetime = datetime.now()
             selected_datetime = datetime.strptime(f"{desired_date} {desired_time}", "%Y-%m-%d %H:%M")
-            
-            # Debug: Hiển thị thông tin so sánh
-            st.write(f"🔍 **Debug:** Thời gian Server: {current_datetime.strftime('%H:%M:%S - %d/%m/%Y')}")
-            st.write(f"🔍 **Debug:** Thời gian chọn: {selected_datetime.strftime('%H:%M:%S - %d/%m/%Y')}")
             
             if selected_datetime < current_datetime:
                 st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} đã qua! Vui lòng chọn thời gian trong tương lai.")
