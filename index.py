@@ -259,15 +259,21 @@ if clinics and doctors:
         """
         components.html(validation_js, height=0)
 
-        # Nút bấm tiến hành đặt lịch
-        if st.button("� TIẾN HÀNH ĐẶT LỊCH"):
-            # Kiểm tra xem khung giờ đã qua chưa (dùng server time như backup)
-            from datetime import datetime, time
-            current_datetime = datetime.now()
+# Nút bấm tiến hành đặt lịch
+        if st.button("🏥 TIẾN HÀNH ĐẶT LỊCH"):
+            # Kiểm tra xem khung giờ đã qua chưa bằng thời gian thực Việt Nam (GMT+7)
+            from datetime import datetime
+            import pytz
+            
+            # Lấy thời gian thực theo múi giờ Việt Nam và loại bỏ thuộc tính tzinfo để so sánh trực tiếp
+            vietnam_tz = pytz.timezone('Asia/Ho_Chi_Minh')
+            current_datetime = datetime.now(vietnam_tz).replace(tzinfo=None)
+            
+            # Khung giờ người dùng chọn
             selected_datetime = datetime.strptime(f"{desired_date} {desired_time}", "%Y-%m-%d %H:%M")
             
             if selected_datetime < current_datetime:
-                st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} đã qua! Vui lòng chọn thời gian trong tương lai.")
+                st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} đã qua so với thời gian thực! Vui lòng chọn thời gian trong tương lai.")
                 st.info("👉 Vui lòng chọn lại ngày và khung giờ phù hợp.")
             else:
                 # Kiểm tra xem khung giờ đã được đặt chưa
@@ -307,11 +313,3 @@ Vui lòng đến đúng giờ để tiến hành kiểm tra sức khỏe tốt n
                         st.info(f"👉 Vui lòng chọn lại một trong các khung giờ trống phía trên để đặt lịch.")
                     else:
                         st.error("Rất tiếc, bác sĩ này đã kín lịch hoàn toàn trong ngày hôm nay. Vui lòng chọn ngày khác.")
-
-    # Hiển thị trực quan danh sách lịch hẹn hiện có trong database
-    st.markdown("---")
-    st.subheader("📋 Danh sách lịch hẹn đã đăng ký trong hệ thống")
-    st.dataframe(appointments, use_container_width=True)
-
-else:
-    st.error("❌ Không thể tải dữ liệu. Vui lòng kiểm tra các file dữ liệu CSV.")
