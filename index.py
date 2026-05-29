@@ -8,7 +8,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import folium
 from streamlit_folium import st_folium
-
+import streamlit.components.v1 as components
 def send_real_email(receiver_email, clinic_name, doctor_name, experience, phone, time, date):
     # 1. Cấu hình thông tin tài khoản gửi (Sử dụng một Gmail của bạn làm Server gửi)
     sender_email = "toinguyen7126@gmail.com"
@@ -233,66 +233,34 @@ if clinics and doctors:
     patient_email = st.text_input("📩 Email nhận nhắc lịch ", placeholder="nguyenvandan@gmail.com")
     
     # --------------------------------------------------------------------------
-    # NÂNG CẤP VỊ TRÍ SỐ 2: TỰ ĐỘNG ĐỊNH VỊ GPS THỜI GIAN THỰC QUA TRÌNH DUYỆT
+    # CẬP NHẬT VỊ TRÍ SỐ 2: CHỌN VỊ TRÍ THỰC TẾ BẰNG CÁCH CLICK TRÊN BẢN ĐỒ MẪU
     # --------------------------------------------------------------------------
-    import streamlit.components.v1 as components
     st.write("📍 **Xác định vị trí hiện tại của bạn:**")
-    
-    # Khởi tạo giá trị mặc định trong Session State nếu chưa từng quét GPS (Mặc định ở Hà Nội)
-    if 'gps_lat' not in st.session_state: 
-        st.session_state['gps_lat'] = 21.0285 
-    if 'gps_lng' not in st.session_state: 
-        st.session_state['gps_lng'] = 105.8542
+    st.caption("💡 Mẹo: Bạn có thể click chuột trực tiếp vào vị trí của mình trên bản đồ dưới đây để hệ thống tự lấy tọa độ thực tế!")
 
-    # Nhúng một cụm HTML/JavaScript để kích hoạt API định vị của thiết bị
-    loc_button_html = """
-    <div style="text-align: center; margin-bottom: 10px;">
-        <button onclick="getLocation()" style="background-color: #2196f3; color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; font-size: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-            🎯 Nhấp để tự động lấy vị trí GPS từ thiết bị của bạn
-        </button>
-        <p id="status" style="color: #666; font-size: 13px; margin-top: 8px; font-style: italic;"></p>
-    </div>
-    <script>
-        function getLocation() {
-            const status = document.getElementById('status');
-            if (!navigator.geolocation) {
-                status.textContent = 'Trình duyệt này không hỗ trợ định vị GPS.';
-            } else {
-                status.textContent = 'Đang quét tìm tọa độ vệ tinh...';
-                navigator.geolocation.getCurrentPosition(success, error);
-            }
-        }
-        function success(position) {
-            const lat = position.coords.latitude;
-            const lng = position.coords.longitude;
-            document.getElementById('status').innerHTML = '<span style="color: #4caf50; font-weight: bold;">✔️ Đã cập nhật tọa độ thực thành công!</span>';
-            // Đẩy ngược dữ liệu Lat,Lng từ JavaScript về widget text_input của Streamlit
-            window.parent.postMessage({
-                type: 'streamlit:set_widget_value',
-                from: 'geo_location',
-                value: lat + ',' + lng
-            }, '*');
-        }
-        function error() {
-            document.getElementById('status').innerHTML = '<span style="color: #f44336;">❌ Không lấy được GPS. Hãy chắc chắn bạn đã nhấn "Cho phép" (Allow) quyền vị trí trên trình duyệt.</span>';
-        }
-    </script>
-    """
-    # Render nút bấm lên giao diện web
-    components.html(loc_button_html, height=80)
+    if 'gps_lat' not in st.session_state: st.session_state['gps_lat'] = 21.0285 
+    if 'gps_lng' not in st.session_state: st.session_state['gps_lng'] = 105.8542
+
+    # Tạo một bản đồ mini để người dùng tự chấm vị trí của mình
+    m_select = folium.Map(location=[st.session_state['gps_lat'], st.session_state['gps_lng']], zoom_start=13)
+    folium.Marker(
+        [st.session_state['gps_lat'], st.session_state['gps_lng']], 
+        tooltip="Vị trí đã chọn", 
+        icon=folium.Icon(color='red', icon='user', prefix='fa')
+    ).add_to(m_select)
     
-    # Thành phần trung gian nhận chuỗi dữ liệu "Lat,Lng" từ Javascript
-    geo_data = st.text_input("Tọa độ thiết bị nhận diện (Lat,Lng):", value=f"{st.session_state['gps_lat']},{st.session_state['gps_lng']}", key="geo_location")
+    # Hiển thị bản đồ chọn và bắt sự kiện click chuột
+    st_data = st_folium(m_select, width=700, height=250, key="map_picker")
     
-    # Tách chuỗi dữ liệu tọa độ ra thành 2 biến số thực để truyền xuống thuật toán xử lý phía dưới
-    try:
-        home_lat, home_lng = map(float, geo_data.split(','))
-        st.session_state['gps_lat'] = home_lat
-        st.session_state['gps_lng'] = home_lng
-    except:
-        home_lat, home_lng = st.session_state['gps_lat'], st.session_state['gps_lng']
+    # Nếu người dùng click vào bản đồ, cập nhật ngay tọa độ đó vào hệ thống
+    if st_data and st_data.get("last_clicked"):
+        st.session_state['gps_lat'] = st_data["last_clicked"]["lat"]
+        st.session_state['gps_lng'] = st_data["last_clicked"]["lng"]
+
+    home_lat = st.session_state['gps_lat']
+    home_lng = st.session_state['gps_lng']
         
-    st.success(f"🗺️ Hệ thống đang định vị tại: **Vĩ độ (Lat):** {home_lat} | **Kinh độ (Lng):** {home_lng}")
+    st.success(f"🗺️ Đã xác định vị trí của bạn tại: **Lat:** {home_lat:.4f} | **Lng:** {home_lng:.4f}")
     # --------------------------------------------------------------------------
         
     symptom_input = st.text_input("🤒 Nhập triệu chứng bệnh của bạn ", placeholder="đau bụng , ho")
