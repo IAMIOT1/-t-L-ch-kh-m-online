@@ -8,7 +8,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import folium
 from streamlit_folium import st_folium
-import streamlit.components.v1 as components
+
 def send_real_email(receiver_email, clinic_name, doctor_name, experience, phone, time, date):
     # 1. Cấu hình thông tin tài khoản gửi (Sử dụng một Gmail của bạn làm Server gửi)
     sender_email = "toinguyen7126@gmail.com"
@@ -235,7 +235,7 @@ if clinics and doctors:
     # --------------------------------------------------------------------------
     # NÂNG CẤP VỊ TRÍ SỐ 2: TỰ ĐỘNG ĐỊNH VỊ GPS THỜI GIAN THỰC QUA TRÌNH DUYỆT
     # --------------------------------------------------------------------------
-
+    import streamlit.components.v1 as components
     st.write("📍 **Xác định vị trí hiện tại của bạn:**")
     
     # Khởi tạo giá trị mặc định trong Session State nếu chưa từng quét GPS (Mặc định ở Hà Nội)
@@ -243,40 +243,6 @@ if clinics and doctors:
         st.session_state['gps_lat'] = 21.0285 
     if 'gps_lng' not in st.session_state: 
         st.session_state['gps_lng'] = 105.8542
-
-    # Thành phần trung gian nhận chuỗi dữ liệu "Lat,Lng" từ Javascript
-    geo_data = st.text_input("Tọa độ thiết bị nhận diện (Lat,Lng):", value=f"{st.session_state['gps_lat']},{st.session_state['gps_lng']}", key="geo_location")
-    
-    # Tách chuỗi dữ liệu tọa độ ra thành 2 biến số thực để truyền xuống thuật toán xử lý phía dưới
-    try:
-        home_lat, home_lng = map(float, geo_data.split(','))
-        st.session_state['gps_lat'] = home_lat
-        st.session_state['gps_lng'] = home_lng
-    except:
-        home_lat, home_lng = st.session_state['gps_lat'], st.session_state['gps_lng']
-        
-    st.success(f"🗺️ Hệ thống đang định vị tại: **Vĩ độ (Lat):** {home_lat} | **Kinh độ (Lng):** {home_lng}")
-    # --------------------------------------------------------------------------
-        
-    symptom_input = st.text_input("🤒 Nhập triệu chứng bệnh của bạn ", placeholder="đau bụng , ho")
-
-    # Bước 1: Tìm phòng khám gần nhất dựa trên tọa độ nhà
-    nearest_clinic, dist = find_nearest_clinic(home_lat, home_lng, clinics)
-    
-    # Bước 2: Tìm bác sĩ phù hợp với triệu chứng TẠI phòng khám gần nhất đó
-    matched_doctors = find_doctors_by_symptom(symptom_input, nearest_clinic['id'], doctors)
-
-    st.markdown("---")
-    st.header("2. Kết quả tìm kiếm & Bản đồ lộ trình")
-    
-    # Hiển thị phòng khám gần nhất (Yêu cầu 2)
-    st.info(f"📍 **Phòng khám gần nhất:** {nearest_clinic['name']} (Khoảng cách tính toán: {dist:.2f} km)")
-    
-    # --------------------------------------------------------------------------
-    # NÂNG CẤP VỊ TRÍ SỐ 2: TỰ ĐỘNG ĐỊNH VỊ GPS THỜI GIAN THỰC QUA TRÌNH DUYỆT
-    # --------------------------------------------------------------------------
-    st.write("📍 **Xác định vị trí hiện tại của bạn:**")
-    st.caption("💡 Mẹo: Bạn có thể click chuột trực tiếp vào vị trí của mình trên bản đồ dưới đây để hệ thống tự lấy tọa độ thực tế!")
 
     # Nhúng một cụm HTML/JavaScript để kích hoạt API định vị của thiết bị
     loc_button_html = """
@@ -315,26 +281,39 @@ if clinics and doctors:
     # Render nút bấm lên giao diện web
     components.html(loc_button_html, height=80)
     
-    # Tạo một bản đồ mini để người dùng tự chấm vị trí của mình
-    m_select = folium.Map(location=[home_lat, home_lng], zoom_start=13)
-    folium.Marker(
-        [home_lat, home_lng], 
-        tooltip="Vị trí đã chọn", 
-        icon=folium.Icon(color='red', icon='user', prefix='fa')
-    ).add_to(m_select)
+    # Thành phần trung gian nhận chuỗi dữ liệu "Lat,Lng" từ Javascript
+    geo_data = st.text_input("Tọa độ thiết bị nhận diện (Lat,Lng):", value=f"{st.session_state['gps_lat']},{st.session_state['gps_lng']}", key="geo_location")
     
-    # Hiển thị bản đồ chọn và bắt sự kiện click chuột
-    st_data = st_folium(m_select, width=700, height=250, key="map_picker")
-    
-    # Nếu người dùng click vào bản đồ, cập nhật ngay tọa độ đó vào hệ thống
-    if st_data and st_data.get("last_clicked"):
-        st.session_state['gps_lat'] = st_data["last_clicked"]["lat"]
-        st.session_state['gps_lng'] = st_data["last_clicked"]["lng"]
-        home_lat = st.session_state['gps_lat']
-        home_lng = st.session_state['gps_lng']
+    # Tách chuỗi dữ liệu tọa độ ra thành 2 biến số thực để truyền xuống thuật toán xử lý phía dưới
+    try:
+        home_lat, home_lng = map(float, geo_data.split(','))
+        st.session_state['gps_lat'] = home_lat
+        st.session_state['gps_lng'] = home_lng
+    except:
+        home_lat, home_lng = st.session_state['gps_lat'], st.session_state['gps_lng']
         
-    st.success(f"🗺️ Đã xác định vị trí của bạn tại: **Lat:** {home_lat:.4f} | **Lng:** {home_lng:.4f}")
+    st.success(f"🗺️ Hệ thống đang định vị tại: **Vĩ độ (Lat):** {home_lat} | **Kinh độ (Lng):** {home_lng}")
     # --------------------------------------------------------------------------
+        
+    symptom_input = st.text_input("🤒 Nhập triệu chứng bệnh của bạn ", placeholder="đau bụng , ho")
+
+    # Bước 1: Tìm phòng khám gần nhất dựa trên tọa độ nhà
+    nearest_clinic, dist = find_nearest_clinic(home_lat, home_lng, clinics)
+    
+    # Bước 2: Tìm bác sĩ phù hợp với triệu chứng TẠI phòng khám gần nhất đó
+    matched_doctors = find_doctors_by_symptom(symptom_input, nearest_clinic['id'], doctors)
+
+    st.markdown("---")
+    st.header("2. Kết quả tìm kiếm & Bản đồ lộ trình")
+    
+    # Hiển thị phòng khám gần nhất (Yêu cầu 2)
+    st.info(f"📍 **Phòng khám gần nhất:** {nearest_clinic['name']} (Khoảng cách tính toán: {dist:.2f} km)")
+    
+    # Hiển thị bản đồ tương tác Google Maps thông qua Folium
+    with st.spinner("Đang tải bản đồ vệ tinh thực tế..."):
+        map_obj = draw_simulation_map(home_lat, home_lng, nearest_clinic, clinics)
+        # Sử dụng st_folium thay vì st.pyplot
+        st_folium(map_obj, width=700, height=450, returned_objects=[])
 
     if not matched_doctors:
         st.warning(f"❌ Không tìm thấy bác sĩ phù hợp với triệu chứng '{symptom_input}' tại phòng khám gần nhất.")
