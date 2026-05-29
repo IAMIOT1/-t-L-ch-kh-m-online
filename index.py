@@ -109,25 +109,21 @@ def draw_simulation_map(home_x, home_y, target_clinic, all_clinics):
             fontweight='bold', color='#1b5e20', ha='center')
     
     # 7. Vẽ đường đi giả lập với các điểm trung gian
-    # Tạo lộ trình giả lập với 2-3 điểm trung gian
     mid_points = []
     num_points = 3
     for i in range(1, num_points):
         ratio = i / num_points
         mid_x = home_x + (target_x - home_x) * ratio
         mid_y = home_y + (target_y - home_y) * ratio
-        # Thêm một chút ngẫu nhiên để lộ trình trông tự nhiên hơn
         mid_x += random.uniform(-0.3, 0.3)
         mid_y += random.uniform(-0.3, 0.3)
         mid_points.append((mid_x, mid_y))
     
-    # Vẽ lộ trình đầy đủ
     route_x = [home_x] + [p[0] for p in mid_points] + [target_x]
     route_y = [home_y] + [p[1] for p in mid_points] + [target_y]
     ax.plot(route_x, route_y, color='#2196f3', linestyle='-', linewidth=3, 
             label='🛣️ Tuyến đường tối ưu', zorder=4, alpha=0.8)
     
-    # Vẽ các điểm trung gian trên lộ trình
     for mx, my in mid_points:
         ax.scatter(mx, my, color='#2196f3', s=30, zorder=5, marker='o')
     
@@ -144,12 +140,8 @@ def draw_simulation_map(home_x, home_y, target_clinic, all_clinics):
     ax.set_xlabel("Tọa độ X (km)", fontsize=10, fontweight='bold')
     ax.set_ylabel("Tọa độ Y (km)", fontsize=10, fontweight='bold')
     ax.grid(True, linestyle=':', alpha=0.3, color='#666')
-    
-    # Thêm legend
     ax.legend(loc='upper right', fontsize=9, framealpha=0.9, 
               facecolor='white', edgecolor='#333')
-    
-    # Đặt giới hạn hiển thị
     ax.set_xlim(min_x, max_x)
     ax.set_ylim(min_y, max_y)
     
@@ -242,3 +234,5 @@ if clinics and doctors:
                     st.info(f"👉 Vui lòng chọn lại một trong các khung giờ trống phía trên để đặt lịch.")
                 else:
                     st.error("Rất tiếc, bác sĩ này đã kín lịch hoàn toàn trong ngày hôm nay. Vui lòng chọn ngày khác.")
+else:
+    st.error("❌ Không thể tải dữ liệu. Vui lòng kiểm tra file CSV.")
