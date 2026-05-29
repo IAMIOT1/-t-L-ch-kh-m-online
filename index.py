@@ -201,10 +201,32 @@ if clinics and doctors:
         st.markdown("---")
         st.header("3. Chọn thời gian & Đặt lịch")
         
-        # Hiển thị thời gian hiện tại
-        from datetime import datetime
-        current_time = datetime.now().strftime("%H:%M:%S - %d/%m/%Y")
-        st.info(f"🕐 Thời gian hiện tại: {current_time}")
+        # Hiển thị đồng hồ thời gian thực chạy giây, phút, giờ
+        import streamlit.components.v1 as components
+        clock_html = """
+        <div style="background-color: #e3f2fd; padding: 15px; border-radius: 10px; border: 2px solid #2196f3; text-align: center;">
+            <h3 style="margin: 0; color: #1565c0;">🕐 Thời gian hiện tại</h3>
+            <div id="clock" style="font-size: 32px; font-weight: bold; color: #0d47a1; margin-top: 10px;">--:--:--</div>
+            <div id="date" style="font-size: 18px; color: #1976d2; margin-top: 5px;">--/--/----</div>
+        </div>
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+                const day = String(now.getDate()).padStart(2, '0');
+                const month = String(now.getMonth() + 1).padStart(2, '0');
+                const year = now.getFullYear();
+                
+                document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
+                document.getElementById('date').textContent = day + '/' + month + '/' + year;
+            }
+            updateClock();
+            setInterval(updateClock, 1000);
+        </script>
+        """
+        components.html(clock_html, height=150)
         
         # Chọn thời gian mong muốn (Yêu cầu 4)
         desired_date = st.date_input("📅 Chọn ngày khám:").strftime("%Y-%m-%d")
