@@ -7,12 +7,15 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+# ==============================================================================
+# HÀM GỬI EMAIL THẬT QUA SMTP GMAIL DIRECTLY
+# ==============================================================================
 def send_real_email(receiver_email, clinic_name, doctor_name, experience, phone, time, date):
-    # 1. Cấu hình thông tin tài khoản gửi (Sử dụng một Gmail của bạn làm Server gửi)
-    sender_email = "YOUR_EMAIL@gmail.com"
-    sender_password = "YOUR_APP_PASSWORD"  # Mật khẩu ứng dụng 16 ký tự của Google
+    # 🔴 BẠN CẦN THAY THẾ 2 THÔNG TIN DƯỚI ĐÂY ĐỂ KÍCH HOẠT GỬI MAIL THẬT:
+    sender_email = "toinguyen7126@gmail.com"
+    sender_password = "japg eyvh ontl dliw"  # Mật khẩu ứng dụng 16 ký tự của Google
     
-    # 2. Tạo bố cục Email dạng HTML cho đẹp mắt
+    # Tạo bố cục nội dung Email dạng HTML
     message = MIMEMultipart("alternative")
     message["Subject"] = f"🏥 [ĐẠI HỌC ĐẠI NAM] - XÁC NHẬN LỊCH HẸN KHÁM THÀNH CÔNG"
     message["From"] = sender_email
@@ -21,32 +24,34 @@ def send_real_email(receiver_email, clinic_name, doctor_name, experience, phone,
     html_content = f"""
     <html>
       <body>
-        <div style="background-color: #f8f9fa; padding: 20px; border-left: 5px solid #007bff; border-radius: 5px;">
-            <h3 style="color: #007bff;">📧 XÁC NHẬN ĐẶT LỊCH KHÁM THÀNH CÔNG</h3>
-            <p>Xin chào <b>{receiver_email}</b>, lịch hẹn khám bệnh của bạn đã được phê duyệt:</p>
-            <hr>
+        <div style="background-color: #f8f9fa; padding: 20px; border-left: 5px solid #007bff; border-radius: 5px; font-family: sans-serif;">
+            <h3 style="color: #007bff; margin-top: 0;">📧 XÁC NHẬN ĐẶT LỊCH KHÁM THÀNH CÔNG</h3>
+            <p>Xin chào <b>{receiver_email}</b>,</p>
+            <p>Lịch hẹn khám bệnh của bạn đã được phê duyệt thành công trên hệ thống Đại học Đại Nam. Chi tiết như sau:</p>
+            <hr style="border: none; border-top: 1px solid #dee2e6;">
             <p>🏥 <b>Địa điểm:</b> {clinic_name}</p>
             <p>👨‍⚕️ <b>Bác sĩ phụ trách:</b> BS. {doctor_name} ({experience})</p>
             <p>📞 <b>Hotline bác sĩ:</b> {phone}</p>
             <p>📅 <b>Thời gian:</b> <span style="color: #dc3545; font-weight: bold;">{time} ngày {date}</span></p>
-            <hr>
-            <p style="color: #6c757d; font-style: italic;">Vui lòng đến đúng giờ để tiến hành kiểm tra sức khỏe tốt nhất!</p>
+            <hr style="border: none; border-top: 1px solid #dee2e6;">
+            <p style="color: #6c757d; font-style: italic; font-size: 0.95em;">Vui lòng đến đúng giờ để tiến hành kiểm tra sức khỏe tốt nhất!</p>
         </div>
       </body>
     </html>
     """
     message.attach(MIMEText(html_content, "html", "utf-8"))
 
-    # 3. Tiến hành kết nối Server SMTP Gmail và gửi đi
+    # Kết nối trực tiếp đến Server SMTP của Gmail để gửi đi
     try:
         server = smtplib.SMTP("smtp.gmail.com", 587)
-        server.starttls()  # Bảo mật kết nối
+        server.starttls()  # Bảo mật kết nối mã hóa TLS
         server.login(sender_email, sender_password)
         server.sendmail(sender_email, receiver_email, message.as_string())
         server.quit()
         return True
     except Exception as e:
-        print(f"Lỗi gửi email: {e}")
+        # Nếu cấu hình sai tài khoản, lỗi sẽ hiển thị ở terminal để bạn kiểm tra
+        print(f"Lỗi gửi email thực tế: {e}")
         return False
 
 # Cấu hình trang web Streamlit
@@ -94,7 +99,6 @@ def find_doctors_by_symptom(symptom, clinic_id, doctors):
     matched_doctors = []
     for doc in doctors:
         if doc['clinic_id'] == clinic_id:
-            # Xử lý trường hợp symptoms có dấu ngoặc kép
             symptoms_str = doc['symptoms'].strip('"')
             doc_symptoms = [s.strip().lower() for s in symptoms_str.split(',')]
             for s in symptom_list:
@@ -107,33 +111,27 @@ def find_doctors_by_symptom(symptom, clinic_id, doctors):
 def check_and_schedule(doctor_id, date_str, time_str, appointments):
     for app in appointments:
         if app['doctor_id'] == str(doctor_id) and app['date'] == date_str and app['time_slot'] == time_str:
-            return False # Trùng lịch
-    return True # Trống lịch
+            return False  # Trùng lịch
+    return True  # Trống lịch
 
 def suggest_alternative_slots(doctor_id, date_str, appointments):
     working_slots = ["08:00", "09:00", "10:00", "11:00", "14:00", "15:00", "16:00"]
     return [slot for slot in working_slots if check_and_schedule(doctor_id, date_str, slot, appointments)]
 
-# Hàm vẽ bản đồ giả lập đường đi
 def draw_simulation_map(home_x, home_y, target_clinic, all_clinics):
     fig, ax = plt.subplots(figsize=(10, 7))
-    
-    # Tìm giới hạn bản đồ dựa trên tất cả các phòng khám
     all_x = [float(clinic['x']) for clinic in all_clinics] + [home_x]
     all_y = [float(clinic['y']) for clinic in all_clinics] + [home_y]
     min_x, max_x = min(all_x) - 2, max(all_x) + 2
     min_y, max_y = min(all_y) - 2, max(all_y) + 2
     
-    # 1. Vẽ nền bản đồ giả lập (màu xanh nhạt như đất)
     ax.set_facecolor('#e8f5e9')
     
-    # 2. Vẽ lưới đường giả lập
     for i in range(int(min_x), int(max_x) + 1):
         ax.axvline(x=i, color='#bdbdbd', linestyle='-', linewidth=0.5, alpha=0.5)
     for i in range(int(min_y), int(max_y) + 1):
         ax.axhline(y=i, color='#bdbdbd', linestyle='-', linewidth=0.5, alpha=0.5)
     
-    # 3. Vẽ tất cả các phòng khám khác (Màu cam) - Loại bỏ dấu tiếng Việt trên nhãn bản đồ để tuyệt đối không lỗi font
     for clinic in all_clinics:
         cx, cy = float(clinic['x']), float(clinic['y'])
         if clinic['id'] != target_clinic['id']:
@@ -141,24 +139,21 @@ def draw_simulation_map(home_x, home_y, target_clinic, all_clinics):
             short_name = clinic['name'].replace('Phòng Khám ', 'PK ').replace('Bệnh Viện ', 'BV ')
             ax.text(cx, cy + 0.4, short_name, fontsize=7, ha='center', color='#e65100', fontweight='bold')
             
-    # 4. Vẽ vị trí nhà của bạn (Điểm màu Đỏ với ngôi sao)
     ax.scatter(home_x, home_y, color='#f44336', s=200, marker='*', label='Nha cua ban', zorder=6, edgecolors='darkred', linewidth=2)
     ax.text(home_x, home_y - 0.7, 'Ban o day', fontsize=9, fontweight='bold', color='#b71c1c', ha='center')
     
-    # 5. Vẽ phòng khám gần nhất được chọn (Điểm màu Xanh lá với marker P)
     target_x, target_y = float(target_clinic['x']), float(target_clinic['y'])
     ax.scatter(target_x, target_y, color='#4caf50', s=200, marker='P', label='Phong kham gan nhat', zorder=6, edgecolors='darkgreen', linewidth=2)
     target_short = target_clinic["name"].replace('Phòng Khám ', 'PK ').replace('Bệnh Viện ', 'BV ')
     ax.text(target_x, target_y + 0.6, target_short, fontsize=8, fontweight='bold', color='#1b5e20', ha='center')
     
-    # 6. Vẽ đường đi giả lập lộ trình tối ưu
     mid_points = []
     num_points = 3
     for i in range(1, num_points):
         ratio = i / num_points
         mid_x = home_x + (target_x - home_x) * ratio
         mid_y = home_y + (target_y - home_y) * ratio
-        mid_x += random.uniform(-0.15, 0.15)  # Giảm độ nhiễu một chút để lộ trình nhìn mượt mà hơn
+        mid_x += random.uniform(-0.15, 0.15)
         mid_y += random.uniform(-0.15, 0.15)
         mid_points.append((mid_x, mid_y))
     
@@ -169,14 +164,12 @@ def draw_simulation_map(home_x, home_y, target_clinic, all_clinics):
     for mx, my in mid_points:
         ax.scatter(mx, my, color='#2196f3', s=30, zorder=5, marker='o')
     
-    # 7. Thêm khoảng cách thông tin
     distance = math.sqrt((target_x - home_x)**2 + (target_y - home_y)**2)
     ax.text((home_x + target_x)/2, (home_y + target_y)/2 + 0.3, 
             f'{distance:.2f} km', fontsize=9, fontweight='bold', 
             color='#1976d2', ha='center', 
             bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.8))
     
-    # Định dạng bản đồ
     ax.set_title("BAN DO GIA LAP LO TRINH DI CHUYEN", fontsize=12, fontweight='bold', pad=15, color='#1b5e20')
     ax.set_xlabel("Toa do X (km)", fontsize=10, fontweight='bold')
     ax.set_ylabel("Toa do Y (km)", fontsize=10, fontweight='bold')
@@ -192,18 +185,15 @@ def draw_simulation_map(home_x, home_y, target_clinic, all_clinics):
 # GIAO DIỆN ỨNG DỤNG WEB (STREAMLIT UI)
 # ==============================================================================
 st.title("🏥 HỆ THỐNG ĐẶT LỊCH KHÁM ONLINE")
-st.subheader("Khoa CNTT - Trường Đại học Đại Nam")
+st.subheader("Khoa Công nghệ thông tin - Đại học Đại Nam")
 st.markdown("---")
 
-# Tải dữ liệu đầu vào
 clinics = read_csv('clinics.csv')
 doctors = read_csv('doctors.csv')
 appointments = read_csv('appointments.csv')
 
 if clinics and doctors:
-    # ------------------ KHU VỰC NHẬP THÔNG TIN BỆNH NHÂN ------------------
     st.header("1. Nhập thông tin bệnh nhân")
-    
     patient_email = st.text_input("📩 Email nhận nhắc lịch (Yêu cầu 6):", "nguyenvandan@gmail.com")
     
     col1, col2 = st.columns(2)
@@ -214,19 +204,13 @@ if clinics and doctors:
         
     symptom_input = st.text_input("🤒 Nhập triệu chứng bệnh của bạn (Ví dụ: ho, sot, dau bung):", "dau bung")
 
-    # Bước 1: Tìm phòng khám gần nhất dựa trên tọa độ nhà
     nearest_clinic, dist = find_nearest_clinic(home_x, home_y, clinics)
-    
-    # Bước 2: Tìm bác sĩ phù hợp với triệu chứng TẠI phòng khám gần nhất đó
     matched_doctors = find_doctors_by_symptom(symptom_input, nearest_clinic['id'], doctors)
 
     st.markdown("---")
     st.header("2. Kết quả tìm kiếm & Bản đồ lộ trình")
-    
-    # Hiển thị phòng khám gần nhất (Yêu cầu 2)
     st.info(f"📍 **Phòng khám gần nhất:** {nearest_clinic['name']} (Khoảng cách tính toán: {dist:.2f} km)")
     
-    # Hiển thị bản đồ giả lập trực quan bằng matplotlib
     with st.spinner("Đang dựng bản đồ lộ trình..."):
         map_fig = draw_simulation_map(home_x, home_y, nearest_clinic, clinics)
         st.pyplot(map_fig)
@@ -234,10 +218,7 @@ if clinics and doctors:
     if not matched_doctors:
         st.warning(f"❌ Không tìm thấy bác sĩ phù hợp với triệu chứng '{symptom_input}' tại phòng khám gần nhất.")
     else:
-        # Chọn bác sĩ đáp ứng triệu chứng (Yêu cầu 3)
         selected_doctor = matched_doctors[0]
-        
-        # Đọc thêm thông tin mở rộng (phone, experience) nếu có, tránh crash nếu file cũ thiếu cột
         phone_num = selected_doctor.get('phone', 'Chưa cập nhật')
         exp_year = selected_doctor.get('experience', 'Chưa rõ')
         
@@ -246,7 +227,6 @@ if clinics and doctors:
         st.markdown("---")
         st.header("3. Chọn thời gian & Đặt lịch")
         
-        # Hiển thị đồng hồ thời gian thực chạy giây, phút, giờ (dùng thời gian client)
         import streamlit.components.v1 as components
         clock_html = """
         <div style="background-color: #e3f2fd; padding: 15px; border-radius: 10px; border: 2px solid #2196f3; text-align: center;">
@@ -273,16 +253,14 @@ if clinics and doctors:
         """
         components.html(clock_html, height=150)
         
-        # Chọn thời gian mong muốn (Yêu cầu 4)
         desired_date = st.date_input("📅 Chọn ngày khám:").strftime("%Y-%m-%d")
         desired_time = st.selectbox("⏰ Chọn khung giờ mong muốn:", ["08:00", "09:00", "10:00", "11:00", "14:00", "15:00", "16:00"], index=1)
 
-        # Thêm JavaScript để kiểm tra thời gian client-side trước khi submit
+        # Kiểm tra frontend bằng JS trước khi Submit
         validation_js = f"""
         <script>
-        // Tìm nút đặt lịch và thêm validation
         document.addEventListener('DOMContentLoaded', function() {{
-            const buttons = document.querySelectorAll('button[kind="primary"]');
+            const buttons = document.querySelectorAll('button');
             buttons.forEach(button => {{
                 if (button.textContent.includes('TIẾN HÀNH ĐẶT LỊCH')) {{
                     button.addEventListener('click', function(e) {{
@@ -290,91 +268,92 @@ if clinics and doctors:
                         const selectedTime = '{desired_time}';
                         const selectedDateTime = new Date(selectedDate + 'T' + selectedTime + ':00');
                         const now = new Date();
-                        
                         if (selectedDateTime < now) {{
                             e.preventDefault();
-                            e.stopPropagation();
                             alert('❌ Khung giờ ' + selectedTime + ' ngày ' + selectedDate + ' đã qua!\\nVui lòng chọn thời gian trong tương lai.');
                         }}
                     }});
-                }}
+                }
             }});
         }});
         </script>
         """
         components.html(validation_js, height=0)
-# Nút bấm tiến hành đặt lịch
+
+        # NÚT BẤM TIẾN HÀNH ĐẶT LỊCH KHÁM
         if st.button("🏥 TIẾN HÀNH ĐẶT LỊCH"):
-            # Kiểm tra xem khung giờ đã qua chưa bằng thời gian thực Việt Nam (GMT+7)
             from datetime import datetime
             import pytz
             
             vietnam_tz = pytz.timezone('Asia/Ho_Chi_Minh')
             current_datetime = datetime.now(vietnam_tz).replace(tzinfo=None)
-            
             selected_datetime = datetime.strptime(f"{desired_date} {desired_time}", "%Y-%m-%d %H:%M")
             
             if selected_datetime < current_datetime:
                 st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} đã qua so với thời gian thực! Vui lòng chọn thời gian trong tương lai.")
-                st.info("👉 Vui lòng chọn lại ngày và khung giờ phù hợp.")
             else:
                 is_free = check_and_schedule(selected_doctor['id'], desired_date, desired_time, appointments)
                 
                 if is_free:
-                    # 1. Lưu dữ liệu vào file CSV
+                    # 1. Lưu thông tin lịch hẹn vào database file CSV
                     new_app_id = len(appointments) + 1
                     write_appointment_to_csv('appointments.csv', [new_app_id, patient_email, selected_doctor['id'], desired_date, desired_time])
                     
-                    # 2. Gọi hàm gửi thư thật (Hệ thống chạy ngầm gửi tới hòm thư người dùng)
-                    # Lưu ý: Đảm bảo bạn đã định nghĩa hàm send_real_email ở phía trên đầu file index.py
+                    # 2. Thực hiện kích hoạt gửi EMAIL THẬT chạy ngầm đến địa chỉ người dùng
                     send_real_email(
                         patient_email, 
                         nearest_clinic['name'], 
                         selected_doctor['name'], 
-                        selected_doctor['experience'], 
-                        selected_doctor['phone'], 
+                        exp_year, 
+                        phone_num, 
                         desired_time, 
                         desired_date
                     )
                     
-                    # 3. Lưu nội dung HTML Email vào session_state để giữ lại giao diện sau khi rerun
+                    # 3. Đồng bộ giao diện lưu vào session_state để hiển thị bản copy trên Web
                     st.session_state['booking_success_email'] = f"""
-                    <div style="background-color: #f8f9fa; padding: 20px; border-left: 5px solid #007bff; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.05);">
+                    <div style="background-color: #f8f9fa; padding: 20px; border-left: 5px solid #007bff; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.05); font-family: sans-serif;">
                         <h5 style="color: #007bff; margin-top: 0;">📧 HỆ THỐNG EMAIL TỰ ĐỘNG — GỬI TỚI: {patient_email}</h5>
-                        <p>Xin chào! Lịch hẹn khám bệnh của bạn đã được phê duyệt thành công trên hệ thống và một bản sao đã được gửi tới hòm thư của bạn:</p>
-                        <hr style="border-top: 1px solid #dee2e6;">
+                        <p>Xin chào! Lịch hẹn khám bệnh của bạn đã được phê duyệt thành công trên hệ thống và một bản sao thư điện tử gốc đã được gửi trực tiếp tới hòm thư của bạn:</p>
+                        <hr style="border: none; border-top: 1px solid #dee2e6;">
                         <p>🏥 <b>Địa điểm:</b> {nearest_clinic['name']}</p>
-                        <p>👨‍⚕️ <b>Bác sĩ phụ trách:</b> BS. {selected_doctor['name']} ({selected_doctor['experience']})</p>
-                        <p>📞 <b>Hotline liên hệ bác sĩ:</b> {selected_doctor['phone']}</p>
+                        <p>👨‍⚕️ <b>Bác sĩ phụ trách:</b> BS. {selected_doctor['name']} ({exp_year})</p>
+                        <p>📞 <b>Hotline liên hệ bác sĩ:</b> {phone_num}</p>
                         <p>📅 <b>Thời gian:</b> <span style="color: #dc3545; font-weight: bold;">{desired_time} ngày {desired_date}</span></p>
-                        <hr style="border-top: 1px solid #dee2e6;">
-                        <p style="font-size: 0.9em; color: #6c757d; font-style: italic;">👉 Vui lòng đến đúng giờ để tiến hành kiểm tra sức khỏe tốt nhất!</p>
+                        <hr style="border: none; border-top: 1px solid #dee2e6;">
+                        <p style="font-size: 0.9em; color: #6c757d; font-style: italic;">👉 Vui lòng mở hòm thư điện tử cá nhân của bạn để kiểm tra hộp thư đến!</p>
                     </div>
                     <br>
                     """
-                    # Bật cờ kích hoạt hiệu ứng bóng bay sau khi reload
                     st.session_state['show_balloons'] = True
-                    
-                    # 4. Khởi động lại app để nạp lại bảng dữ liệu lịch hẹn mới lập tức
                     st.rerun()
-                
                 else:
                     st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} của Bác sĩ {selected_doctor['name']} đã bị trùng lịch!")
                     suggestions = suggest_alternative_slots(selected_doctor['id'], desired_date, appointments)
                     if suggestions:
                         st.warning(f"💡 Đề xuất các khung giờ thay thế còn trống trong ngày: {', '.join(suggestions)}")
-                        st.info(f"👉 Vui lòng chọn lại một trong các khung giờ trống phía trên để đặt lịch.")
                     else:
                         st.error("Rất tiếc, bác sĩ này đã kín lịch hoàn toàn trong ngày hôm nay. Vui lòng chọn ngày khác.")
 
     # ==============================================================================
-    # NƠI HIỂN THỊ EMAIL TRÊN WEB SAU KHI RERUN
-    # (Đoạn này đặt ngay phía trên subheader "Danh sách lịch hẹn đã đăng ký")
+    # KHU VỰC HIỂN THỊ EMAIL VÀ BẢNG DANH SÁCH SAU KHI RERUN
     # ==============================================================================
+    st.markdown("---")
+    
+    # Hiển thị card thông báo và hiệu ứng bong bóng khi đặt xong
     if 'booking_success_email' in st.session_state:
         if st.session_state.get('show_balloons', False):
             st.balloons()
             st.success("✔️ Đặt lịch thành công! Chi tiết lịch hẹn đã được đồng bộ vào hệ thống dữ liệu.")
-            st.session_state['show_balloons'] = False # Tắt cờ hiệu để tránh lặp lại hiệu ứng
-            
+            st.session_state['show_balloons'] = False
         st.markdown(st.session_state['booking_success_email'], unsafe_allow_html=True)
+        
+    # HIỂN THỊ BẢNG DANH SÁCH ĐỌC TỪ FILE CSV ĐỂ KIỂM CHỨNG
+    st.subheader("📋 Danh sách lịch hẹn đã đăng ký trên hệ thống")
+    latest_appointments = read_csv('appointments.csv')
+    if latest_appointments:
+        st.dataframe(latest_appointments, use_container_width=True)
+    else:
+        st.info("Hiện chưa có lịch hẹn nào được đăng ký.")
+else:
+    st.error("❌ Không thể tải dữ liệu đầu vào. Vui lòng kiểm tra lại các file CSV!")
