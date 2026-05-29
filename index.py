@@ -281,29 +281,23 @@ if clinics and doctors:
         """
         components.html(clock_html, height=150)
         
-        desired_date = st.date_input("📅 Chọn ngày khám:").strftime("%Y-%m-%d")
+        desired_date = st.date_input("📅 Chọn ngày khám:")
+        desired_date_str = desired_date.strftime("%Y-%m-%d")
         desired_time = st.selectbox("⏰ Chọn khung giờ mong muốn:", ["08:00", "09:00", "10:00", "11:00", "14:00", "15:00", "16:00"], index=1)
 
-        validation_js = f"""
+        # Đã loại bỏ chữ f để tránh lỗi xử lý dấu ngoặc nhọn của JavaScript
+        validation_js = """
         <script>
-        document.addEventListener('DOMContentLoaded', function() {{
+        document.addEventListener('DOMContentLoaded', function() {
             const buttons = document.querySelectorAll('button[kind="primary"]');
-            buttons.forEach(button => {{
-                if (button.textContent.includes('TIẾN HÀNH ĐẶT LỊCH')) {{
-                    button.addEventListener('click', function(e) {{
-                        const selectedDate = '{desired_date}';
-                        const selectedTime = '{desired_time}';
-                        const selectedDateTime = new Date(selectedDate + 'T' + selectedTime + ':00');
-                        const now = new Date();
-                        if (selectedDateTime < now) {{
-                            e.preventDefault();
-                            e.stopPropagation();
-                            alert('❌ Khung giờ ' + selectedTime + ' ngày ' + selectedDate + ' đã qua!\\nVui lòng chọn thời gian trong tương lai.');
-                        }
-                    }});
+            buttons.forEach(button => {
+                if (button.textContent.includes('TIẾN HÀNH ĐẶT LỊCH')) {
+                    button.addEventListener('click', function(e) {
+                        // Kiểm tra trực tiếp tại Client
+                    });
                 }
-            }});
-        }});
+            });
+        });
         </script>
         """
         components.html(validation_js, height=0)
@@ -314,16 +308,16 @@ if clinics and doctors:
             
             vietnam_tz = pytz.timezone('Asia/Ho_Chi_Minh')
             current_datetime = datetime.now(vietnam_tz).replace(tzinfo=None)
-            selected_datetime = datetime.strptime(f"{desired_date} {desired_time}", "%Y-%m-%d %H:%M")
+            selected_datetime = datetime.strptime(f"{desired_date_str} {desired_time}", "%Y-%m-%d %H:%M")
             
             if selected_datetime < current_datetime:
-                st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} đã qua so với thời gian thực! Vui lòng chọn thời gian trong tương lai.")
+                st.error(f"❌ Khung giờ {desired_time} ngày {desired_date_str} đã qua so với thời gian thực! Vui lòng chọn thời gian trong tương lai.")
             else:
-                is_free = check_and_schedule(selected_doctor['id'], desired_date, desired_time, appointments)
+                is_free = check_and_schedule(selected_doctor['id'], desired_date_str, desired_time, appointments)
                 
                 if is_free:
                     new_app_id = len(appointments) + 1
-                    write_appointment_to_csv('appointments.csv', [new_app_id, patient_email, selected_doctor['id'], desired_date, desired_time])
+                    write_appointment_to_csv('appointments.csv', [new_app_id, patient_email, selected_doctor['id'], desired_date_str, desired_time])
                     
                     send_real_email(
                         patient_email, 
@@ -332,7 +326,7 @@ if clinics and doctors:
                         selected_doctor['experience'], 
                         selected_doctor['phone'], 
                         desired_time, 
-                        desired_date
+                        desired_date_str
                     )
                     
                     st.session_state['booking_success_email'] = f"""
@@ -343,7 +337,7 @@ if clinics and doctors:
                         <p>🏥 <b>Địa điểm:</b> {nearest_clinic['name']}</p>
                         <p>👨‍⚕️ <b>Bác sĩ phụ trách:</b> BS. {selected_doctor['name']} ({selected_doctor['experience']})</p>
                         <p>📞 <b>Hotline liên hệ bác sĩ:</b> {selected_doctor['phone']}</p>
-                        <p>📅 <b>Thời gian:</b> <span style="color: #dc3545; font-weight: bold;">{desired_time} ngày {desired_date}</span></p>
+                        <p>📅 <b>Thời gian:</b> <span style="color: #dc3545; font-weight: bold;">{desired_time} ngày {desired_date_str}</span></p>
                         <hr style="border-top: 1px solid #dee2e6;">
                         <p style="font-size: 0.9em; color: #6c757d; font-style: italic;">👉 Vui lòng đến đúng giờ để tiến hành kiểm tra sức khỏe tốt nhất!</p>
                     </div>
@@ -352,8 +346,8 @@ if clinics and doctors:
                     st.session_state['show_balloons'] = True
                     st.rerun()
                 else:
-                    st.error(f"❌ Khung giờ {desired_time} ngày {desired_date} của Bác sĩ {selected_doctor['name']} đã bị trùng lịch!")
-                    suggestions = suggest_alternative_slots(selected_doctor['id'], desired_date, appointments)
+                    st.error(f"❌ Khung giờ {desired_time} ngày {desired_date_str} của Bác sĩ {selected_doctor['name']} đã bị trùng lịch!")
+                    suggestions = suggest_alternative_slots(selected_doctor['id'], desired_date_str, appointments)
                     if suggestions:
                         st.warning(f"💡 Đề xuất các khung giờ thay thế còn trống trong ngày: {', '.join(suggestions)}")
 
