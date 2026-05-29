@@ -1,21 +1,21 @@
 id,name,specialty,symptoms,clinic_id,phone,experience
-101,Nguyễn Văn A,Tai Mũi Họng,đau họng,ho,sốt,đau đầu,1,0901234567,15 năm
-102,Trần Thị B,Da Liễu,mẩn ngứa,dị ứng,nổi ban,2,0901234568,12 năm
-103,Lê Văn C,Nội Tiết,mệt mỏi,giảm cân,táo bón,1,0901234569,18 năm
-104,Phạm Minh D,Tai Mũi Họng,ngạt mũi,ho,chảy nước mũi,3,0901234570,10 năm
-105,Đỗ Thị E,Thần Kinh,đau đầu,chuột rút,tê bì,4,0901234571,20 năm
-106,Ngô Trung F,Hậu Môn - Trực Tràng,đau bụng,tiêu chảy,táo bón,5,0901234572,14 năm
-107,Phạm Quang G,Tim Mạch,đau ngực,hụt hơi,đau tim,6,0901234573,25 năm
-108,Nguyễn Thị H,Nhi,ho,sốt,biếng ăn,7,0901234574,8 năm
-109,Trần Văn I,Cơ Xương Khớp,đau khớp,đau lưng,vai cứng,8,0901234575,16 năm
-110,Lê Thị K,Phụ Sản,đau bụng kinh,rối loạn kinh nguyệt,9,0901234576,11 năm
-111,Đinh Văn L,Mắt,nhìn mờ,đau mắt,chảy nước mắt,10,0901234577,13 năm
-112,Ngô Thị M,Răng Hàm Mặt,đau răng,viêm lợi,chảy máu chân răng,11,0901234578,9 năm
-113,Phạm Văn N,Ung Bướu,giảm cân,mệt mỏi,đau lan,12,0901234579,22 năm
-114,Trần Thị O,Dinh Dưỡng,biếng ăn,táo bón,thiếu máu,1,0901234580,7 năm
-115,Lê Văn P,Tâm Lý,lo âu,mất ngủ, Stress,2,0901234581,17 năm
-116,Nguyễn Thị Q,Hô Hấp,khó thở,ho,khò khè,3,0901234582,19 năm
-117,Đỗ Văn R,Tiêu Hóa,đau bụng,buồn nôn,ăn không tiêu,4,0901234583,14 năm
-118,Phạm Thị S,Thận Niệu,đau lưng,tiểu buốt,tiểu rắt,5,0901234584,12 năm
-119,Ngô Trung T,Cấp Cứu,đau dữ dội,chảy máu,ngất xỉu,6,0901234585,21 năm
-120,Nguyễn Văn U,Lão Khoa,đau khớp,mất trí nhớ,tiểu đêm,7,0901234586,16 năm
+101,Nguyễn Văn A,Tai Mũi Họng,đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,1,0901234567,15 năm
+102,Trần Thị B,Da Liễu,mẩn ngứa,dị ứng,nổi ban,đau da,viêm da,nổi mẩn đỏ,ngứa,phát ban,đau đầu,mệt mỏi,2,0901234568,12 năm
+103,Lê Văn C,Nội Tiết,mệt mỏi,giảm cân,táo bón,đau đầu,tiểu nhiều,đau bụng,buồn nôn,biếng ăn,sốt,1,0901234569,18 năm
+104,Phạm Minh D,Tai Mũi Họng,ngạt mũi,ho,chảy nước mũi,đau họng,sốt,đau đầu,khó thở,mệt mỏi,đau ngực,3,0901234570,10 năm
+105,Đỗ Thị E,Thần Kinh,đau đầu,chuột rút,tê bì,đau lưng,đau vai,đau cổ,mệt mỏi,lo âu,mất ngủ,đau bụng,4,0901234571,20 năm
+106,Ngô Trung F,Hậu Môn - Trực Tràng,đau bụng,tiêu chảy,táo bón,buồn nôn,ăn không tiêu,đau đầu,mệt mỏi,sốt,biếng ăn,5,0901234572,14 năm
+107,Phạm Quang G,Tim Mạch,đau ngực,hụt hơi,đau tim,đau đầu,mệt mỏi,khó thở,đau lưng,đau vai,sốt,6,0901234573,25 năm
+108,Nguyễn Thị H,Nhi,ho,sốt,biếng ăn,đau bụng,tiêu chảy,nôn mửa,đau đầu,mệt mỏi,ngạt mũi,phát ban,7,0901234574,8 năm
+109,Trần Văn I,Cơ Xương Khớp,đau khớp,đau lưng,vai cứng,đau gối,đau cổ tay,đau đầu,mệt mỏi,chuột rút,tê bì,8,0901234575,16 năm
+110,Lê Thị K,Phụ Sản,đau bụng kinh,rối loạn kinh nguyệt,đau bụng,buồn nôn,mệt mỏi,đau đầu,biếng ăn,sốt,9,0901234576,11 năm
+111,Đinh Văn L,Mắt,nhìn mờ,đau mắt,chảy nước mắt,đau đầu,mắt đỏ,mệt mỏi,ngứa mắt,đau cổ,10,0901234577,13 năm
+112,Ngô Thị M,Răng Hàm Mặt,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau đầu,mệt mỏi,đau mặt,11,0901234578,9 năm
+113,Phạm Văn N,Ung Bướu,giảm cân,mệt mỏi,đau lan,đau đầu,sốt,biếng ăn,đau bụng,buồn nôn,đau ngực,12,0901234579,22 năm
+114,Trần Thị O,Dinh Dưỡng,biếng ăn,táo bón,thiếu máu,mệt mỏi,đau đầu,đau bụng,sốt,giảm cân,1,0901234580,7 năm
+115,Lê Văn P,Tâm Lý,lo âu,mất ngủ,Stress,đau đầu,mệt mỏi,biếng ăn,đau bụng,buồn nôn,tim đập nhanh,2,0901234581,17 năm
+116,Nguyễn Thị Q,Hô Hấp,khó thở,ho,khò khè,đau ngực,sốt,đau đầu,mệt mỏi,ngạt mũi,đau họng,3,0901234582,19 năm
+117,Đỗ Văn R,Tiêu Hóa,đau bụng,buồn nôn,ăn không tiêu,tiêu chảy,táo bón,đau đầu,mệt mỏi,sốt,biếng ăn,4,0901234583,14 năm
+118,Phạm Thị S,Thận Niệu,đau lưng,tiểu buốt,tiểu rắt,tiểu nhiều,đau bụng,mệt mỏi,sốt,đau đầu,5,0901234584,12 năm
+119,Ngô Trung T,Cấp Cứu,đau dữ dội,chảy máu,ngất xỉu,sốt cao,đau đầu,mệt mỏi,đau ngực,khó thở,đau bụng,6,0901234585,21 năm
+120,Nguyễn Văn U,Lão Khoa,đau khớp,mất trí nhớ,tiểu đêm,mệt mỏi,đau đầu,đau lưng,tê bì,biếng ăn,sốt,7,0901234586,16 năm
