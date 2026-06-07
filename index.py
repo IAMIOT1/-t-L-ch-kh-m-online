@@ -258,17 +258,39 @@ if clinics and doctors:
         
     symptom_input = st.text_input("🤒 Nhập triệu chứng bệnh của bạn ", placeholder="đau bụng , ho")
 
-    # Bước 1: Tìm phòng khám gần nhất dựa trên tọa độ đã xác định
+    # Bước 1: Tìm phòng khám gần nhất dựa trên tọa độ đã xác định để làm gợi ý mặc định
     nearest_clinic, dist = find_nearest_clinic(home_lat, home_lng, clinics)
-    
-    # Bước 2: Tìm bác sĩ phù hợp với triệu chứng TẠI phòng khám gần nhất đó
-    matched_doctors = find_doctors_by_symptom(symptom_input, nearest_clinic['id'], doctors)
 
     st.markdown("---")
     st.header("2. Kết quả tìm kiếm & Bản đồ lộ trình")
-    st.write("📍 **Xác định vị trí hiện tại của bạn:**")
-    # Hiển thị phòng khám gần nhất công khai số km
-    st.info(f"📍 **Phòng khám gần nhất với bạn:** {nearest_clinic['name']} (Khoảng cách thực tế: {dist:.2f} km)")
+    st.write("📍 **Xác định vị trí và chọn cơ sở khám bệnh:**")
+
+    # Tạo danh sách hiển thị kèm khoảng cách tính theo đường chim bay của từng phòng khám
+    clinic_options = []
+    for c in clinics:
+        d_km = haversine_distance(home_lat, home_lng, float(c['y']), float(c['x']))
+        clinic_options.append(f"{c['name']} (Cách {d_km:.2f} km - Địa chỉ: {c['address']})")
+
+    # Tìm vị trí (index) của phòng khám gần nhất trong danh sách để làm mặc định
+    nearest_index = clinics.index(nearest_clinic)
+
+    # Thanh selectbox cho phép đổi phòng khám chủ động
+    selected_option = st.selectbox(
+        "🏥 Hệ thống tự chọn phòng khám gần bạn nhất. Bạn có thể bấm vào đây để đổi cơ sở khác nếu muốn:",
+        options=clinic_options,
+        index=nearest_index
+    )
+
+    # Lấy ra đối tượng phòng khám thực tế đang được chọn từ selectbox
+    chosen_index = clinic_options.index(selected_option)
+    current_clinic = clinics[chosen_index]
+
+    # Tính toán lại khoảng cách thực tế của phòng khám được chọn
+    current_dist = haversine_distance(home_lat, home_lng, float(current_clinic['y']), float(current_clinic['x']))
+    st.info(f"📍 **Cơ sở đang được chọn:** {current_clinic['name']} (Khoảng cách di chuyển: ~{current_dist:.2f} km)")
+
+    # Bước 2: Tìm bác sĩ phù hợp với triệu chứng TẠI phòng khám được chọn
+    matched_doctors = find_doctors_by_symptom(symptom_input, current_clinic['id'], doctors)
     
     # Tạo bản đồ tích hợp hiển thị lộ trình và lắng nghe sự kiện click thay đổi vị trí
     with st.spinner("Đang đồng bộ bản đồ vệ tinh thực tế..."):
