@@ -262,46 +262,66 @@ if clinics and doctors:
     nearest_clinic, dist = find_nearest_clinic(home_lat, home_lng, clinics)
 
 # ==============================================================================
-    # 2. KẾT QUẢ TÌM KIẾM & BẢN ĐỒ LỘ TRÌNH (SẮP XẾP TỪ GẦN ĐẾN XA)
+    # 2. KẾT QUẢ TÌM KIẾM & BẢN ĐỒ LỘ TRÌNH (TÍNH THEO QUÃNG ĐƯỜNG DI CHUYỂN THỰC TẾ)
     # ==============================================================================
     st.markdown("---")
     st.header("2. Kết quả tìm kiếm & Bản đồ lộ trình")
     st.write("📍 **Xác định vị trí và chọn cơ sở khám bệnh:**")
 
-    # --- BƯỚC THAY ĐỔI: SẮP XẾP DANH SÁCH PHÒNG KHÁM THEO KHOẢNG CÁCH THỰC TẾ ---
-    # Sắp xếp danh sách clinics gốc dựa trên khoảng cách từ vị trí hiện tại (home_lat, home_lng)
-    sorted_clinics = sorted(
-        clinics, 
-        key=lambda c: haversine_distance(home_lat, home_lng, float(c['y']), float(c['x']))
-    )
+    # Hàm bổ trợ gọi nhanh API OSRM để lấy khoảng cách đường đi thực tế (quãng đường)
+    def get_real_road_distance(lon1, lat1, lon2, lat2):
+        try:
+            url = f"http://router.project-osrm.org/route/v1/driving/{lon1},{lat1};{lon2},{lat2}?overview=false"
+            res = requests.get(url, timeout=2).json()
+            if res.get("code") == "Ok":
+                # Quy đổi từ mét sang km
+                return res["routes"][0]["distance"] / 1000
+        except Exception:
+            pass
+        # Nếu API lỗi hoặc mất mạng, tự động quay về dùng đường chim bay làm phương án dự phòng
+        return haversine_distance(lat1, lon1, lat2, lon2)
 
-    # Tạo danh sách hiển thị cho selectbox từ danh sách đã được sắp xếp
-    clinic_options = []
-    for c in sorted_clinics:
-        d_km = haversine_distance(home_lat, home_lng, float(c['y']), float(c['x']))
-        clinic_options.append(f"{c['name']} (Cách {d_km:.2f} km - Địa chỉ: {c['address']})")
+    # --- TIẾN HÀNH TÍNH QUÃNG ĐƯỜNG THỰC TẾ VÀ SẮP XẾP ---
+    with st.spinner("🔄 Đang tính toán quãng đường thực tế đến các phòng khám..."):
+        clinics_with_distance = []
+        for c in clinics:
+            # Lấy kinh độ (x) và vĩ độ (y) của phòng khám
+            cx, cy = float(c['x']), float(c['y'])
+            # Gọi API lấy khoảng cách đường đi thực tế
+            real_dist = get_real_road_distance(home_lng, home_lat, cx, cy)
+            
+            # Lưu tạm khoảng cách vào object phòng khám để xử lý
+            c_copy = c.copy()
+            c_copy['real_distance'] = real_dist
+            clinics_with_distance.append(c_copy)
+            
+        # Sắp xếp danh sách từ gần nhất đến xa nhất dựa theo QUÃNG ĐƯỜNG THỰC TẾ
+        sorted_clinics = sorted(clinics_with_distance, key=lambda x: x['real_distance'])
 
-    # Vì danh sách đã được sắp xếp từ gần đến xa, nên phòng khám gần nhất luôn nằm đầu tiên (index = 0)
+    # Tạo danh sách hiển thị cho selectbox
+    clinic_options = [
+        f"{c['name']} (Quãng đường thực tế: {c['real_distance']:.2f} km - Địa chỉ: {c['address']})" 
+        for c in sorted_clinics
+    ]
+
+    # Phòng khám có quãng đường ngắn nhất luôn đứng đầu (index = 0)
     nearest_index = 0
 
-    # Thanh selectbox hiển thị danh sách từ gần đến xa
+    # Thanh selectbox hiển thị danh sách sắp xếp theo quãng đường thực tế
     selected_option = st.selectbox(
-        "🏥 Danh sách đã được sắp xếp theo thứ tự gần bạn nhất (từ trên xuống dưới):",
+        "🏥 Danh sách đã được sắp xếp theo quãng đường di chuyển thực tế (từ gần đến xa):",
         options=clinic_options,
         index=nearest_index
     )
 
-    # Lấy ra đối tượng phòng khám thực tế đang được chọn từ danh sách đã sắp xếp
+    # Lấy ra đối tượng phòng khám thực tế đang được chọn
     chosen_index = clinic_options.index(selected_option)
     current_clinic = sorted_clinics[chosen_index]
 
-    # Tính toán khoảng cách thực tế của phòng khám được chọn để hiển thị thông báo
-    current_dist = haversine_distance(home_lat, home_lng, float(current_clinic['y']), float(current_clinic['x']))
-    st.info(f"📍 **Cơ sở đang được chọn:** {current_clinic['name']} (Khoảng cách di chuyển: ~{current_dist:.2f} km)")
+    st.info(f"🏥 **Cơ sở đang được chọn:** {current_clinic['name']} (Quãng đường di chuyển: {current_clinic['real_distance']:.2f} km)")
 
-    # 🔥 HIỂN THỊ BẢN ĐỒ: Luôn luôn vẽ lộ trình đường đi tới phòng khám được chọn
+    # 🔥 HIỂN THỊ BẢN ĐỒ: Vẽ lộ trình thực tế bám theo đường phố đến cơ sở được chọn
     with st.spinner("Đang đồng bộ bản đồ vệ tinh thực tế..."):
-        # Lưu ý: truyền sorted_clinics vào để bản đồ hiển thị đầy đủ các marker khác xung quanh
         map_obj = draw_simulation_map(home_lat, home_lng, current_clinic, sorted_clinics)
         st_data = st_folium(map_obj, width=700, height=450, key="integrated_map_picker")
         
