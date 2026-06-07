@@ -8,6 +8,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import folium
 from streamlit_folium import st_folium
+import requests
 
 def send_real_email(receiver_email, clinic_name, doctor_name, experience, phone, time, date):
     # 1. Cấu hình thông tin tài khoản gửi
@@ -135,7 +136,9 @@ def suggest_alternative_slots(doctor_id, date_str, appointments):
     return [slot for slot in working_slots if check_and_schedule(doctor_id, date_str, slot, appointments)]
 
 # Hàm vẽ bản đồ lộ trình tối ưu duy nhất dựa trên tọa độ thực Lat/Lng
+
 def draw_simulation_map(home_lat, home_lng, target_clinic, all_clinics):
+    # Khởi tạo bản đồ Folium tập trung tại vị trí người dùng
     m = folium.Map(location=[home_lat, home_lng], zoom_start=14, control_scale=True)
     
     # Cấu hình các layer bản đồ đường phố và vệ tinh
@@ -146,7 +149,7 @@ def draw_simulation_map(home_lat, home_lng, target_clinic, all_clinics):
         name='Bản đồ Vệ tinh (Google)'
     ).add_to(m)
 
-    # 1. Đánh dấu vị trí Người dùng (Đỏ)
+    # 1. Đánh dấu vị trí Người dùng (Màu đỏ)
     folium.Marker(
         location=[home_lat, home_lng],
         popup=f"<b>Vị trí của bạn</b><br>Tọa độ thực: ({home_lat:.4f}, {home_lng:.4f})",
@@ -154,7 +157,7 @@ def draw_simulation_map(home_lat, home_lng, target_clinic, all_clinics):
         icon=folium.Icon(color='red', icon='home', prefix='fa')
     ).add_to(m)
     
-    # 2. Đánh dấu các phòng khám vệ tinh khác (Cam)
+    # 2. Đánh dấu các phòng khám vệ tinh khác xung quanh (Màu cam)
     for clinic in all_clinics:
         cx, cy = float(clinic['x']), float(clinic['y'])
         if clinic['id'] != target_clinic['id']:
@@ -165,8 +168,8 @@ def draw_simulation_map(home_lat, home_lng, target_clinic, all_clinics):
                 icon=folium.Icon(color='orange', icon='plus', prefix='fa')
             ).add_to(m)
 
-    # 3. Đánh dấu phòng khám GẦN NHẤT được hệ thống chọn (Xanh lá)
-    target_x, target_y = float(target_clinic['x']), float(target_clinic['y'])
+    # 3. Đánh dấu phòng khám GẦN NHẤT được hệ thống chọn (Màu xanh lá)
+    target_x, target_y = float(target_clinic['x']), float(target_clinic['y'])  # x là Lng, y là Lat
     folium.Marker(
         location=[target_y, target_x],
         popup=f"<div style='width:200px;'><b>🏥 {target_clinic['name']}</b><br>Đây là phòng khám gần bạn nhất!</div>",
@@ -174,9 +177,41 @@ def draw_simulation_map(home_lat, home_lng, target_clinic, all_clinics):
         icon=folium.Icon(color='green', icon='hospital-o', prefix='fa')
     ).add_to(m)
     
-    # 4. Vẽ duy nhất một đường lộ trình nối từ Vị trí chọn -> Phòng khám gần nhất
-    points = [[home_lat, home_lng], [target_y, target_x]]
-    folium.PolyLine(points, color="#1a73e8", weight=5, opacity=0.8).add_to(m)
+    # 4. 🔥 GOOGLE MAPS ROUTING: Gọi API OSRM để lấy đường đi thực tế chạy theo các tuyến phố
+    try:
+        # Định dạng URL API OSRM: kinh_độ,vĩ_độ của điểm đi và điểm đến
+        url = f"http://router.project-osrm.org/route/v1/driving/{home_lng},{home_lat};{target_x},{target_y}?overview=full&geometries=geojson"
+        response = requests.get(url, timeout=5).json()
+        
+        if response.get("code") == "Ok":
+            # Trích xuất danh sách các điểm tọa độ thật trên đường phố từ API
+            geometry = response["routes"][0]["geometry"]["coordinates"]
+            # OSRM trả về [Kinh độ, Vĩ độ], cần đảo ngược lại thành [Vĩ độ, Kinh độ] để Folium hiểu
+            street_route_points = [[coord[1], coord[0]] for coord in geometry]
+            
+            # Lấy thông tin khoảng cách thực tế di chuyển trên đường (quy đổi từ mét sang km)
+            real_distance_km = response["routes"][0]["distance"] / 1000
+            duration_mins = response["routes"][0]["duration"] / 60
+            
+            # Vẽ đường lót mờ tạo hiệu ứng đường đi đổ bóng (Shadow Path)
+            folium.PolyLine(street_route_points, color="#93c5fd", weight=8, opacity=0.5).add_to(m)
+            
+            # Vẽ đường lộ trình chính xác màu xanh đậm bám theo đường phố
+            folium.PolyLine(
+                street_route_points, 
+                color="#1a73e8", 
+                weight=4, 
+                opacity=0.9, 
+                tooltip=f"Tuyến đường thực tế: {real_distance_km:.2f} km - Dự kiến đi: {duration_mins:.0f} phút"
+            ).add_to(m)
+            
+        else:
+            # Nếu API lỗi, tự động chuyển về vẽ đường thẳng để không làm sập ứng dụng
+            folium.PolyLine([[home_lat, home_lng], [target_y, target_x]], color="#ef4444", weight=4, opacity=0.8).add_to(m)
+            
+    except Exception as e:
+        # Xử lý trường hợp mất mạng hoặc API không phản hồi
+        folium.PolyLine([[home_lat, home_lng], [target_y, target_x]], color="#ef4444", weight=4, opacity=0.8).add_to(m)
     
     folium.LayerControl(position='topright').add_to(m)
     return m

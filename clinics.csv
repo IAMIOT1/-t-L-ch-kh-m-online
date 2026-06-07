@@ -1,13 +1,101 @@
 id,name,x,y,address,district
-1,Phòng Khám Đa Khoa Cầu Giấy,5,5,279 Nguyễn Khánh Toàn,Cầu Giấy
-2,Phòng Khám Đa Khoa Đống Đa,2,3,456 Đặng Tiến Đông,Đống Đa
-3,Phòng Khám Đa Khoa Hà Đông,10,12,789 Quang Trung,Hà Đông
-4,Phòng Khám Bệnh Viện Bạch Mai,8,8,78 Giải Phóng,Hai Bà Trưng
-5,Phòng Khám Bệnh Viện Việt Đức,6,9,40 Tràng Thi,Hoàn Kiếm
-6,Phòng Khám Đa Khoa Thanh Xuân,12,6,234 Lê Văn Lương,Thanh Xuân
-7,Phòng Khám Bệnh Viện Saint Paul,4,7,12 Nhân Chính,Thanh Xuân
-8,Phòng Khám Đa Khoa Hoàng Mai,11,4,567 Tam Trinh,Hoàng Mai
-9,Phòng Khám Bệnh Viện E,7,11,89 Trần Cung,Cầu Giấy
-10,Phòng Khám Đa Khoa Long Biên,9,2,345 Nguyễn Văn Linh,Long Biên
-11,Phòng Khám Bệnh Viện Nhi Trung ương,3,10,879 Láng Thường,Hai Bà Trưng
-12,Phòng Khám Đa Khoa Tây Hồ,1,8,234 Lạc Long Quân,Tây Hồ
+1,Bệnh viện Bạch Mai,105.8425,21.0056,78 Giải Phóng,Hai Bà Trưng
+2,Bệnh viện Hữu nghị Việt Đức,105.8492,21.0264,40 Tràng Thi,Hoàn Kiếm
+3,Bệnh viện Nhi Trung ương,105.8105,21.0221,879 Đường Láng,Đống Đa
+4,Bệnh viện Phụ sản Trung ương,105.8481,21.0253,43 Tràng Thi,Hoàn Kiếm
+5,Bệnh viện Trung ương Quân đội 108,105.8598,21.0189,1 Trần Hưng Đạo,Hai Bà Trưng
+6,Bệnh viện E,105.7876,21.0521,89 Trần Cung,Cầu Giấy
+7,Bệnh viện Đại học Y Hà Nội,105.8291,21.0042,1 Tôn Thất Tùng,Đống Đa
+8,Bệnh viện Đa khoa Xanh Pôn,105.8385,21.0245,12 Chu Văn An,Ba Đình
+9,Bệnh viện Phụ sản Hà Nội,105.8083,21.0239,929 Đê La Thành,Ba Đình
+10,Bệnh viện Đa khoa Hà Đông,105.7735,20.9725,789 Quang Trung,Hà Đông
+11,Bệnh viện Đa khoa Cầu Giấy,105.7915,21.0362,279 Nguyễn Khánh Toàn,Cầu Giấy
+12,Bệnh viện Đa khoa Đống Đa,105.8198,21.0118,456 Đặng Tiến Đông,Đống Đa
+13,Bệnh viện Đa khoa Thanh Xuân,105.8115,21.0022,234 Lê Văn Lương,Thanh Xuân
+14,Bệnh viện Đa khoa Hoàng Mai,105.8654,20.9855,567 Tam Trinh,Hoàng Mai
+15,Bệnh viện Đa khoa Long Biên,105.8845,21.0278,345 Nguyễn Văn Linh,Long Biên
+16,Bệnh viện Đa khoa Tây Hồ,105.8088,21.0654,234 Lạc Long Quân,Tây Hồ
+17,Bệnh viện Đa khoa Ba Đình,105.8354,21.0392,37 Hàng Bún,Ba Đình
+18,Bệnh viện Đa khoa Hai Bà Trưng,105.8541,21.0012,121 Lê Thanh Nghị,Hai Bà Trưng
+19,Bệnh viện Đa khoa Hoàn Kiếm,105.8523,21.0298,29 Lý Thường Kiệt,Hoàn Kiếm
+20,Bệnh viện Đa khoa Nam Từ Liêm,105.7654,21.0145,45 Nguyễn Hoàng,Nam Từ Liêm
+21,Bệnh viện Đa khoa Bắc Từ Liêm,105.7532,21.0564,Kiều Mai - Phúc Diễn,Bắc Từ Liêm
+22,Bệnh viện Tim Hà Nội Cơ sở 1,105.8456,21.0229,92 Trần Hưng Đạo,Hoàn Kiếm
+23,Bệnh viện Tim Hà Nội Cơ sở 2,105.8204,21.0612,Đường Võ Chí Công,Tây Hồ
+24,Bệnh viện Lão khoa Trung ương,105.8398,21.0023,1A Phương Mai,Đống Đa
+25,Bệnh viện Da liễu Trung ương,105.8409,21.0034,15A Phương Mai,Đống Đa
+26,Bệnh viện Bệnh Nhiệt đới Trung ương,105.8415,21.0041,78 Giải Phóng,Hai Bà Trưng
+27,Bệnh viện Tai Mũi Họng Trung ương,105.8419,21.0048,78 Giải Phóng,Hai Bà Trưng
+28,Bệnh viện Mắt Trung ương,105.8496,21.0192,85 Bà Triệu,Hai Bà Trưng
+29,Bệnh viện K Trung ương Cơ sở 1,105.8475,21.0242,43 Quán Sứ,Hoàn Kiếm
+30,Bệnh viện K Trung ương Cơ sở 2,105.8231,20.9785,Tựu Liệt,Thanh Trì
+31,Bệnh viện K Trung ương Cơ sở 3,105.7954,20.9632,Đường Cầu Bươu,Thanh Trì
+32,Bệnh viện Y học cổ truyền Trung ương,105.8451,21.0143,29 Nguyễn Bỉnh Khiêm,Hai Bà Trưng
+33,Bệnh viện Châm cứu Trung ương,105.8174,21.0129,49 Thái Thịnh,Đống Đa
+34,Bệnh viện Nội tiết Trung ương CS1,105.8211,21.0064,Ngõ 215 Ngọc Hồi,Thanh Trì
+35,Bệnh viện Nội tiết Trung ương CS2,105.8341,20.9612,Tứ Hiệp,Thanh Trì
+36,Bệnh viện Răng Hàm Mặt Trung ương,105.8489,21.0259,40B Tràng Thi,Hoàn Kiếm
+37,Bệnh viện Phổi Trung ương,105.8052,21.0345,463 Hoàng Hoa Thám,Ba Đình
+38,Bệnh viện Hữu nghị,105.8621,21.0162,1 Trần Khánh Dư,Hai Bà Trưng
+39,Bệnh viện Y học cổ truyền Hà Nội,105.7865,21.0232,8 Phạm Hùng,Cầu Giấy
+40,Bệnh viện Thanh Nhàn,105.8567,21.0045,42 Thanh Nhàn,Hai Bà Trưng
+41,Bệnh viện Ung bướu Hà Nội,105.8572,21.0039,42A Thanh Nhàn,Hai Bà Trưng
+42,Bệnh viện Thận Hà Nội,105.8559,21.0052,70 Nguyễn Tam Trinh,Hoàng Mai
+43,Bệnh viện Mắt Hà Nội,105.8462,21.0292,37 Nguyễn Du,Hai Bà Trưng
+44,Bệnh viện Da liễu Hà Nội,105.8431,21.0271,79 Nguyễn Khuyến,Đống Đa
+45,Bệnh viện Tâm thần Hà Nội,105.8924,21.0381,Ngõ 467 Nguyễn Văn Linh,Long Biên
+46,Bệnh viện Đa khoa Đức Giang,105.8995,21.0542,54 Trường Lâm,Long Biên
+47,Bệnh viện Đa khoa Gia Lâm,105.9321,21.0156,Khu đô thị Trâu Quỳ,Gia Lâm
+48,Bệnh viện Đa khoa Đông Anh,105.8485,21.1254,Uy Nỗ,Đông Anh
+49,Bệnh viện Đa khoa Sóc Sơn,105.8112,21.2587,Thị trấn Sóc Sơn,Sóc Sơn
+50,Bệnh viện Đa khoa Mê Linh,105.7185,21.1764,Đại Thịnh,Mê Linh
+51,Bệnh viện Đa khoa Đan Phượng,105.6754,21.1085,Thị trấn Phùng,Đan Phượng
+52,Bệnh viện Đa khoa Hoài Đức,105.7085,21.0195,Đức Giang,Hoài Đức
+53,Bệnh viện Đa khoa Quốc Oai,105.6412,20.9921,Thị trấn Quốc Oai,Quốc Oai
+54,Bệnh viện Đa khoa Thạch Thất,105.5654,21.0125,Kim Quan,Thạch Thất
+55,Bệnh viện Đa khoa Phúc Thọ,105.5895,21.1054,Thị trấn Phúc Thọ,Phúc Thọ
+56,Bệnh viện Đa khoa Ba Vì,105.4125,21.1564,Quảng Oai,Ba Ba Vì
+57,Bệnh viện Đa khoa Sơn Tây,105.5085,21.1342,Lê Lợi,Sơn Tây
+58,Bệnh viện Đa khoa Chương Mỹ,105.6125,20.8921,Chúc Sơn,Chương Mỹ
+59,Bệnh viện Đa khoa Thanh Oai,105.7485,20.8754,Kim Bài,Thanh Oai
+60,Bệnh viện Đa khoa Mỹ Đức,105.7125,20.6921,Đại Nghĩa,Mỹ Đức
+61,Bệnh viện Đa khoa Ứng Hòa,105.7585,20.6724,Vân Đình,Ứng Hòa
+62,Bệnh viện Đa khoa Phú Xuyên,105.8125,20.6125,Thị trấn Phú Xuyên,Phú Xuyên
+63,Bệnh viện Đa khoa Thường Tín,105.8564,20.8354,Thị trấn Thường Tín,Thường Tín
+64,Bệnh viện Quân y 103,105.7872,20.9624,261 Phùng Hưng,Hà Đông
+65,Bệnh viện Quân y 354,105.8132,21.0395,120 Đốc Ngữ,Ba Đình
+66,Bệnh viện Quân y 105,105.4954,21.1295,Sơn Lộc,Sơn Tây
+67,Bệnh viện Đa khoa Quốc tế Thu Cúc,105.8172,21.0416,286 Thụy Khuê,Tây Hồ
+68,Bệnh viện Đa khoa Hồng Ngọc,105.8421,21.0395,55 Yên Ninh,Ba Đình
+69,Bệnh viện Đa khoa Quốc tế Vinmec,105.8642,21.0018,458 Minh Khai,Hai Bà Trưng
+70,Bệnh viện Đa khoa Quốc tế Tâm Anh,105.8774,21.0345,108 Hoàng Như Tiếp,Long Biên
+71,Bệnh viện Đa khoa Việt Pháp Hà Nội,105.8392,21.0019,1 Phương Mai,Đống Đa
+72,Bệnh viện Đa khoa Gia Định Hà Nội,105.7995,21.0315,445 Lạc Long Quân,Tây Hồ
+73,Bệnh viện Đa khoa Medlatec,105.8235,21.0485,42 Nghĩa Dũng,Ba Đình
+74,Phòng khám Đa khoa Vietlife,105.8356,21.0084,14 Trần Bình Trọng,Hoàn Kiếm
+75,Phòng khám Đa khoa Thu Cúc,105.8012,21.0115,216 Trần Duy Hưng,Cầu Giấy
+76,Phòng khám Đa khoa Hồng Ngọc Keangnam,105.7834,21.0168,Tòa Keangnam Landmark 72,Nam Từ Liêm
+77,Phòng khám Đa khoa Medlatec Tây Hồ,105.8154,21.0692,99 Trích Sài,Tây Hồ
+78,Phòng khám Đa khoa Quốc tế Thanh Chân,105.7954,21.0264,6 Nguyễn Thị Thập,Cầu Giấy
+79,Phòng khám Đa khoa Hoàng Long,105.8402,21.0049,9 Đào Duy Anh,Đống Đa
+80,Phòng khám Đa khoa Dr. Binh TeleClinic,105.8512,21.0215,11 Trần Xuân Soạn,Hai Bà Trưng
+81,Phòng khám Đa khoa Quốc tế Hà Nội,105.8423,21.0154,152 Xã Đàn,Đống Đa
+82,Phòng khám Đa khoa Link,105.7985,21.0214,120 Trần Duy Hưng,Cầu Giấy
+83,Phòng khám Đa khoa 5 Sao Hà Nội,105.8054,20.9964,25 Nguyễn Trãi,Thanh Xuân
+84,Phòng khám Đa khoa Pacific,105.8454,21.0242,4B Hàng Bài,Hoàn Kiếm
+85,Phòng khám Đa khoa Yên Hòa,105.7924,21.0215,36 Trung Kính,Cầu Giấy
+86,Phòng khám Đa khoa Mai Hương,105.8592,21.0041,4 Hồng Mai,Hai Bà Trưng
+87,Phòng khám Đa khoa Việt Hàn,105.8434,21.0195,9 Ngô Thì Nhậm,Hai Bà Trưng
+88,Phòng khám Đa khoa Vinmec Royal City,105.8152,21.0014,Tòa R2 Royal City,Thanh Xuân
+89,Phòng khám Đa khoa CarePlus Hà Nội,105.7824,21.0345,71 Hoàng Quốc Việt,Cầu Giấy
+90,Phòng khám Đa khoa Thiên Hòa,105.8192,20.9954,73 Trần Duy Hưng,Cầu Giấy
+91,Phòng khám Đa khoa 12 Kim Mã,105.8295,21.0305,12 Kim Mã,Ba Đình
+92,Phòng khám Đa khoa Marie Stopes Hà Nội,105.7954,21.0124,Tháp A D2 Giảng Võ,Ba Đình
+93,Phòng khám Đa khoa Nguyễn Khang,105.7998,21.0185,200 Nguyễn Khang,Cầu Giấy
+94,Phòng khám Đa khoa Linh Đàm,105.8264,20.9678,KĐT Bán đảo Linh Đàm,Hoàng Mai
+95,Phòng khám Đa khoa Nam Học Hà Nội,105.8214,21.0095,52 Nguyễn Trãi,Thanh Xuân
+96,Phòng khám Đa khoa Âu Việt,105.8342,21.0112,15A Đại Cồ Việt,Hai Bà Trưng
+97,Phòng khám Đa khoa Harvard,105.8465,21.0341,25 Lý Nam Đế,Hoàn Kiếm
+98,Phòng khám Đa khoa Tokyo Quốc tế,105.8124,21.0295,36 Cầu Giấy,Cầu Giấy
+99,Phòng khám Đa khoa Raffles Medical,105.8242,21.0394,51 Xuân Diệu,Tây Hồ
+100,Phòng khám Y Cao Hà Nội,105.7892,21.0454,260 Cầu Giấy,Cầu Giấy
