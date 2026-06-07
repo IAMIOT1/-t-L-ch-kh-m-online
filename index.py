@@ -262,42 +262,50 @@ if clinics and doctors:
     nearest_clinic, dist = find_nearest_clinic(home_lat, home_lng, clinics)
 
 # ==============================================================================
-    # 2. KẾT QUẢ TÌM KIẾM & BẢN ĐỒ LỘ TRÌNH (ĐÃ SỬA LỖI MẤT BẢN ĐỒ)
+    # 2. KẾT QUẢ TÌM KIẾM & BẢN ĐỒ LỘ TRÌNH (SẮP XẾP TỪ GẦN ĐẾN XA)
     # ==============================================================================
     st.markdown("---")
     st.header("2. Kết quả tìm kiếm & Bản đồ lộ trình")
     st.write("📍 **Xác định vị trí và chọn cơ sở khám bệnh:**")
 
-    # Tạo danh sách hiển thị kèm khoảng cách tính theo đường chim bay của từng phòng khám
+    # --- BƯỚC THAY ĐỔI: SẮP XẾP DANH SÁCH PHÒNG KHÁM THEO KHOẢNG CÁCH THỰC TẾ ---
+    # Sắp xếp danh sách clinics gốc dựa trên khoảng cách từ vị trí hiện tại (home_lat, home_lng)
+    sorted_clinics = sorted(
+        clinics, 
+        key=lambda c: haversine_distance(home_lat, home_lng, float(c['y']), float(c['x']))
+    )
+
+    # Tạo danh sách hiển thị cho selectbox từ danh sách đã được sắp xếp
     clinic_options = []
-    for c in clinics:
+    for c in sorted_clinics:
         d_km = haversine_distance(home_lat, home_lng, float(c['y']), float(c['x']))
         clinic_options.append(f"{c['name']} (Cách {d_km:.2f} km - Địa chỉ: {c['address']})")
 
-    # Tìm vị trí (index) của phòng khám gần nhất trong danh sách để làm mặc định
-    nearest_index = clinics.index(nearest_clinic)
+    # Vì danh sách đã được sắp xếp từ gần đến xa, nên phòng khám gần nhất luôn nằm đầu tiên (index = 0)
+    nearest_index = 0
 
-    # Thanh selectbox cho phép đổi phòng khám chủ động
+    # Thanh selectbox hiển thị danh sách từ gần đến xa
     selected_option = st.selectbox(
-        "🏥 Hệ thống tự chọn phòng khám gần bạn nhất. Bạn có thể bấm vào đây để đổi cơ sở khác nếu muốn:",
+        "🏥 Danh sách đã được sắp xếp theo thứ tự gần bạn nhất (từ trên xuống dưới):",
         options=clinic_options,
         index=nearest_index
     )
 
-    # Lấy ra đối tượng phòng khám thực tế đang được chọn từ selectbox
+    # Lấy ra đối tượng phòng khám thực tế đang được chọn từ danh sách đã sắp xếp
     chosen_index = clinic_options.index(selected_option)
-    current_clinic = clinics[chosen_index]
+    current_clinic = sorted_clinics[chosen_index]
 
-    # Tính toán lại khoảng cách thực tế của phòng khám được chọn
+    # Tính toán khoảng cách thực tế của phòng khám được chọn để hiển thị thông báo
     current_dist = haversine_distance(home_lat, home_lng, float(current_clinic['y']), float(current_clinic['x']))
     st.info(f"📍 **Cơ sở đang được chọn:** {current_clinic['name']} (Khoảng cách di chuyển: ~{current_dist:.2f} km)")
 
-    # 🔥 ĐƯA BẢN ĐỒ RA NGOÀI: Luôn luôn vẽ lộ trình đường đi tới phòng khám được chọn
+    # 🔥 HIỂN THỊ BẢN ĐỒ: Luôn luôn vẽ lộ trình đường đi tới phòng khám được chọn
     with st.spinner("Đang đồng bộ bản đồ vệ tinh thực tế..."):
-        map_obj = draw_simulation_map(home_lat, home_lng, current_clinic, clinics)
+        # Lưu ý: truyền sorted_clinics vào để bản đồ hiển thị đầy đủ các marker khác xung quanh
+        map_obj = draw_simulation_map(home_lat, home_lng, current_clinic, sorted_clinics)
         st_data = st_folium(map_obj, width=700, height=450, key="integrated_map_picker")
         
-    # Lắng nghe sự kiện click thay đổi vị trí trên bản đồ
+    # Lắng nghe sự kiện click thay đổi vị trí trực tiếp trên bản đồ
     if st_data and st_data.get("last_clicked"):
         click_lat = st_data["last_clicked"]["lat"]
         click_lng = st_data["last_clicked"]["lng"]
@@ -312,7 +320,7 @@ if clinics and doctors:
     matched_doctors = find_doctors_by_symptom(symptom_input, current_clinic['id'], doctors)
 
     if not matched_doctors:
-        st.warning(f"❌ Không tìm thấy bác sĩ phù hợp với triệu chứng '{symptom_input}' tại {current_clinic['name']}. Vui lòng thử nhập triệu chứng khác hoặc chọn phòng khám khác.")
+        st.warning(f"❌ Không tìm thấy bác sĩ phù hợp với triệu chứng '{symptom_input}' tại {current_clinic['name']}. Vui lòng thử nhập triệu chứng khác hoặc chọn cơ sở khác trong danh sách.")
     else:
         selected_doctor = matched_doctors[0]
         phone_num = selected_doctor.get('phone', 'Chưa cập nhật')
