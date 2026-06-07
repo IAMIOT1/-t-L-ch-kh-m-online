@@ -59,3 +59,531 @@ id,name,specialty,symptoms,clinic_id,phone,experience
 158,Bùi Tuyết K3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",12,0901234624,14 năm
 159,Hoàng Đình L3,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",12,0901234625,18 năm
 160,Nguyễn Thanh M3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",12,0901234626,12 năm
+161,Nguyễn Văn An,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",13,0901234700,12 năm
+162,Trần Thị Bình,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",14,0901234701,15 năm
+163,Lê Văn Công,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",15,0901234702,10 năm
+164,Phạm Minh Đạt,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",16,0901234703,14 năm
+165,Đỗ Thị Em,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",17,0901234704,9 năm
+166,Ngô Trung Hậu,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",18,0901234705,20 năm
+167,Phạm Quang Kiên,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",19,0901234706,18 năm
+168,Nguyễn Thị Lan,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",20,0901234707,11 năm
+169,Trần Văn Mạnh,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",21,0901234708,13 năm
+170,Lê Thị Ngọc,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",22,0901234709,16 năm
+171,Đinh Văn Phát,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",23,0901234710,7 năm
+172,Ngô Thị Quyên,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",24,0901234711,22 năm
+173,Phạm Văn Sáng,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",25,0901234712,19 năm
+174,Trần Thị Tươi,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",26,0901234713,14 năm
+175,Lê Văn Uy,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",27,0901234714,12 năm
+176,Nguyễn Thị Vy,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",28,0901234715,21 năm
+177,Hoàng Văn Xuyến,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",29,0901234716,16 năm
+178,Vũ Thị Yến,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",30,0901234717,11 năm
+179,Bùi Văn Chung,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",31,0901234718,13 năm
+180,Phan Lạc Dũng,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",32,0901234719,6 năm
+181,Tạ Thị Giang,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",33,0901234720,14 năm
+182,Trần Đức Hùng,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",34,0901234721,9 năm
+183,Lê Thúy Hương,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",35,0901234722,10 năm
+184,Phạm Hồng Khang,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",36,0901234723,12 năm
+185,Đỗ Minh Linh,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",37,0901234724,15 năm
+186,Nguyễn Hải Minh,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",38,0901234725,7 năm
+187,Dương Quang Nam,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",39,0901234726,16 năm
+188,Trịnh Thu Oanh,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",40,0901234727,18 năm
+189,Vương Văn Phong,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",41,0901234728,5 năm
+190,Lý Thị Quỳnh,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",42,0901234729,20 năm
+191,Đoàn Văn Sơn,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",43,0901234730,11 năm
+192,Lâm Thị Thanh,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",44,0901234731,14 năm
+193,Phùng Văn Tú,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",45,0901234732,12 năm
+194,Mai Thị Vân,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",46,0901234733,15 năm
+195,Đào Văn Xuân,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",47,0901234734,9 năm
+196,Hồ Thị Yến,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",48,0901234735,17 năm
+197,Đặng Văn Ánh,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",49,0901234736,10 năm
+198,Nghiêm Thị Bích,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",50,0901234737,13 năm
+199,Triệu Trung Chi,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",51,0901234738,12 năm
+200,Quách Văn Dũng,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",52,0901234739,21 năm
+201,Lương Thị Hạnh,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",53,0901234740,11 năm
+202,Từ Đức Khoa,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",54,0901234741,16 năm
+203,Vi Thị Liên,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",55,0901234742,19 năm
+204,Mạc Văn Mỹ,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",56,0901234743,15 năm
+205,Lê Hồng Nga,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",57,0901234744,12 năm
+206,Nguyễn Anh Oanh,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",58,0901234745,14 năm
+207,Trần Hoàng Phương,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",59,0901234746,17 năm
+208,Phạm Kim Quý,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",60,0901234747,10 năm
+209,Đỗ Tuấn Sang,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",61,0901234748,13 năm
+210,Ngô Minh Tâm,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",62,0901234749,9 năm
+211,Dương Thùy Út,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",63,0901234750,16 năm
+212,Trịnh Nhật Vinh,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",64,0901234751,11 năm
+213,Vũ Bảo Xa,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",65,0901234752,14 năm
+214,Bùi Tuyết Yên,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",66,0901234753,18 năm
+215,Hoàng Đình Danh,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",67,0901234754,12 năm
+216,Nguyễn Thanh Gia,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",68,0901234755,14 năm
+217,Nguyễn Văn Hiếu,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",69,0901234756,17 năm
+218,Trần Thị Ích,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",70,0901234757,10 năm
+219,Lê Văn Kha,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",71,0901234758,13 năm
+220,Phạm Minh Ly,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",72,0901234759,9 năm
+221,Đỗ Thị Mão,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",73,0901234760,16 năm
+222,Ngô Trung Nga,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",74,0901234761,11 năm
+223,Phạm Quang Oai,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",75,0901234762,14 năm
+224,Nguyễn Thị Phi,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",76,0901234763,18 năm
+225,Trần Văn Quế,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",77,0901234764,12 năm
+226,Lê Thị Sen,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",78,0901234765,14 năm
+227,Đinh Văn Thế,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",79,0901234766,17 năm
+228,Ngô Thị Uông,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",80,0901234767,10 năm
+229,Phạm Văn Vỹ,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",81,0901234768,13 năm
+230,Trần Thị Xoan,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",82,0901234769,9 năm
+231,Lê Văn Yến,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",83,0901234770,16 năm
+232,Nguyễn Thị Zai,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",84,0901234771,11 năm
+233,Hoàng Văn An,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",85,0901234772,14 năm
+234,Vũ Thị Bình,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",86,0901234773,18 năm
+235,Bùi Văn Công,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",87,0901234774,12 năm
+236,Phan Lạc Dũng,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",88,0901234775,14 năm
+237,Tạ Thị Em,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",89,0901234776,17 năm
+238,Trần Đức Giang,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",90,0901234777,10 năm
+239,Lê Thúy Hậu,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",91,0901234778,13 năm
+240,Phạm Hồng Kiên,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",92,0901234779,9 năm
+241,Đỗ Minh Lan,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",93,0901234780,16 năm
+242,Nguyễn Hải Mạnh,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",94,0901234781,11 năm
+243,Dương Quang Ngọc,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",95,0901234782,14 năm
+244,Trịnh Thu Phát,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",96,0901234783,18 năm
+245,Vương Văn Quyên,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",97,0901234784,12 năm
+246,Lý Thị Sáng,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",98,0901234785,14 năm
+247,Đoàn Văn Tươi,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",99,0901234786,17 năm
+248,Lâm Thị Uy,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",100,0901234787,10 năm
+249,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",13,0907726249,5 năm
+250,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",13,0904219516,15 năm
+251,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",13,0909096359,12 năm
+252,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",13,0906878526,6 năm
+253,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",13,0903338744,11 năm
+254,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",14,0902693751,16 năm
+255,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",14,0902720916,10 năm
+256,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",14,0906467052,20 năm
+257,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",14,0905214964,20 năm
+258,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",14,0901255997,10 năm
+259,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",15,0903112448,22 năm
+260,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",15,0909456721,14 năm
+261,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",15,0908873105,8 năm
+262,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",15,0902254397,19 năm
+263,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",15,0907100346,25 năm
+264,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",16,0905391993,14 năm
+265,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",16,0902998394,22 năm
+266,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",16,0904008107,24 năm
+267,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",16,0908587123,28 năm
+268,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",16,0909943261,28 năm
+269,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",17,0905204481,25 năm
+270,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",17,0901502476,17 năm
+271,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",17,0905206673,7 năm
+272,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",17,0901923145,15 năm
+273,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",17,0905541604,7 năm
+274,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",18,0901046424,19 năm
+275,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",18,0905232745,21 năm
+276,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",18,0902781488,8 năm
+277,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",18,0901309307,17 năm
+278,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",18,0906969502,8 năm
+279,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",19,0901614051,18 năm
+280,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",19,0904323267,11 năm
+281,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",19,0907689104,24 năm
+282,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",19,0906663523,20 năm
+283,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",19,0904791010,23 năm
+284,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",20,0905404551,16 năm
+285,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",20,0907106093,24 năm
+286,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",20,0902888998,28 năm
+287,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",20,0903332561,16 năm
+288,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",20,0905477215,9 năm
+289,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",21,0907865239,23 năm
+290,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",21,0903422675,7 năm
+291,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",21,0908865672,7 năm
+292,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",21,0904724040,11 năm
+293,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",21,0909565554,23 năm
+294,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",22,0901764619,10 năm
+295,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",22,0902636901,15 năm
+296,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",22,0901235656,12 năm
+297,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",22,0903333333,6 năm
+298,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",22,0904445555,11 năm
+299,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",23,0902888123,19 năm
+300,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",23,0905559876,21 năm
+301,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",23,0904321098,8 năm
+302,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",23,0901234567,17 năm
+303,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",23,0906789123,8 năm
+304,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",24,0903332211,18 năm
+305,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",24,0904443322,11 năm
+306,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",24,0905554433,24 năm
+307,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",24,0906665544,20 năm
+308,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",24,0907776655,23 năm
+309,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",25,0901239876,16 năm
+310,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",25,0902348765,24 năm
+311,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",25,0903457654,28 năm
+312,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",25,0904566543,16 năm
+313,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",25,0905675432,9 năm
+314,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",26,0906784321,23 năm
+315,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",26,0907893210,7 năm
+316,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",26,0908902109,7 năm
+317,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",26,0909011098,11 năm
+318,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",26,0901122334,23 năm
+319,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",27,0902233445,10 năm
+320,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",27,0903344556,15 năm
+321,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",27,0904455667,12 năm
+322,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",27,0905566778,6 năm
+323,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",27,0906677889,11 năm
+324,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",28,0907788990,16 năm
+325,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",28,0908899001,10 năm
+326,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",28,0909900112,20 năm
+327,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",28,0901112223,20 năm
+328,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",28,0902223334,10 năm
+329,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",29,0903334445,22 năm
+330,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",29,0904445556,14 năm
+331,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",29,0905556667,8 năm
+332,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",29,0906667778,19 năm
+333,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",29,0907778889,25 năm
+334,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",30,0908889990,14 năm
+335,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",30,0909990001,22 năm
+336,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",30,0901110002,24 năm
+337,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",30,0902221113,28 năm
+338,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",30,0903332224,28 năm
+339,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",31,0904443335,25 năm
+340,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",31,0905554446,17 năm
+341,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",31,0906665557,7 năm
+342,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",31,0907776668,15 năm
+343,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",31,0908887779,7 năm
+344,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",32,0909998880,19 năm
+345,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",32,0901231234,21 năm
+346,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",32,0902342345,8 năm
+347,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",32,0903453456,17 năm
+348,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",32,0904564567,8 năm
+349,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",33,0905674567,18 năm
+350,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",33,0906785678,11 năm
+351,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",33,0907896789,24 năm
+352,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",33,0908907890,20 năm
+353,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",33,0909018901,23 năm
+354,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",34,0901129012,16 năm
+355,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",34,0902230123,24 năm
+356,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",34,0903341234,28 năm
+357,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",34,0904452345,16 năm
+358,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",34,0905563456,9 năm
+359,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",35,0906674567,23 năm
+360,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",35,0907785678,7 năm
+361,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",35,0908896789,7 năm
+362,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",35,0909907890,11 năm
+363,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",35,0901018901,23 năm
+364,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",36,0902129012,10 năm
+365,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",36,0903230123,15 năm
+366,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",36,0904341234,12 năm
+367,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",36,0905452345,6 năm
+368,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",36,0906563456,11 năm
+369,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",37,0907674567,16 năm
+370,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",37,0908785678,10 năm
+371,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",37,0909896789,20 năm
+372,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",37,0901907890,20 năm
+373,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",37,0902018901,10 năm
+374,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",38,0903129012,22 năm
+375,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",38,0904230123,14 năm
+376,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",38,0905341234,8 năm
+377,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",38,0906452345,19 năm
+378,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",38,0907563456,25 năm
+379,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",39,0908674567,14 năm
+380,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",39,0909785678,22 năm
+381,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",39,0901896789,24 năm
+382,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",39,0902907890,28 năm
+383,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",39,0903018901,28 năm
+384,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",40,0904129012,25 năm
+385,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",40,0905230123,17 năm
+386,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",40,0906341234,7 năm
+387,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",40,0907452345,15 năm
+388,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",40,0908563456,7 năm
+389,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",41,0909674567,19 năm
+390,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",41,0901785678,21 năm
+391,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",41,0902896789,8 năm
+392,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",41,0903907890,17 năm
+393,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",41,0904018901,8 năm
+394,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",42,0905129012,18 năm
+395,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",42,0906230123,11 năm
+396,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",42,0907341234,24 năm
+397,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",42,0908452345,20 năm
+398,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",42,0909563456,23 năm
+399,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",43,0906674567,16 năm
+400,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",43,0907785678,24 năm
+401,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",43,0908896789,28 năm
+402,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tiêm đập nhanh",43,0909907890,16 năm
+403,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",43,0901018901,9 năm
+404,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",44,0902129012,23 năm
+405,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",44,0903230123,7 năm
+406,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",44,0904341234,7 năm
+407,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",44,0905452345,11 năm
+408,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",44,0906563456,23 năm
+409,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",45,0907674567,10 năm
+410,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",45,0908785678,15 năm
+411,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",45,0909896789,12 năm
+412,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",45,0901907890,6 năm
+413,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",45,0902018901,11 năm
+414,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",46,0903129012,16 năm
+415,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",46,0904230123,10 năm
+416,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",46,0905341234,20 năm
+417,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",46,0906452345,20 năm
+418,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",46,0907563456,10 năm
+419,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",47,0908674567,22 năm
+420,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",47,0909785678,14 năm
+421,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",47,0901896789,8 năm
+422,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",47,0902907890,19 năm
+423,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",47,0903018901,25 năm
+424,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",48,0904129012,14 năm
+425,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",48,0905230123,22 năm
+426,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",48,0906341234,24 năm
+427,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",48,0907452345,28 năm
+428,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",48,0908563456,28 năm
+429,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",49,0909674567,25 năm
+430,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",49,0901785678,17 năm
+431,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",49,0902896789,7 năm
+432,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",49,0903907890,15 năm
+433,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",49,0904018901,7 năm
+434,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",50,0905129012,19 năm
+435,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",50,0906230123,21 năm
+436,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",50,0907341234,8 năm
+437,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",50,0908452345,17 năm
+438,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",50,0909563456,8 năm
+439,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",51,0901674567,18 năm
+440,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",51,0902785678,11 năm
+441,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",51,0903896789,24 năm
+442,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",51,0904907890,20 năm
+443,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",51,0905018901,23 năm
+444,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",52,0906129012,16 năm
+445,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",52,0907230123,24 năm
+446,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",52,0908341234,28 năm
+447,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",52,0909452345,16 năm
+448,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",52,0901563456,9 năm
+449,Nguyễn Văn J1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",53,0902769923,21 năm
+450,Trần Thị K2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",53,0904559923,15 năm
+451,Lê Văn L3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",53,0905183312,24 năm
+452,Phạm Thị M4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",53,0907942233,28 năm
+453,Đỗ Văn N5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",53,0909185566,10 năm
+454,Nguyễn Văn O1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",54,0901120703,25 năm
+455,Trần Thị P2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",54,0909885844,11 năm
+456,Lê Văn Q3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",54,0903600833,17 năm
+457,Phạm Thị R4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",54,0905903083,14 năm
+458,Đỗ Văn S5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",54,0903032523,11 năm
+459,Nguyễn Văn T1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",55,0901162622,11 năm
+460,Trần Thị A2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",55,0901108391,16 năm
+461,Lê Văn B3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",55,0909923684,20 năm
+462,Phạm Thị C4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",55,0901348974,7 năm
+463,Đỗ Văn D5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",55,0902164730,16 năm
+464,Nguyễn Văn E1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",56,0903707648,25 năm
+465,Trần Thị F2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",56,0904368253,28 năm
+466,Lê Văn G3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",56,0906264861,5 năm
+467,Phạm Thị H4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",56,0906545426,27 năm
+468,Đỗ Văn I5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",56,0908854388,23 năm
+469,Nguyễn Văn J1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",57,0909708318,12 năm
+470,Trần Thị K2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",57,0906581331,14 năm
+471,Lê Văn L3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",57,0909942660,24 năm
+472,Phạm Thị M4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",57,0907815748,23 năm
+473,Đỗ Văn N5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",57,0905959035,28 năm
+474,Nguyễn Văn O1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",58,0908236579,8 năm
+475,Trần Thị P2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",58,0903957914,14 năm
+476,Lê Văn Q3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",58,0909416430,20 năm
+477,Phạm Thị R4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",58,0902755630,6 năm
+478,Đỗ Văn S5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",58,0903232990,28 năm
+479,Nguyễn Văn T1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",59,0904445128,7 năm
+480,Trần Thị A2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",59,0904713024,13 năm
+481,Lê Văn B3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",59,0905262767,29 năm
+482,Phạm Thị C4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",59,0905680793,17 năm
+483,Đỗ Văn D5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",59,0904729673,26 năm
+484,Nguyễn Văn E1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",60,0909449060,7 năm
+485,Trần Thị F2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",60,0904642587,8 năm
+486,Lê Văn G3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",60,0907530193,9 năm
+487,Phạm Thị H4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",60,0906064187,14 năm
+488,Đỗ Văn I5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",60,0908033719,6 năm
+489,Nguyễn Văn J1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",61,0909131623,28 năm
+490,Trần Thị K2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",61,0903730072,11 năm
+491,Lê Văn L3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",61,0904344022,29 năm
+492,Phạm Thị M4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",61,0907490643,14 năm
+493,Đỗ Văn N5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",61,0905547712,29 năm
+494,Nguyễn Văn O1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",62,0906463694,21 năm
+495,Trần Thị P2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",62,0909427380,29 năm
+496,Lê Văn Q3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",62,0903814120,24 năm
+497,Phạm Thị R4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",62,0903472338,18 năm
+498,Đỗ Văn S5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",62,0903582786,25 năm
+499,Nguyễn Văn T1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",63,0902252354,24 năm
+500,Trần Thị A2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",63,0902380162,13 năm
+501,Lê Văn B3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",63,0908371812,13 năm
+502,Phạm Thị C4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",63,0904426252,26 năm
+503,Đỗ Văn D5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",63,0905086914,9 năm
+504,Nguyễn Văn E1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",64,0908358614,16 năm
+505,Trần Thị F2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",64,0906844343,9 năm
+506,Lê Văn G3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",64,0906389314,18 năm
+507,Phạm Thị H4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",64,0908229906,9 năm
+508,Đỗ Văn I5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",64,0902305101,15 năm
+509,Nguyễn Văn J1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",65,0904123224,13 năm
+510,Trần Thị K2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",65,0901377062,20 năm
+511,Lê Văn L3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",65,0901342966,20 năm
+512,Phạm Thị M4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",65,0902239839,19 năm
+513,Đỗ Văn N5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",65,0904295760,19 năm
+514,Nguyễn Văn O1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",66,0906716560,27 năm
+515,Trần Thị P2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",66,0907935752,17 năm
+516,Lê Văn Q3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",66,0906347843,9 năm
+517,Phạm Thị R4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",66,0906751397,9 năm
+518,Đỗ Văn S5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",66,0905125277,16 năm
+519,Nguyễn Văn T1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",67,0905454813,10 năm
+520,Trần Thị A2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",67,0908981360,14 năm
+521,Lê Văn B3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",67,0901168094,24 năm
+522,Phạm Thị C4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",67,0904000941,19 năm
+523,Đỗ Văn D5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",67,0908865478,23 năm
+524,Nguyễn Văn E1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",68,0903102420,19 năm
+525,Trần Thị F2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",68,0909013947,7 năm
+526,Lê Văn G3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",68,0902303711,8 năm
+527,Phạm Thị H4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",68,0905589008,5 năm
+528,Đỗ Văn I5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",68,0902559332,20 năm
+529,Nguyễn Văn J1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",69,0908076538,26 năm
+530,Trần Thị K2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",69,0909565280,18 năm
+531,Lê Văn L3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",69,0904229384,26 năm
+532,Phạm Thị M4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",69,0901925299,23 năm
+533,Đỗ Văn N5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",69,0905343390,14 năm
+534,Nguyễn Văn O1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",70,0901312423,9 năm
+535,Trần Thị P2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",70,0904094206,14 năm
+536,Lê Văn Q3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",70,0902996988,23 năm
+537,Phạm Thị R4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",70,0909589497,14 năm
+538,Đỗ Văn S5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",70,0907561624,19 năm
+539,Nguyễn Văn T1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",71,0906705578,11 năm
+540,Trần Thị A2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",71,0905556378,16 năm
+541,Lê Văn B3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",71,0908903132,6 năm
+542,Phạm Thị C4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",71,0907670696,14 năm
+543,Đỗ Văn D5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",71,0908423514,19 năm
+544,Nguyễn Văn E1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",72,0902937678,6 năm
+545,Trần Thị F2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",72,0908875331,19 năm
+546,Lê Văn G3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",72,0902948491,24 năm
+547,Phạm Thị H4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",72,0902746481,17 năm
+548,Đỗ Văn I5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",72,0909060988,28 năm
+549,Nguyễn Văn J1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",73,0909319882,8 năm
+550,Trần Thị K2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",73,0901907254,23 năm
+551,Lê Văn L3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",73,0907925995,13 năm
+552,Phạm Thị M4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",73,0903216797,18 năm
+553,Đỗ Văn N5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",73,0904725627,21 năm
+554,Nguyễn Văn O1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",74,0903025817,7 năm
+555,Trần Thị P2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",74,0901922903,24 năm
+556,Lê Văn Q3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",74,0904725167,26 năm
+557,Phạm Thị R4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",74,0903843307,7 năm
+558,Đỗ Văn S5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",74,0908767388,6 năm
+559,Nguyễn Văn T1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",75,0907098759,13 năm
+560,Trần Thị A2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",75,0909609113,7 năm
+561,Lê Văn B3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",75,0907850560,28 năm
+562,Phạm Thị C4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",75,0904300392,28 năm
+563,Đỗ Văn D5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",75,0906918955,17 năm
+564,Nguyễn Văn E1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",76,0904994313,21 năm
+565,Trần Thị F2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",76,0901296277,15 năm
+566,Lê Văn G3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",76,0902068001,25 năm
+567,Phạm Thị H4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",76,0909007403,13 năm
+568,Đỗ Văn I5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",76,0904524264,7 năm
+569,Nguyễn Văn J1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",77,0901545484,29 năm
+570,Trần Thị K2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",77,0907306184,8 năm
+571,Lê Văn L3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",77,0906746666,20 năm
+572,Phạm Thị M4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",77,0908234048,7 năm
+573,Đỗ Văn N5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",77,0909516914,6 năm
+574,Nguyễn Văn O1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",78,0904882543,26 năm
+575,Trần Thị P2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",78,0902349845,8 năm
+576,Lê Văn Q3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",78,0901924406,8 năm
+577,Phạm Thị R4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",78,0909392279,12 năm
+578,Đỗ Văn S5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",78,0907134506,7 năm
+579,Nguyễn Văn T1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",79,0907848864,14 năm
+580,Trần Thị A2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",79,0901525031,11 năm
+581,Lê Văn B3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",79,0902553045,11 năm
+582,Phạm Thị C4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",79,0903035371,8 năm
+583,Đỗ Văn D5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",79,0908714636,25 năm
+584,Nguyễn Văn E1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",80,0904042843,16 năm
+585,Trần Thị F2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",80,0906347622,6 năm
+586,Lê Văn G3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",80,0902186296,14 năm
+587,Phạm Thị H4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",80,0901375866,16 năm
+588,Đỗ Văn I5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",80,0903125216,24 năm
+589,Nguyễn Văn J1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",81,0906970947,27 năm
+590,Trần Thị K2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",81,0904704513,25 năm
+591,Lê Văn L3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",81,0907685134,11 năm
+592,Phạm Thị M4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",81,0905309622,18 năm
+593,Đỗ Văn N5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",81,0904957782,26 năm
+594,Nguyễn Văn O1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",82,0907770428,26 năm
+595,Trần Thị P2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",82,0909875168,25 năm
+596,Lê Văn Q3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",82,0904584124,20 năm
+597,Phạm Thị R4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",82,0908758124,15 năm
+598,Đỗ Văn S5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",82,0907726638,11 năm
+599,Nguyễn Văn T1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",83,0902789776,22 năm
+600,Trần Thị A2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",83,0909645608,6 năm
+601,Lê Văn B3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",83,0906912643,14 năm
+602,Phạm Thị C4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",83,0904804763,16 năm
+603,Đỗ Văn D5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",83,0904732739,9 năm
+604,Nguyễn Văn E1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",84,0902466537,10 năm
+605,Trần Thị F2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",84,0906842109,20 năm
+606,Lê Văn G3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",84,0902312817,9 năm
+607,Phạm Thị H4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",84,0908238910,10 năm
+608,Đỗ Văn I5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",84,0908743767,26 năm
+609,Nguyễn Văn J1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",85,0902122085,8 năm
+610,Trần Thị K2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",85,0901263374,10 năm
+611,Lê Văn L3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",85,0901050446,11 năm
+612,Phạm Thị M4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",85,0906725952,22 năm
+613,Đỗ Văn N5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",85,0906747318,9 năm
+614,Nguyễn Văn O1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",86,0905265428,19 năm
+615,Trần Thị P2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",86,0907627368,27 năm
+616,Lê Văn Q3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",86,0904930176,12 năm
+617,Phạm Thị R4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",86,0903275593,14 năm
+618,Đỗ Văn S5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",86,0909090067,7 năm
+619,Nguyễn Văn T1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",87,0902526951,8 năm
+620,Trần Thị A2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",87,0902966129,23 năm
+621,Lê Văn B3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",87,0908780231,28 năm
+622,Phạm Thị C4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",87,0908089658,8 năm
+623,Đỗ Văn D5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",87,0903887384,11 năm
+624,Nguyễn Văn E1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",88,0901763146,21 năm
+625,Trần Thị F2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",88,0905119537,9 năm
+626,Lê Văn G3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",88,0901250669,26 năm
+627,Phạm Thị H4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",88,0906941286,11 năm
+628,Đỗ Văn I5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",88,0907440824,17 năm
+629,Nguyễn Văn J1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",89,0907825145,17 năm
+630,Trần Thị K2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",89,0901636930,25 năm
+631,Lê Văn L3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",89,0909252205,19 năm
+632,Phạm Thị M4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",89,0905450959,5 năm
+633,Đỗ Văn N5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",89,0907999764,11 năm
+634,Nguyễn Văn O1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",90,0905542869,26 năm
+635,Trần Thị P2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",90,0901014603,8 năm
+636,Lê Văn Q3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",90,0901093693,8 năm
+637,Phạm Thị R4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",90,0907068153,15 năm
+638,Đỗ Văn S5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",90,0902896077,20 năm
+639,Nguyễn Văn T1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",91,0901486050,11 năm
+640,Trần Thị A2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",91,0901258720,29 năm
+641,Lê Văn B3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",91,0903727300,17 năm
+642,Phạm Thị C4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",91,0909254664,13 năm
+643,Đỗ Văn D5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",91,0907321718,25 năm
+644,Nguyễn Văn E1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",92,0903358298,26 năm
+645,Trần Thị F2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",92,0904289572,22 năm
+646,Lê Văn G3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",92,0901056170,28 năm
+647,Phạm Thị H4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",92,0906649569,11 năm
+648,Đỗ Văn I5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",92,0909227180,5 năm
+649,Nguyễn Văn J1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",93,0905600854,20 năm
+650,Trần Thị K2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",93,0903677098,28 năm
+651,Lê Văn L3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",93,0909914791,11 năm
+652,Phạm Thị M4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",93,0902479782,25 năm
+653,Đỗ Văn N5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",93,0902275313,21 năm
+654,Nguyễn Văn O1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",94,0904485985,10 năm
+655,Trần Thị P2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",94,0904621995,6 năm
+656,Lê Văn Q3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",94,0907944277,13 năm
+657,Phạm Thị R4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",94,0904872993,29 năm
+658,Đỗ Văn S5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",94,0906635402,16 năm
+659,Nguyễn Văn T1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",95,0903616152,28 năm
+660,Trần Thị A2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",95,0907876864,25 năm
+661,Lê Văn B3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",95,0902848614,20 năm
+662,Phạm Thị C4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",95,0904898533,21 năm
+663,Đỗ Văn D5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",95,0906396076,18 năm
+664,Nguyễn Văn E1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",96,0903506256,8 năm
+665,Trần Thị F2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",96,0907870630,27 năm
+666,Lê Văn G3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",96,0909478948,19 năm
+667,Phạm Thị H4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",96,0902567801,27 năm
+668,Đỗ Văn I5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",96,0901391965,22 năm
+669,Nguyễn Văn J1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",97,0905700323,12 năm
+670,Trần Thị K2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",97,0903290941,19 năm
+671,Lê Văn L3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",97,0904842914,12 năm
+672,Phạm Thị M4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",97,0903369316,29 năm
+673,Đỗ Văn N5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",97,0906637725,8 năm
+674,Nguyễn Văn O1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",98,0903019335,8 năm
+675,Trần Thị P2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",98,0907999868,29 năm
+676,Lê Văn Q3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",98,0902611772,17 năm
+677,Phạm Thị R4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",98,0904342171,28 năm
+678,Đỗ Văn S5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",98,0907214872,5 năm
+679,Nguyễn Văn T1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",99,0908159124,29 năm
+680,Trần Thị A2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",99,0907231967,19 năm
+681,Lê Văn B3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",99,0901654893,17 năm
+682,Phạm Thị C4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",99,0902748556,16 năm
+683,Đỗ Văn D5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",99,0908463159,17 năm
+684,Nguyễn Văn E1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",100,0907603566,13 năm
+685,Trần Thị F2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",100,0903461072,5 năm
+686,Lê Văn G3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",100,0903227634,9 năm
+687,Phạm Thị H4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",100,0902802627,6 năm
+688,Đỗ Văn I5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",100,0907043025,16 năm
