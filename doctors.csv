@@ -298,6 +298,56 @@ id,name,specialty,symptoms,clinic_id,phone,experience
 397,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",42,0908452345,20 năm
 398,Đỗ Văn E5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",42,0909563456,23 năm
 399,Nguyễn Văn A1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",43,0906674567,16 năm
+400,Nguyen Van An0,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",1,0901234567,5 nam
+401,Tran Thi Binh0,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",2,0902345678,12 nam
+402,Le Van Cong0,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",3,0903456789,18 nam
+403,Pham Thi Dat0,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",4,0904567890,15 nam
+404,Do Van Em0,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",5,0905678901,10 nam
+405,Nguyen Van An1,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",6,0901111111,7 nam
+406,Tran Thi Binh1,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",7,0902222222,14 nam
+407,Le Van Cong1,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",8,0903333333,9 nam
+408,Pham Thi Dat1,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",9,0904444444,19 nam
+409,Do Van Em1,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",10,0905555555,12 nam
+410,Nguyen Van An2,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",11,0901234561,8 nam
+411,Tran Thi Binh2,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",12,0902345672,16 nam
+412,Le Van Cong2,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",13,0903456783,11 nam
+413,Pham Thi Dat2,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",14,0904567894,20 nam
+414,Do Van Em2,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",15,0905678905,13 nam
+415,Nguyen Van An3,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",16,0901234562,10 nam
+416,Tran Thi Binh3,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",17,0902345673,14 nam
+417,Le Van Cong3,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",18,0903456784,9 nam
+418,Pham Thi Dat3,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",19,0904567895,17 nam
+419,Do Van Em3,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",20,0905678906,11 nam
+420,Nguyen Van An4,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",21,0901234563,12 nam
+421,Tran Thi Binh4,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",22,0902345674,15 nam
+422,Le Van Cong4,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",23,0903456785,8 nam
+423,Pham Thi Dat4,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",24,0904567896,21 nam
+424,Do Van Em4,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",25,0905678907,14 nam
+425,Nguyen Van An5,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",26,0901234564,10 nam
+426,Tran Thi Binh5,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",27,0902345675,13 nam
+427,Le Van Cong5,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",28,0903456786,9 nam
+428,Pham Thi Dat5,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",29,0904567897,18 nam
+429,Do Van Em5,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",30,0905678908,12 nam
+430,Nguyen Van An6,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",31,0901234565,11 nam
+431,Tran Thi Binh6,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",32,0902345676,16 nam
+432,Le Van Cong6,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",33,0903456787,10 nam
+433,Pham Thi Dat6,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",34,0904567898,19 nam
+434,Do Van Em6,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",35,0905678909,14 nam
+435,Nguyen Van An7,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",36,0901234566,9 nam
+436,Tran Thi Binh7,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",37,0902345677,14 nam
+437,Le Van Cong7,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",38,0903456788,8 nam
+438,Pham Thi Dat7,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",39,0904567899,20 nam
+439,Do Van Em7,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",40,0905678910,13 nam
+440,Nguyen Van An8,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",41,0901234567,10 nam
+441,Tran Thi Binh8,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",42,0902345678,15 nam
+442,Le Van Cong8,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",43,0903456789,11 nam
+443,Pham Thi Dat8,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",44,0904567890,17 nam
+444,Do Van Em8,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",45,0905678901,12 nam
+445,Nguyen Van An9,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",46,0901234568,12 nam
+446,Tran Thi Binh9,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",47,0902345679,18 nam
+447,Le Van Cong9,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",48,0903456790,9 nam
+448,Pham Thi Dat9,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",49,0904567891,21 nam
+449,Do Van Em9,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",50,0905678902,16 nam
 400,Trần Thị B2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",43,0907785678,24 năm
 401,Lê Văn C3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",43,0908896789,28 năm
 402,Phạm Thị D4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tiêm đập nhanh",43,0909907890,16 năm
@@ -583,7 +633,1049 @@ id,name,specialty,symptoms,clinic_id,phone,experience
 682,Phạm Thị C4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",99,0902748556,16 năm
 683,Đỗ Văn D5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",99,0908463159,17 năm
 684,Nguyễn Văn E1,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",100,0907603566,13 năm
+685,Nguyen Van A51,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",51,0901567890,8 nam
+686,Tran Thi B51,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",52,0902678901,13 nam
+687,Le Van C51,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",53,0903789012,9 nam
+688,Pham Thi D51,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",54,0904890123,18 nam
+689,Do Van E51,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",55,0905901234,11 nam
+690,Nguyen Van F51,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",56,0906012345,14 nam
+691,Tran Thi G51,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",57,0907123456,10 nam
+692,Le Van H51,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",58,0908234567,19 nam
+693,Pham Thi I51,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",59,0909345678,15 nam
+694,Do Van J51,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",60,0901456789,12 nam
+695,Nguyen Van K51,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",61,0902567890,9 nam
+696,Tran Thi L51,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",62,0903678901,17 nam
+697,Le Van M51,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",63,0904789012,12 nam
+698,Pham Thi N51,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",64,0905890123,21 nam
+699,Do Van O51,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",65,0906901234,14 nam
+700,Nguyen Van P51,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",66,0907012345,11 nam
+701,Tran Thi Q51,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",67,0908123456,15 nam
+702,Le Van R51,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",68,0909234567,10 nam
+703,Pham Thi S51,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",69,0901345678,18 nam
+704,Do Van T51,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",70,0902456789,12 nam
+705,Nguyen Van U51,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",71,0903567890,13 nam
+706,Tran Thi V51,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",72,0904678901,16 nam
+707,Le Van W51,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",73,0905789012,9 nam
+708,Pham Thi X51,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",74,0906890123,22 nam
+709,Do Van Y51,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",75,0907901234,15 nam
+710,Nguyen Van Z51,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",76,0908012345,11 nam
+711,Tran Thi A52,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",77,0909123456,14 nam
+712,Le Van B52,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",78,0901234567,10 nam
+713,Pham Thi C52,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",79,0902345678,19 nam
+714,Do Van D52,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",80,0903456789,13 nam
+715,Nguyen Van E52,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",81,0904567890,12 nam
+716,Tran Thi F52,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",82,0905678901,17 nam
+717,Le Van G52,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",83,0906789012,11 nam
+718,Pham Thi H52,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",84,0907890123,20 nam
+719,Do Van I52,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",85,0908901234,15 nam
+720,Nguyen Van J52,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",86,0909012345,10 nam
+721,Tran Thi K52,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",87,0901123456,15 nam
+722,Le Van L52,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",88,0902234567,9 nam
+723,Pham Thi M52,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",89,0903345678,21 nam
+724,Do Van N52,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",90,0904456789,14 nam
+725,Nguyen Van O52,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",91,0905567890,11 nam
+726,Tran Thi P52,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",92,0906678901,16 nam
+727,Le Van Q52,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",93,0907789012,12 nam
+728,Pham Thi R52,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",94,0908890123,18 nam
+729,Do Van S52,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",95,0909901234,13 nam
+730,Nguyen Van T52,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",96,0901012345,13 nam
+731,Tran Thi U52,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",97,0902123456,19 nam
+732,Le Van V52,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",98,0903234567,10 nam
+733,Pham Thi W52,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",99,0904345678,22 nam
+734,Do Van X52,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",100,0905456789,17 nam
 685,Trần Thị F2,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",100,0903461072,5 năm
 686,Lê Văn G3,Mắt - Răng Hàm Mặt,"nhìn mờ,đau mắt,chảy nước mắt,mắt đỏ,đau răng,viêm lợi,chảy máu chân răng,đau hàm,sưng nướu,đau lan",100,0903227634,9 năm
 687,Phạm Thị H4,Đa Khoa,"đau họng,ho,sốt,đau đầu,ngạt mũi,chảy nước mũi,khó thở,mệt mỏi,biếng ăn,đau bụng,tiêu chảy,buồn nôn,ăn không tiêu,nôn mửa,sốt cao,tim đập nhanh",100,0902802627,6 năm
 688,Đỗ Văn I5,Cơ Xương Khớp,"đau lưng,đau vai,đau cổ,đau khớp,vai cứng,đau gối,đau cổ tay,chuột rút,tê bì",100,0907043025,16 năm
+735,Nguyen Van C1,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",1,090735,20 nam
+736,Tran Thi C1,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",1,090736,21 nam
+737,Le Van C1,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",1,090737,22 nam
+738,Pham Thi C1,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",1,090738,23 nam
+739,Do Van C1,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",1,090739,24 nam
+740,Hoang Thai C1,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",1,090740,5 nam
+741,Trinh Thu C1,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",1,090741,6 nam
+742,Vu Bao C1,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",1,090742,7 nam
+743,Bui Tuyet C1,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",1,090743,8 nam
+744,Nguyen Van C2,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",2,090744,9 nam
+745,Tran Thi C2,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",2,090745,10 nam
+746,Le Van C2,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",2,090746,11 nam
+747,Pham Thi C2,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",2,090747,12 nam
+748,Do Van C2,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",2,090748,13 nam
+749,Hoang Thai C2,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",2,090749,14 nam
+750,Trinh Thu C2,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",2,090750,15 nam
+751,Vu Bao C2,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",2,090751,16 nam
+752,Bui Tuyet C2,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",2,090752,17 nam
+753,Nguyen Van C3,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",3,090753,18 nam
+754,Tran Thi C3,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",3,090754,19 nam
+755,Le Van C3,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",3,090755,20 nam
+756,Pham Thi C3,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",3,090756,21 nam
+757,Do Van C3,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",3,090757,22 nam
+758,Hoang Thai C3,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",3,090758,23 nam
+759,Trinh Thu C3,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",3,090759,24 nam
+760,Vu Bao C3,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",3,090760,5 nam
+761,Bui Tuyet C3,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",3,090761,6 nam
+762,Nguyen Van C4,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",4,090762,7 nam
+763,Tran Thi C4,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",4,090763,8 nam
+764,Le Van C4,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",4,090764,9 nam
+765,Pham Thi C4,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",4,090765,10 nam
+766,Do Van C4,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",4,090766,11 nam
+767,Hoang Thai C4,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",4,090767,12 nam
+768,Trinh Thu C4,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",4,090768,13 nam
+769,Vu Bao C4,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",4,090769,14 nam
+770,Bui Tuyet C4,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",4,090770,15 nam
+771,Nguyen Van C5,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",5,090771,16 nam
+772,Tran Thi C5,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",5,090772,17 nam
+773,Le Van C5,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",5,090773,18 nam
+774,Pham Thi C5,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",5,090774,19 nam
+775,Do Van C5,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",5,090775,20 nam
+776,Hoang Thai C5,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",5,090776,21 nam
+777,Trinh Thu C5,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",5,090777,22 nam
+778,Vu Bao C5,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",5,090778,23 nam
+779,Bui Tuyet C5,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",5,090779,24 nam
+780,Nguyen Van C6,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",6,090780,5 nam
+781,Tran Thi C6,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",6,090781,6 nam
+782,Le Van C6,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",6,090782,7 nam
+783,Pham Thi C6,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",6,090783,8 nam
+784,Do Van C6,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",6,090784,9 nam
+785,Hoang Thai C6,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",6,090785,10 nam
+786,Trinh Thu C6,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",6,090786,11 nam
+787,Vu Bao C6,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",6,090787,12 nam
+788,Bui Tuyet C6,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",6,090788,13 nam
+789,Nguyen Van C7,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",7,090789,14 nam
+790,Tran Thi C7,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",7,090790,15 nam
+791,Le Van C7,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",7,090791,16 nam
+792,Pham Thi C7,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",7,090792,17 nam
+793,Do Van C7,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",7,090793,18 nam
+794,Hoang Thai C7,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",7,090794,19 nam
+795,Trinh Thu C7,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",7,090795,20 nam
+796,Vu Bao C7,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",7,090796,21 nam
+797,Bui Tuyet C7,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",7,090797,22 nam
+798,Nguyen Van C8,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",8,090798,23 nam
+799,Tran Thi C8,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",8,090799,24 nam
+800,Le Van C8,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",8,090800,5 nam
+801,Pham Thi C8,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",8,090801,6 nam
+802,Do Van C8,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",8,090802,7 nam
+803,Hoang Thai C8,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",8,090803,8 nam
+804,Trinh Thu C8,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",8,090804,9 nam
+805,Vu Bao C8,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",8,090805,10 nam
+806,Bui Tuyet C8,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",8,090806,11 nam
+807,Nguyen Van C9,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",9,090807,12 nam
+808,Tran Thi C9,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",9,090808,13 nam
+809,Le Van C9,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",9,090809,14 nam
+810,Pham Thi C9,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",9,090810,15 nam
+811,Do Van C9,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",9,090811,16 nam
+812,Hoang Thai C9,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",9,090812,17 nam
+813,Trinh Thu C9,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",9,090813,18 nam
+814,Vu Bao C9,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",9,090814,19 nam
+815,Bui Tuyet C9,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",9,090815,20 nam
+816,Nguyen Van C10,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",10,090816,21 nam
+817,Tran Thi C10,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",10,090817,22 nam
+818,Le Van C10,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",10,090818,23 nam
+819,Pham Thi C10,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",10,090819,24 nam
+820,Do Van C10,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",10,090820,5 nam
+821,Hoang Thai C10,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",10,090821,6 nam
+822,Trinh Thu C10,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",10,090822,7 nam
+823,Vu Bao C10,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",10,090823,8 nam
+824,Bui Tuyet C10,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",10,090824,9 nam
+825,Nguyen Van C11,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",11,090825,10 nam
+826,Tran Thi C11,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",11,090826,11 nam
+827,Le Van C11,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",11,090827,12 nam
+828,Pham Thi C11,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",11,090828,13 nam
+829,Do Van C11,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",11,090829,14 nam
+830,Hoang Thai C11,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",11,090830,15 nam
+831,Trinh Thu C11,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",11,090831,16 nam
+832,Vu Bao C11,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",11,090832,17 nam
+833,Bui Tuyet C11,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",11,090833,18 nam
+834,Nguyen Van C12,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",12,090834,19 nam
+835,Tran Thi C12,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",12,090835,20 nam
+836,Le Van C12,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",12,090836,21 nam
+837,Pham Thi C12,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",12,090837,22 nam
+838,Do Van C12,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",12,090838,23 nam
+839,Hoang Thai C12,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",12,090839,24 nam
+840,Trinh Thu C12,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",12,090840,5 nam
+841,Vu Bao C12,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",12,090841,6 nam
+842,Bui Tuyet C12,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",12,090842,7 nam
+843,Nguyen Van C13,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",13,090843,8 nam
+844,Tran Thi C13,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",13,090844,9 nam
+845,Le Van C13,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",13,090845,10 nam
+846,Pham Thi C13,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",13,090846,11 nam
+847,Do Van C13,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",13,090847,12 nam
+848,Hoang Thai C13,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",13,090848,13 nam
+849,Trinh Thu C13,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",13,090849,14 nam
+850,Vu Bao C13,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",13,090850,15 nam
+851,Bui Tuyet C13,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",13,090851,16 nam
+852,Nguyen Van C14,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",14,090852,17 nam
+853,Tran Thi C14,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",14,090853,18 nam
+854,Le Van C14,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",14,090854,19 nam
+855,Pham Thi C14,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",14,090855,20 nam
+856,Do Van C14,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",14,090856,21 nam
+857,Hoang Thai C14,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",14,090857,22 nam
+858,Trinh Thu C14,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",14,090858,23 nam
+859,Vu Bao C14,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",14,090859,24 nam
+860,Bui Tuyet C14,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",14,090860,5 nam
+861,Nguyen Van C15,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",15,090861,6 nam
+862,Tran Thi C15,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",15,090862,7 nam
+863,Le Van C15,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",15,090863,8 nam
+864,Pham Thi C15,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",15,090864,9 nam
+865,Do Van C15,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",15,090865,10 nam
+866,Hoang Thai C15,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",15,090866,11 nam
+867,Trinh Thu C15,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",15,090867,12 nam
+868,Vu Bao C15,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",15,090868,13 nam
+869,Bui Tuyet C15,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",15,090869,14 nam
+870,Nguyen Van C16,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",16,090870,15 nam
+871,Tran Thi C16,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",16,090871,16 nam
+872,Le Van C16,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",16,090872,17 nam
+873,Pham Thi C16,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",16,090873,18 nam
+874,Do Van C16,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",16,090874,19 nam
+875,Hoang Thai C16,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",16,090875,20 nam
+876,Trinh Thu C16,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",16,090876,21 nam
+877,Vu Bao C16,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",16,090877,22 nam
+878,Bui Tuyet C16,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",16,090878,23 nam
+879,Nguyen Van C17,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",17,090879,24 nam
+880,Tran Thi C17,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",17,090880,5 nam
+881,Le Van C17,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",17,090881,6 nam
+882,Pham Thi C17,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",17,090882,7 nam
+883,Do Van C17,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",17,090883,8 nam
+884,Hoang Thai C17,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",17,090884,9 nam
+885,Trinh Thu C17,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",17,090885,10 nam
+886,Vu Bao C17,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",17,090886,11 nam
+887,Bui Tuyet C17,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",17,090887,12 nam
+888,Nguyen Van C18,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",18,090888,13 nam
+889,Tran Thi C18,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",18,090889,14 nam
+890,Le Van C18,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",18,090890,15 nam
+891,Pham Thi C18,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",18,090891,16 nam
+892,Do Van C18,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",18,090892,17 nam
+893,Hoang Thai C18,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",18,090893,18 nam
+894,Trinh Thu C18,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",18,090894,19 nam
+895,Vu Bao C18,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",18,090895,20 nam
+896,Bui Tuyet C18,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",18,090896,21 nam
+897,Nguyen Van C19,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",19,090897,22 nam
+898,Tran Thi C19,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",19,090898,23 nam
+899,Le Van C19,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",19,090899,24 nam
+900,Pham Thi C19,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",19,090900,5 nam
+901,Do Van C19,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",19,090901,6 nam
+902,Hoang Thai C19,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",19,090902,7 nam
+903,Trinh Thu C19,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",19,090903,8 nam
+904,Vu Bao C19,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",19,090904,9 nam
+905,Bui Tuyet C19,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",19,090905,10 nam
+906,Nguyen Van C20,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",20,090906,11 nam
+907,Tran Thi C20,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",20,090907,12 nam
+908,Le Van C20,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",20,090908,13 nam
+909,Pham Thi C20,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",20,090909,14 nam
+910,Do Van C20,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",20,090910,15 nam
+911,Hoang Thai C20,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",20,090911,16 nam
+912,Trinh Thu C20,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",20,090912,17 nam
+913,Vu Bao C20,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",20,090913,18 nam
+914,Bui Tuyet C20,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",20,090914,19 nam
+915,Nguyen Van C21,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",21,090915,20 nam
+916,Tran Thi C21,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",21,090916,21 nam
+917,Le Van C21,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",21,090917,22 nam
+918,Pham Thi C21,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",21,090918,23 nam
+919,Do Van C21,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",21,090919,24 nam
+920,Hoang Thai C21,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",21,090920,5 nam
+921,Trinh Thu C21,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",21,090921,6 nam
+922,Vu Bao C21,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",21,090922,7 nam
+923,Bui Tuyet C21,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",21,090923,8 nam
+924,Nguyen Van C22,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",22,090924,9 nam
+925,Tran Thi C22,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",22,090925,10 nam
+926,Le Van C22,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",22,090926,11 nam
+927,Pham Thi C22,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",22,090927,12 nam
+928,Do Van C22,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",22,090928,13 nam
+929,Hoang Thai C22,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",22,090929,14 nam
+930,Trinh Thu C22,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",22,090930,15 nam
+931,Vu Bao C22,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",22,090931,16 nam
+932,Bui Tuyet C22,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",22,090932,17 nam
+933,Nguyen Van C23,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",23,090933,18 nam
+934,Tran Thi C23,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",23,090934,19 nam
+935,Le Van C23,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",23,090935,20 nam
+936,Pham Thi C23,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",23,090936,21 nam
+937,Do Van C23,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",23,090937,22 nam
+938,Hoang Thai C23,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",23,090938,23 nam
+939,Trinh Thu C23,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",23,090939,24 nam
+940,Vu Bao C23,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",23,090940,5 nam
+941,Bui Tuyet C23,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",23,090941,6 nam
+942,Nguyen Van C24,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",24,090942,7 nam
+943,Tran Thi C24,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",24,090943,8 nam
+944,Le Van C24,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",24,090944,9 nam
+945,Pham Thi C24,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",24,090945,10 nam
+946,Do Van C24,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",24,090946,11 nam
+947,Hoang Thai C24,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",24,090947,12 nam
+948,Trinh Thu C24,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",24,090948,13 nam
+949,Vu Bao C24,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",24,090949,14 nam
+950,Bui Tuyet C24,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",24,090950,15 nam
+951,Nguyen Van C25,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",25,090951,16 nam
+952,Tran Thi C25,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",25,090952,17 nam
+953,Le Van C25,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",25,090953,18 nam
+954,Pham Thi C25,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",25,090954,19 nam
+955,Do Van C25,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",25,090955,20 nam
+956,Hoang Thai C25,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",25,090956,21 nam
+957,Trinh Thu C25,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",25,090957,22 nam
+958,Vu Bao C25,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",25,090958,23 nam
+959,Bui Tuyet C25,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",25,090959,24 nam
+960,Nguyen Van C26,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",26,090960,5 nam
+961,Tran Thi C26,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",26,090961,6 nam
+962,Le Van C26,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",26,090962,7 nam
+963,Pham Thi C26,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",26,090963,8 nam
+964,Do Van C26,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",26,090964,9 nam
+965,Hoang Thai C26,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",26,090965,10 nam
+966,Trinh Thu C26,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",26,090966,11 nam
+967,Vu Bao C26,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",26,090967,12 nam
+968,Bui Tuyet C26,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",26,090968,13 nam
+969,Nguyen Van C27,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",27,090969,14 nam
+970,Tran Thi C27,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",27,090970,15 nam
+971,Le Van C27,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",27,090971,16 nam
+972,Pham Thi C27,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",27,090972,17 nam
+973,Do Van C27,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",27,090973,18 nam
+974,Hoang Thai C27,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",27,090974,19 nam
+975,Trinh Thu C27,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",27,090975,20 nam
+976,Vu Bao C27,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",27,090976,21 nam
+977,Bui Tuyet C27,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",27,090977,22 nam
+978,Nguyen Van C28,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",28,090978,23 nam
+979,Tran Thi C28,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",28,090979,24 nam
+980,Le Van C28,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",28,090980,5 nam
+981,Pham Thi C28,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",28,090981,6 nam
+982,Do Van C28,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",28,090982,7 nam
+983,Hoang Thai C28,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",28,090983,8 nam
+984,Trinh Thu C28,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",28,090984,9 nam
+985,Vu Bao C28,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",28,090985,10 nam
+986,Bui Tuyet C28,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",28,090986,11 nam
+987,Nguyen Van C29,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",29,090987,12 nam
+988,Tran Thi C29,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",29,090988,13 nam
+989,Le Van C29,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",29,090989,14 nam
+990,Pham Thi C29,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",29,090990,15 nam
+991,Do Van C29,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",29,090991,16 nam
+992,Hoang Thai C29,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",29,090992,17 nam
+993,Trinh Thu C29,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",29,090993,18 nam
+994,Vu Bao C29,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",29,090994,19 nam
+995,Bui Tuyet C29,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",29,090995,20 nam
+996,Nguyen Van C30,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",30,090996,21 nam
+997,Tran Thi C30,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",30,090997,22 nam
+998,Le Van C30,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",30,090998,23 nam
+999,Pham Thi C30,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",30,090999,24 nam
+1000,Do Van C30,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",30,0901000,5 nam
+1001,Hoang Thai C30,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",30,0901001,6 nam
+1002,Trinh Thu C30,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",30,0901002,7 nam
+1003,Vu Bao C30,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",30,0901003,8 nam
+1004,Bui Tuyet C30,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",30,0901004,9 nam
+1005,Nguyen Van C31,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",31,0901005,10 nam
+1006,Tran Thi C31,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",31,0901006,11 nam
+1007,Le Van C31,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",31,0901007,12 nam
+1008,Pham Thi C31,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",31,0901008,13 nam
+1009,Do Van C31,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",31,0901009,14 nam
+1010,Hoang Thai C31,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",31,0901010,15 nam
+1011,Trinh Thu C31,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",31,0901011,16 nam
+1012,Vu Bao C31,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",31,0901012,17 nam
+1013,Bui Tuyet C31,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",31,0901013,18 nam
+1014,Nguyen Van C32,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",32,0901014,19 nam
+1015,Tran Thi C32,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",32,0901015,20 nam
+1016,Le Van C32,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",32,0901016,21 nam
+1017,Pham Thi C32,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",32,0901017,22 nam
+1018,Do Van C32,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",32,0901018,23 nam
+1019,Hoang Thai C32,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",32,0901019,24 nam
+1020,Trinh Thu C32,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",32,0901020,5 nam
+1021,Vu Bao C32,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",32,0901021,6 nam
+1022,Bui Tuyet C32,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",32,0901022,7 nam
+1023,Nguyen Van C33,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",33,0901023,8 nam
+1024,Tran Thi C33,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",33,0901024,9 nam
+1025,Le Van C33,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",33,0901025,10 nam
+1026,Pham Thi C33,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",33,0901026,11 nam
+1027,Do Van C33,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",33,0901027,12 nam
+1028,Hoang Thai C33,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",33,0901028,13 nam
+1029,Trinh Thu C33,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",33,0901029,14 nam
+1030,Vu Bao C33,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",33,0901030,15 nam
+1031,Bui Tuyet C33,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",33,0901031,16 nam
+1032,Nguyen Van C34,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",34,0901032,17 nam
+1033,Tran Thi C34,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",34,0901033,18 nam
+1034,Le Van C34,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",34,0901034,19 nam
+1035,Pham Thi C34,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",34,0901035,20 nam
+1036,Do Van C34,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",34,0901036,21 nam
+1037,Hoang Thai C34,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",34,0901037,22 nam
+1038,Trinh Thu C34,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",34,0901038,23 nam
+1039,Vu Bao C34,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",34,0901039,24 nam
+1040,Bui Tuyet C34,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",34,0901040,5 nam
+1041,Nguyen Van C35,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",35,0901041,6 nam
+1042,Tran Thi C35,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",35,0901042,7 nam
+1043,Le Van C35,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",35,0901043,8 nam
+1044,Pham Thi C35,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",35,0901044,9 nam
+1045,Do Van C35,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",35,0901045,10 nam
+1046,Hoang Thai C35,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",35,0901046,11 nam
+1047,Trinh Thu C35,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",35,0901047,12 nam
+1048,Vu Bao C35,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",35,0901048,13 nam
+1049,Bui Tuyet C35,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",35,0901049,14 nam
+1050,Nguyen Van C36,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",36,0901050,15 nam
+1051,Tran Thi C36,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",36,0901051,16 nam
+1052,Le Van C36,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",36,0901052,17 nam
+1053,Pham Thi C36,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",36,0901053,18 nam
+1054,Do Van C36,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",36,0901054,19 nam
+1055,Hoang Thai C36,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",36,0901055,20 nam
+1056,Trinh Thu C36,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",36,0901056,21 nam
+1057,Vu Bao C36,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",36,0901057,22 nam
+1058,Bui Tuyet C36,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",36,0901058,23 nam
+1059,Nguyen Van C37,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",37,0901059,24 nam
+1060,Tran Thi C37,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",37,0901060,5 nam
+1061,Le Van C37,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",37,0901061,6 nam
+1062,Pham Thi C37,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",37,0901062,7 nam
+1063,Do Van C37,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",37,0901063,8 nam
+1064,Hoang Thai C37,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",37,0901064,9 nam
+1065,Trinh Thu C37,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",37,0901065,10 nam
+1066,Vu Bao C37,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",37,0901066,11 nam
+1067,Bui Tuyet C37,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",37,0901067,12 nam
+1068,Nguyen Van C38,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",38,0901068,13 nam
+1069,Tran Thi C38,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",38,0901069,14 nam
+1070,Le Van C38,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",38,0901070,15 nam
+1071,Pham Thi C38,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",38,0901071,16 nam
+1072,Do Van C38,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",38,0901072,17 nam
+1073,Hoang Thai C38,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",38,0901073,18 nam
+1074,Trinh Thu C38,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",38,0901074,19 nam
+1075,Vu Bao C38,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",38,0901075,20 nam
+1076,Bui Tuyet C38,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",38,0901076,21 nam
+1077,Nguyen Van C39,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",39,0901077,22 nam
+1078,Tran Thi C39,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",39,0901078,23 nam
+1079,Le Van C39,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",39,0901079,24 nam
+1080,Pham Thi C39,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",39,0901080,5 nam
+1081,Do Van C39,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",39,0901081,6 nam
+1082,Hoang Thai C39,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",39,0901082,7 nam
+1083,Trinh Thu C39,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",39,0901083,8 nam
+1084,Vu Bao C39,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",39,0901084,9 nam
+1085,Bui Tuyet C39,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",39,0901085,10 nam
+1086,Nguyen Van C40,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",40,0901086,11 nam
+1087,Tran Thi C40,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",40,0901087,12 nam
+1088,Le Van C40,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",40,0901088,13 nam
+1089,Pham Thi C40,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",40,0901089,14 nam
+1090,Do Van C40,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",40,0901090,15 nam
+1091,Hoang Thai C40,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",40,0901091,16 nam
+1092,Trinh Thu C40,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",40,0901092,17 nam
+1093,Vu Bao C40,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",40,0901093,18 nam
+1094,Bui Tuyet C40,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",40,0901094,19 nam
+1095,Nguyen Van C41,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",41,0901095,20 nam
+1096,Tran Thi C41,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",41,0901096,21 nam
+1097,Le Van C41,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",41,0901097,22 nam
+1098,Pham Thi C41,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",41,0901098,23 nam
+1099,Do Van C41,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",41,0901099,24 nam
+1100,Hoang Thai C41,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",41,0901100,5 nam
+1101,Trinh Thu C41,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",41,0901101,6 nam
+1102,Vu Bao C41,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",41,0901102,7 nam
+1103,Bui Tuyet C41,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",41,0901103,8 nam
+1104,Nguyen Van C42,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",42,0901104,9 nam
+1105,Tran Thi C42,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",42,0901105,10 nam
+1106,Le Van C42,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",42,0901106,11 nam
+1107,Pham Thi C42,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",42,0901107,12 nam
+1108,Do Van C42,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",42,0901108,13 nam
+1109,Hoang Thai C42,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",42,0901109,14 nam
+1110,Trinh Thu C42,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",42,0901110,15 nam
+1111,Vu Bao C42,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",42,0901111,16 nam
+1112,Bui Tuyet C42,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",42,0901112,17 nam
+1113,Nguyen Van C43,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",43,0901113,18 nam
+1114,Tran Thi C43,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",43,0901114,19 nam
+1115,Le Van C43,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",43,0901115,20 nam
+1116,Pham Thi C43,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",43,0901116,21 nam
+1117,Do Van C43,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",43,0901117,22 nam
+1118,Hoang Thai C43,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",43,0901118,23 nam
+1119,Trinh Thu C43,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",43,0901119,24 nam
+1120,Vu Bao C43,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",43,0901120,5 nam
+1121,Bui Tuyet C43,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",43,0901121,6 nam
+1122,Nguyen Van C44,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",44,0901122,7 nam
+1123,Tran Thi C44,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",44,0901123,8 nam
+1124,Le Van C44,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",44,0901124,9 nam
+1125,Pham Thi C44,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",44,0901125,10 nam
+1126,Do Van C44,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",44,0901126,11 nam
+1127,Hoang Thai C44,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",44,0901127,12 nam
+1128,Trinh Thu C44,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",44,0901128,13 nam
+1129,Vu Bao C44,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",44,0901129,14 nam
+1130,Bui Tuyet C44,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",44,0901130,15 nam
+1131,Nguyen Van C45,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",45,0901131,16 nam
+1132,Tran Thi C45,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",45,0901132,17 nam
+1133,Le Van C45,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",45,0901133,18 nam
+1134,Pham Thi C45,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",45,0901134,19 nam
+1135,Do Van C45,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",45,0901135,20 nam
+1136,Hoang Thai C45,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",45,0901136,21 nam
+1137,Trinh Thu C45,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",45,0901137,22 nam
+1138,Vu Bao C45,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",45,0901138,23 nam
+1139,Bui Tuyet C45,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",45,0901139,24 nam
+1140,Nguyen Van C46,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",46,0901140,5 nam
+1141,Tran Thi C46,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",46,0901141,6 nam
+1142,Le Van C46,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",46,0901142,7 nam
+1143,Pham Thi C46,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",46,0901143,8 nam
+1144,Do Van C46,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",46,0901144,9 nam
+1145,Hoang Thai C46,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",46,0901145,10 nam
+1146,Trinh Thu C46,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",46,0901146,11 nam
+1147,Vu Bao C46,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",46,0901147,12 nam
+1148,Bui Tuyet C46,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",46,0901148,13 nam
+1149,Nguyen Van C47,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",47,0901149,14 nam
+1150,Tran Thi C47,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",47,0901150,15 nam
+1151,Le Van C47,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",47,0901151,16 nam
+1152,Pham Thi C47,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",47,0901152,17 nam
+1153,Do Van C47,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",47,0901153,18 nam
+1154,Hoang Thai C47,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",47,0901154,19 nam
+1155,Trinh Thu C47,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",47,0901155,20 nam
+1156,Vu Bao C47,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",47,0901156,21 nam
+1157,Bui Tuyet C47,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",47,0901157,22 nam
+1158,Nguyen Van C48,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",48,0901158,23 nam
+1159,Tran Thi C48,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",48,0901159,24 nam
+1160,Le Van C48,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",48,0901160,5 nam
+1161,Pham Thi C48,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",48,0901161,6 nam
+1162,Do Van C48,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",48,0901162,7 nam
+1163,Hoang Thai C48,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",48,0901163,8 nam
+1164,Trinh Thu C48,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",48,0901164,9 nam
+1165,Vu Bao C48,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",48,0901165,10 nam
+1166,Bui Tuyet C48,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",48,0901166,11 nam
+1167,Nguyen Van C49,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",49,0901167,12 nam
+1168,Tran Thi C49,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",49,0901168,13 nam
+1169,Le Van C49,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",49,0901169,14 nam
+1170,Pham Thi C49,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",49,0901170,15 nam
+1171,Do Van C49,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",49,0901171,16 nam
+1172,Hoang Thai C49,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",49,0901172,17 nam
+1173,Trinh Thu C49,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",49,0901173,18 nam
+1174,Vu Bao C49,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",49,0901174,19 nam
+1175,Bui Tuyet C49,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",49,0901175,20 nam
+1176,Nguyen Van C50,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",50,0901176,21 nam
+1177,Tran Thi C50,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",50,0901177,22 nam
+1178,Le Van C50,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",50,0901178,23 nam
+1179,Pham Thi C50,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",50,0901179,24 nam
+1180,Do Van C50,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",50,0901180,5 nam
+1181,Hoang Thai C50,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",50,0901181,6 nam
+1182,Trinh Thu C50,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",50,0901182,7 nam
+1183,Vu Bao C50,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",50,0901183,8 nam
+1184,Bui Tuyet C50,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",50,0901184,9 nam
+1185,Nguyen Van C51,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",51,0901185,10 nam
+1186,Tran Thi C51,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",51,0901186,11 nam
+1187,Le Van C51,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",51,0901187,12 nam
+1188,Pham Thi C51,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",51,0901188,13 nam
+1189,Do Van C51,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",51,0901189,14 nam
+1190,Hoang Thai C51,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",51,0901190,15 nam
+1191,Trinh Thu C51,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",51,0901191,16 nam
+1192,Vu Bao C51,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",51,0901192,17 nam
+1193,Bui Tuyet C51,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",51,0901193,18 nam
+1194,Nguyen Van C52,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",52,0901194,19 nam
+1195,Tran Thi C52,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",52,0901195,20 nam
+1196,Le Van C52,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",52,0901196,21 nam
+1197,Pham Thi C52,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",52,0901197,22 nam
+1198,Do Van C52,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",52,0901198,23 nam
+1199,Hoang Thai C52,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",52,0901199,24 nam
+1200,Trinh Thu C52,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",52,0901200,5 nam
+1201,Vu Bao C52,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",52,0901201,6 nam
+1202,Bui Tuyet C52,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",52,0901202,7 nam
+1203,Nguyen Van C53,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",53,0901203,8 nam
+1204,Tran Thi C53,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",53,0901204,9 nam
+1205,Le Van C53,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",53,0901205,10 nam
+1206,Pham Thi C53,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",53,0901206,11 nam
+1207,Do Van C53,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",53,0901207,12 nam
+1208,Hoang Thai C53,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",53,0901208,13 nam
+1209,Trinh Thu C53,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",53,0901209,14 nam
+1210,Vu Bao C53,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",53,0901210,15 nam
+1211,Bui Tuyet C53,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",53,0901211,16 nam
+1212,Nguyen Van C54,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",54,0901212,17 nam
+1213,Tran Thi C54,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",54,0901213,18 nam
+1214,Le Van C54,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",54,0901214,19 nam
+1215,Pham Thi C54,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",54,0901215,20 nam
+1216,Do Van C54,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",54,0901216,21 nam
+1217,Hoang Thai C54,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",54,0901217,22 nam
+1218,Trinh Thu C54,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",54,0901218,23 nam
+1219,Vu Bao C54,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",54,0901219,24 nam
+1220,Bui Tuyet C54,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",54,0901220,5 nam
+1221,Nguyen Van C55,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",55,0901221,6 nam
+1222,Tran Thi C55,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",55,0901222,7 nam
+1223,Le Van C55,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",55,0901223,8 nam
+1224,Pham Thi C55,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",55,0901224,9 nam
+1225,Do Van C55,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",55,0901225,10 nam
+1226,Hoang Thai C55,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",55,0901226,11 nam
+1227,Trinh Thu C55,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",55,0901227,12 nam
+1228,Vu Bao C55,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",55,0901228,13 nam
+1229,Bui Tuyet C55,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",55,0901229,14 nam
+1230,Nguyen Van C56,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",56,0901230,15 nam
+1231,Tran Thi C56,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",56,0901231,16 nam
+1232,Le Van C56,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",56,0901232,17 nam
+1233,Pham Thi C56,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",56,0901233,18 nam
+1234,Do Van C56,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",56,0901234,19 nam
+1235,Hoang Thai C56,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",56,0901235,20 nam
+1236,Trinh Thu C56,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",56,0901236,21 nam
+1237,Vu Bao C56,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",56,0901237,22 nam
+1238,Bui Tuyet C56,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",56,0901238,23 nam
+1239,Nguyen Van C57,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",57,0901239,24 nam
+1240,Tran Thi C57,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",57,0901240,5 nam
+1241,Le Van C57,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",57,0901241,6 nam
+1242,Pham Thi C57,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",57,0901242,7 nam
+1243,Do Van C57,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",57,0901243,8 nam
+1244,Hoang Thai C57,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",57,0901244,9 nam
+1245,Trinh Thu C57,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",57,0901245,10 nam
+1246,Vu Bao C57,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",57,0901246,11 nam
+1247,Bui Tuyet C57,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",57,0901247,12 nam
+1248,Nguyen Van C58,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",58,0901248,13 nam
+1249,Tran Thi C58,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",58,0901249,14 nam
+1250,Le Van C58,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",58,0901250,15 nam
+1251,Pham Thi C58,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",58,0901251,16 nam
+1252,Do Van C58,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",58,0901252,17 nam
+1253,Hoang Thai C58,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",58,0901253,18 nam
+1254,Trinh Thu C58,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",58,0901254,19 nam
+1255,Vu Bao C58,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",58,0901255,20 nam
+1256,Bui Tuyet C58,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",58,0901256,21 nam
+1257,Nguyen Van C59,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",59,0901257,22 nam
+1258,Tran Thi C59,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",59,0901258,23 nam
+1259,Le Van C59,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",59,0901259,24 nam
+1260,Pham Thi C59,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",59,0901260,5 nam
+1261,Do Van C59,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",59,0901261,6 nam
+1262,Hoang Thai C59,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",59,0901262,7 nam
+1263,Trinh Thu C59,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",59,0901263,8 nam
+1264,Vu Bao C59,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",59,0901264,9 nam
+1265,Bui Tuyet C59,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",59,0901265,10 nam
+1266,Nguyen Van C60,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",60,0901266,11 nam
+1267,Tran Thi C60,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",60,0901267,12 nam
+1268,Le Van C60,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",60,0901268,13 nam
+1269,Pham Thi C60,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",60,0901269,14 nam
+1270,Do Van C60,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",60,0901270,15 nam
+1271,Hoang Thai C60,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",60,0901271,16 nam
+1272,Trinh Thu C60,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",60,0901272,17 nam
+1273,Vu Bao C60,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",60,0901273,18 nam
+1274,Bui Tuyet C60,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",60,0901274,19 nam
+1275,Nguyen Van C61,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",61,0901275,20 nam
+1276,Tran Thi C61,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",61,0901276,21 nam
+1277,Le Van C61,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",61,0901277,22 nam
+1278,Pham Thi C61,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",61,0901278,23 nam
+1279,Do Van C61,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",61,0901279,24 nam
+1280,Hoang Thai C61,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",61,0901280,5 nam
+1281,Trinh Thu C61,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",61,0901281,6 nam
+1282,Vu Bao C61,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",61,0901282,7 nam
+1283,Bui Tuyet C61,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",61,0901283,8 nam
+1284,Nguyen Van C62,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",62,0901284,9 nam
+1285,Tran Thi C62,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",62,0901285,10 nam
+1286,Le Van C62,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",62,0901286,11 nam
+1287,Pham Thi C62,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",62,0901287,12 nam
+1288,Do Van C62,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",62,0901288,13 nam
+1289,Hoang Thai C62,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",62,0901289,14 nam
+1290,Trinh Thu C62,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",62,0901290,15 nam
+1291,Vu Bao C62,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",62,0901291,16 nam
+1292,Bui Tuyet C62,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",62,0901292,17 nam
+1293,Nguyen Van C63,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",63,0901293,18 nam
+1294,Tran Thi C63,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",63,0901294,19 nam
+1295,Le Van C63,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",63,0901295,20 nam
+1296,Pham Thi C63,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",63,0901296,21 nam
+1297,Do Van C63,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",63,0901297,22 nam
+1298,Hoang Thai C63,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",63,0901298,23 nam
+1299,Trinh Thu C63,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",63,0901299,24 nam
+1300,Vu Bao C63,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",63,0901300,5 nam
+1301,Bui Tuyet C63,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",63,0901301,6 nam
+1302,Nguyen Van C64,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",64,0901302,7 nam
+1303,Tran Thi C64,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",64,0901303,8 nam
+1304,Le Van C64,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",64,0901304,9 nam
+1305,Pham Thi C64,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",64,0901305,10 nam
+1306,Do Van C64,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",64,0901306,11 nam
+1307,Hoang Thai C64,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",64,0901307,12 nam
+1308,Trinh Thu C64,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",64,0901308,13 nam
+1309,Vu Bao C64,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",64,0901309,14 nam
+1310,Bui Tuyet C64,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",64,0901310,15 nam
+1311,Nguyen Van C65,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",65,0901311,16 nam
+1312,Tran Thi C65,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",65,0901312,17 nam
+1313,Le Van C65,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",65,0901313,18 nam
+1314,Pham Thi C65,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",65,0901314,19 nam
+1315,Do Van C65,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",65,0901315,20 nam
+1316,Hoang Thai C65,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",65,0901316,21 nam
+1317,Trinh Thu C65,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",65,0901317,22 nam
+1318,Vu Bao C65,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",65,0901318,23 nam
+1319,Bui Tuyet C65,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",65,0901319,24 nam
+1320,Nguyen Van C66,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",66,0901320,5 nam
+1321,Tran Thi C66,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",66,0901321,6 nam
+1322,Le Van C66,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",66,0901322,7 nam
+1323,Pham Thi C66,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",66,0901323,8 nam
+1324,Do Van C66,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",66,0901324,9 nam
+1325,Hoang Thai C66,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",66,0901325,10 nam
+1326,Trinh Thu C66,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",66,0901326,11 nam
+1327,Vu Bao C66,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",66,0901327,12 nam
+1328,Bui Tuyet C66,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",66,0901328,13 nam
+1329,Nguyen Van C67,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",67,0901329,14 nam
+1330,Tran Thi C67,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",67,0901330,15 nam
+1331,Le Van C67,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",67,0901331,16 nam
+1332,Pham Thi C67,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",67,0901332,17 nam
+1333,Do Van C67,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",67,0901333,18 nam
+1334,Hoang Thai C67,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",67,0901334,19 nam
+1335,Trinh Thu C67,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",67,0901335,20 nam
+1336,Vu Bao C67,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",67,0901336,21 nam
+1337,Bui Tuyet C67,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",67,0901337,22 nam
+1338,Nguyen Van C68,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",68,0901338,23 nam
+1339,Tran Thi C68,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",68,0901339,24 nam
+1340,Le Van C68,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",68,0901340,5 nam
+1341,Pham Thi C68,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",68,0901341,6 nam
+1342,Do Van C68,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",68,0901342,7 nam
+1343,Hoang Thai C68,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",68,0901343,8 nam
+1344,Trinh Thu C68,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",68,0901344,9 nam
+1345,Vu Bao C68,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",68,0901345,10 nam
+1346,Bui Tuyet C68,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",68,0901346,11 nam
+1347,Nguyen Van C69,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",69,0901347,12 nam
+1348,Tran Thi C69,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",69,0901348,13 nam
+1349,Le Van C69,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",69,0901349,14 nam
+1350,Pham Thi C69,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",69,0901350,15 nam
+1351,Do Van C69,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",69,0901351,16 nam
+1352,Hoang Thai C69,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",69,0901352,17 nam
+1353,Trinh Thu C69,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",69,0901353,18 nam
+1354,Vu Bao C69,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",69,0901354,19 nam
+1355,Bui Tuyet C69,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",69,0901355,20 nam
+1356,Nguyen Van C70,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",70,0901356,21 nam
+1357,Tran Thi C70,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",70,0901357,22 nam
+1358,Le Van C70,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",70,0901358,23 nam
+1359,Pham Thi C70,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",70,0901359,24 nam
+1360,Do Van C70,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",70,0901360,5 nam
+1361,Hoang Thai C70,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",70,0901361,6 nam
+1362,Trinh Thu C70,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",70,0901362,7 nam
+1363,Vu Bao C70,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",70,0901363,8 nam
+1364,Bui Tuyet C70,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",70,0901364,9 nam
+1365,Nguyen Van C71,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",71,0901365,10 nam
+1366,Tran Thi C71,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",71,0901366,11 nam
+1367,Le Van C71,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",71,0901367,12 nam
+1368,Pham Thi C71,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",71,0901368,13 nam
+1369,Do Van C71,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",71,0901369,14 nam
+1370,Hoang Thai C71,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",71,0901370,15 nam
+1371,Trinh Thu C71,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",71,0901371,16 nam
+1372,Vu Bao C71,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",71,0901372,17 nam
+1373,Bui Tuyet C71,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",71,0901373,18 nam
+1374,Nguyen Van C72,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",72,0901374,19 nam
+1375,Tran Thi C72,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",72,0901375,20 nam
+1376,Le Van C72,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",72,0901376,21 nam
+1377,Pham Thi C72,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",72,0901377,22 nam
+1378,Do Van C72,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",72,0901378,23 nam
+1379,Hoang Thai C72,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",72,0901379,24 nam
+1380,Trinh Thu C72,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",72,0901380,5 nam
+1381,Vu Bao C72,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",72,0901381,6 nam
+1382,Bui Tuyet C72,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",72,0901382,7 nam
+1383,Nguyen Van C73,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",73,0901383,8 nam
+1384,Tran Thi C73,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",73,0901384,9 nam
+1385,Le Van C73,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",73,0901385,10 nam
+1386,Pham Thi C73,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",73,0901386,11 nam
+1387,Do Van C73,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",73,0901387,12 nam
+1388,Hoang Thai C73,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",73,0901388,13 nam
+1389,Trinh Thu C73,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",73,0901389,14 nam
+1390,Vu Bao C73,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",73,0901390,15 nam
+1391,Bui Tuyet C73,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",73,0901391,16 nam
+1392,Nguyen Van C74,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",74,0901392,17 nam
+1393,Tran Thi C74,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",74,0901393,18 nam
+1394,Le Van C74,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",74,0901394,19 nam
+1395,Pham Thi C74,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",74,0901395,20 nam
+1396,Do Van C74,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",74,0901396,21 nam
+1397,Hoang Thai C74,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",74,0901397,22 nam
+1398,Trinh Thu C74,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",74,0901398,23 nam
+1399,Vu Bao C74,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",74,0901399,24 nam
+1400,Bui Tuyet C74,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",74,0901400,5 nam
+1401,Nguyen Van C75,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",75,0901401,6 nam
+1402,Tran Thi C75,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",75,0901402,7 nam
+1403,Le Van C75,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",75,0901403,8 nam
+1404,Pham Thi C75,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",75,0901404,9 nam
+1405,Do Van C75,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",75,0901405,10 nam
+1406,Hoang Thai C75,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",75,0901406,11 nam
+1407,Trinh Thu C75,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",75,0901407,12 nam
+1408,Vu Bao C75,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",75,0901408,13 nam
+1409,Bui Tuyet C75,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",75,0901409,14 nam
+1410,Nguyen Van C76,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",76,0901410,15 nam
+1411,Tran Thi C76,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",76,0901411,16 nam
+1412,Le Van C76,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",76,0901412,17 nam
+1413,Pham Thi C76,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",76,0901413,18 nam
+1414,Do Van C76,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",76,0901414,19 nam
+1415,Hoang Thai C76,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",76,0901415,20 nam
+1416,Trinh Thu C76,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",76,0901416,21 nam
+1417,Vu Bao C76,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",76,0901417,22 nam
+1418,Bui Tuyet C76,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",76,0901418,23 nam
+1419,Nguyen Van C77,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",77,0901419,24 nam
+1420,Tran Thi C77,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",77,0901420,5 nam
+1421,Le Van C77,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",77,0901421,6 nam
+1422,Pham Thi C77,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",77,0901422,7 nam
+1423,Do Van C77,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",77,0901423,8 nam
+1424,Hoang Thai C77,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",77,0901424,9 nam
+1425,Trinh Thu C77,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",77,0901425,10 nam
+1426,Vu Bao C77,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",77,0901426,11 nam
+1427,Bui Tuyet C77,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",77,0901427,12 nam
+1428,Nguyen Van C78,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",78,0901428,13 nam
+1429,Tran Thi C78,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",78,0901429,14 nam
+1430,Le Van C78,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",78,0901430,15 nam
+1431,Pham Thi C78,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",78,0901431,16 nam
+1432,Do Van C78,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",78,0901432,17 nam
+1433,Hoang Thai C78,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",78,0901433,18 nam
+1434,Trinh Thu C78,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",78,0901434,19 nam
+1435,Vu Bao C78,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",78,0901435,20 nam
+1436,Bui Tuyet C78,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",78,0901436,21 nam
+1437,Nguyen Van C79,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",79,0901437,22 nam
+1438,Tran Thi C79,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",79,0901438,23 nam
+1439,Le Van C79,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",79,0901439,24 nam
+1440,Pham Thi C79,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",79,0901440,5 nam
+1441,Do Van C79,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",79,0901441,6 nam
+1442,Hoang Thai C79,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",79,0901442,7 nam
+1443,Trinh Thu C79,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",79,0901443,8 nam
+1444,Vu Bao C79,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",79,0901444,9 nam
+1445,Bui Tuyet C79,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",79,0901445,10 nam
+1446,Nguyen Van C80,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",80,0901446,11 nam
+1447,Tran Thi C80,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",80,0901447,12 nam
+1448,Le Van C80,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",80,0901448,13 nam
+1449,Pham Thi C80,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",80,0901449,14 nam
+1450,Do Van C80,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",80,0901450,15 nam
+1451,Hoang Thai C80,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",80,0901451,16 nam
+1452,Trinh Thu C80,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",80,0901452,17 nam
+1453,Vu Bao C80,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",80,0901453,18 nam
+1454,Bui Tuyet C80,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",80,0901454,19 nam
+1455,Nguyen Van C81,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",81,0901455,20 nam
+1456,Tran Thi C81,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",81,0901456,21 nam
+1457,Le Van C81,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",81,0901457,22 nam
+1458,Pham Thi C81,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",81,0901458,23 nam
+1459,Do Van C81,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",81,0901459,24 nam
+1460,Hoang Thai C81,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",81,0901460,5 nam
+1461,Trinh Thu C81,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",81,0901461,6 nam
+1462,Vu Bao C81,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",81,0901462,7 nam
+1463,Bui Tuyet C81,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",81,0901463,8 nam
+1464,Nguyen Van C82,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",82,0901464,9 nam
+1465,Tran Thi C82,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",82,0901465,10 nam
+1466,Le Van C82,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",82,0901466,11 nam
+1467,Pham Thi C82,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",82,0901467,12 nam
+1468,Do Van C82,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",82,0901468,13 nam
+1469,Hoang Thai C82,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",82,0901469,14 nam
+1470,Trinh Thu C82,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",82,0901470,15 nam
+1471,Vu Bao C82,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",82,0901471,16 nam
+1472,Bui Tuyet C82,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",82,0901472,17 nam
+1473,Nguyen Van C83,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",83,0901473,18 nam
+1474,Tran Thi C83,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",83,0901474,19 nam
+1475,Le Van C83,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",83,0901475,20 nam
+1476,Pham Thi C83,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",83,0901476,21 nam
+1477,Do Van C83,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",83,0901477,22 nam
+1478,Hoang Thai C83,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",83,0901478,23 nam
+1479,Trinh Thu C83,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",83,0901479,24 nam
+1480,Vu Bao C83,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",83,0901480,5 nam
+1481,Bui Tuyet C83,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",83,0901481,6 nam
+1482,Nguyen Van C84,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",84,0901482,7 nam
+1483,Tran Thi C84,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",84,0901483,8 nam
+1484,Le Van C84,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",84,0901484,9 nam
+1485,Pham Thi C84,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",84,0901485,10 nam
+1486,Do Van C84,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",84,0901486,11 nam
+1487,Hoang Thai C84,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",84,0901487,12 nam
+1488,Trinh Thu C84,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",84,0901488,13 nam
+1489,Vu Bao C84,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",84,0901489,14 nam
+1490,Bui Tuyet C84,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",84,0901490,15 nam
+1491,Nguyen Van C85,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",85,0901491,16 nam
+1492,Tran Thi C85,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",85,0901492,17 nam
+1493,Le Van C85,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",85,0901493,18 nam
+1494,Pham Thi C85,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",85,0901494,19 nam
+1495,Do Van C85,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",85,0901495,20 nam
+1496,Hoang Thai C85,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",85,0901496,21 nam
+1497,Trinh Thu C85,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",85,0901497,22 nam
+1498,Vu Bao C85,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",85,0901498,23 nam
+1499,Bui Tuyet C85,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",85,0901499,24 nam
+1500,Nguyen Van C86,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",86,0901500,5 nam
+1501,Tran Thi C86,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",86,0901501,6 nam
+1502,Le Van C86,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",86,0901502,7 nam
+1503,Pham Thi C86,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",86,0901503,8 nam
+1504,Do Van C86,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",86,0901504,9 nam
+1505,Hoang Thai C86,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",86,0901505,10 nam
+1506,Trinh Thu C86,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",86,0901506,11 nam
+1507,Vu Bao C86,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",86,0901507,12 nam
+1508,Bui Tuyet C86,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",86,0901508,13 nam
+1509,Nguyen Van C87,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",87,0901509,14 nam
+1510,Tran Thi C87,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",87,0901510,15 nam
+1511,Le Van C87,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",87,0901511,16 nam
+1512,Pham Thi C87,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",87,0901512,17 nam
+1513,Do Van C87,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",87,0901513,18 nam
+1514,Hoang Thai C87,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",87,0901514,19 nam
+1515,Trinh Thu C87,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",87,0901515,20 nam
+1516,Vu Bao C87,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",87,0901516,21 nam
+1517,Bui Tuyet C87,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",87,0901517,22 nam
+1518,Nguyen Van C88,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",88,0901518,23 nam
+1519,Tran Thi C88,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",88,0901519,24 nam
+1520,Le Van C88,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",88,0901520,5 nam
+1521,Pham Thi C88,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",88,0901521,6 nam
+1522,Do Van C88,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",88,0901522,7 nam
+1523,Hoang Thai C88,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",88,0901523,8 nam
+1524,Trinh Thu C88,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",88,0901524,9 nam
+1525,Vu Bao C88,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",88,0901525,10 nam
+1526,Bui Tuyet C88,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",88,0901526,11 nam
+1527,Nguyen Van C89,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",89,0901527,12 nam
+1528,Tran Thi C89,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",89,0901528,13 nam
+1529,Le Van C89,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",89,0901529,14 nam
+1530,Pham Thi C89,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",89,0901530,15 nam
+1531,Do Van C89,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",89,0901531,16 nam
+1532,Hoang Thai C89,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",89,0901532,17 nam
+1533,Trinh Thu C89,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",89,0901533,18 nam
+1534,Vu Bao C89,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",89,0901534,19 nam
+1535,Bui Tuyet C89,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",89,0901535,20 nam
+1536,Nguyen Van C90,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",90,0901536,21 nam
+1537,Tran Thi C90,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",90,0901537,22 nam
+1538,Le Van C90,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",90,0901538,23 nam
+1539,Pham Thi C90,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",90,0901539,24 nam
+1540,Do Van C90,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",90,0901540,5 nam
+1541,Hoang Thai C90,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",90,0901541,6 nam
+1542,Trinh Thu C90,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",90,0901542,7 nam
+1543,Vu Bao C90,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",90,0901543,8 nam
+1544,Bui Tuyet C90,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",90,0901544,9 nam
+1545,Nguyen Van C91,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",91,0901545,10 nam
+1546,Tran Thi C91,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",91,0901546,11 nam
+1547,Le Van C91,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",91,0901547,12 nam
+1548,Pham Thi C91,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",91,0901548,13 nam
+1549,Do Van C91,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",91,0901549,14 nam
+1550,Hoang Thai C91,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",91,0901550,15 nam
+1551,Trinh Thu C91,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",91,0901551,16 nam
+1552,Vu Bao C91,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",91,0901552,17 nam
+1553,Bui Tuyet C91,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",91,0901553,18 nam
+1554,Nguyen Van C92,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",92,0901554,19 nam
+1555,Tran Thi C92,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",92,0901555,20 nam
+1556,Le Van C92,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",92,0901556,21 nam
+1557,Pham Thi C92,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",92,0901557,22 nam
+1558,Do Van C92,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",92,0901558,23 nam
+1559,Hoang Thai C92,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",92,0901559,24 nam
+1560,Trinh Thu C92,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",92,0901560,5 nam
+1561,Vu Bao C92,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",92,0901561,6 nam
+1562,Bui Tuyet C92,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",92,0901562,7 nam
+1563,Nguyen Van C93,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",93,0901563,8 nam
+1564,Tran Thi C93,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",93,0901564,9 nam
+1565,Le Van C93,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",93,0901565,10 nam
+1566,Pham Thi C93,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",93,0901566,11 nam
+1567,Do Van C93,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",93,0901567,12 nam
+1568,Hoang Thai C93,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",93,0901568,13 nam
+1569,Trinh Thu C93,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",93,0901569,14 nam
+1570,Vu Bao C93,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",93,0901570,15 nam
+1571,Bui Tuyet C93,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",93,0901571,16 nam
+1572,Nguyen Van C94,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",94,0901572,17 nam
+1573,Tran Thi C94,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",94,0901573,18 nam
+1574,Le Van C94,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",94,0901574,19 nam
+1575,Pham Thi C94,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",94,0901575,20 nam
+1576,Do Van C94,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",94,0901576,21 nam
+1577,Hoang Thai C94,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",94,0901577,22 nam
+1578,Trinh Thu C94,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",94,0901578,23 nam
+1579,Vu Bao C94,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",94,0901579,24 nam
+1580,Bui Tuyet C94,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",94,0901580,5 nam
+1581,Nguyen Van C95,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",95,0901581,6 nam
+1582,Tran Thi C95,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",95,0901582,7 nam
+1583,Le Van C95,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",95,0901583,8 nam
+1584,Pham Thi C95,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",95,0901584,9 nam
+1585,Do Van C95,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",95,0901585,10 nam
+1586,Hoang Thai C95,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",95,0901586,11 nam
+1587,Trinh Thu C95,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",95,0901587,12 nam
+1588,Vu Bao C95,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",95,0901588,13 nam
+1589,Bui Tuyet C95,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",95,0901589,14 nam
+1590,Nguyen Van C96,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",96,0901590,15 nam
+1591,Tran Thi C96,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",96,0901591,16 nam
+1592,Le Van C96,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",96,0901592,17 nam
+1593,Pham Thi C96,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",96,0901593,18 nam
+1594,Do Van C96,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",96,0901594,19 nam
+1595,Hoang Thai C96,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",96,0901595,20 nam
+1596,Trinh Thu C96,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",96,0901596,21 nam
+1597,Vu Bao C96,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",96,0901597,22 nam
+1598,Bui Tuyet C96,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",96,0901598,23 nam
+1599,Nguyen Van C97,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",97,0901599,24 nam
+1600,Tran Thi C97,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",97,0901600,5 nam
+1601,Le Van C97,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",97,0901601,6 nam
+1602,Pham Thi C97,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",97,0901602,7 nam
+1603,Do Van C97,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",97,0901603,8 nam
+1604,Hoang Thai C97,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",97,0901604,9 nam
+1605,Trinh Thu C97,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",97,0901605,10 nam
+1606,Vu Bao C97,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",97,0901606,11 nam
+1607,Bui Tuyet C97,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",97,0901607,12 nam
+1608,Nguyen Van C98,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",98,0901608,13 nam
+1609,Tran Thi C98,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",98,0901609,14 nam
+1610,Le Van C98,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",98,0901610,15 nam
+1611,Pham Thi C98,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",98,0901611,16 nam
+1612,Do Van C98,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",98,0901612,17 nam
+1613,Hoang Thai C98,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",98,0901613,18 nam
+1614,Trinh Thu C98,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",98,0901614,19 nam
+1615,Vu Bao C98,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",98,0901615,20 nam
+1616,Bui Tuyet C98,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",98,0901616,21 nam
+1617,Nguyen Van C99,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",99,0901617,22 nam
+1618,Tran Thi C99,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",99,0901618,23 nam
+1619,Le Van C99,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",99,0901619,24 nam
+1620,Pham Thi C99,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",99,0901620,5 nam
+1621,Do Van C99,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",99,0901621,6 nam
+1622,Hoang Thai C99,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",99,0901622,7 nam
+1623,Trinh Thu C99,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",99,0901623,8 nam
+1624,Vu Bao C99,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",99,0901624,9 nam
+1625,Bui Tuyet C99,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",99,0901625,10 nam
+1626,Nguyen Van C100,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",100,0901626,11 nam
+1627,Tran Thi C100,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",100,0901627,12 nam
+1628,Le Van C100,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",100,0901628,13 nam
+1629,Pham Thi C100,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",100,0901629,14 nam
+1630,Do Van C100,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",100,0901630,15 nam
+1631,Hoang Thai C100,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",100,0901631,16 nam
+1632,Trinh Thu C100,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",100,0901632,17 nam
+1633,Vu Bao C100,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",100,0901633,18 nam
+1634,Bui Tuyet C100,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",100,0901634,19 nam
+1635,Tran Final1,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",1,0900001635,20 nam
+1636,Pham Final3,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",3,0900001636,21 nam
+1637,Do Final4,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",4,0900001637,22 nam
+1638,Hoang Final5,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",5,0900001638,23 nam
+1639,Trinh Final6,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",6,0900001639,24 nam
+1640,Vu Final7,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",7,0900001640,5 nam
+1641,Bui Final8,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",8,0900001641,6 nam
+1642,Phan Final9,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",9,0900001642,7 nam
+1643,Dang Final10,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",10,0900001643,8 nam
+1644,Bui Final11,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",11,0900001644,9 nam
+1645,Nguyen Final12,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",12,0900001645,10 nam
+1646,Tran Final13,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",13,0900001646,11 nam
+1647,Pham Final15,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",15,0900001647,12 nam
+1648,Do Final16,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",16,0900001648,13 nam
+1649,Hoang Final17,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",17,0900001649,14 nam
+1650,Trinh Final18,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",18,0900001650,15 nam
+1651,Vu Final19,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",19,0900001651,16 nam
+1652,Bui Final20,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",20,0900001652,17 nam
+1653,Phan Final21,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",21,0900001653,18 nam
+1654,Dang Final22,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",22,0900001654,19 nam
+1655,Bui Final23,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",23,0900001655,20 nam
+1656,Nguyen Final24,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",24,0900001656,21 nam
+1657,Tran Final25,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",25,0900001657,22 nam
+1658,Le Final26,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",26,0900001658,23 nam
+1659,Do Final28,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",28,0900001659,24 nam
+1660,Hoang Final29,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",29,0900001660,5 nam
+1661,Trinh Final30,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",30,0900001661,6 nam
+1662,Vu Final31,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",31,0900001662,7 nam
+1663,Bui Final32,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",32,0900001663,8 nam
+1664,Phan Final33,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",33,0900001664,9 nam
+1665,Dang Final34,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",34,0900001665,10 nam
+1666,Bui Final35,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",35,0900001666,11 nam
+1667,Nguyen Final36,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",36,0900001667,12 nam
+1668,Tran Final37,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",37,0900001668,13 nam
+1669,Le Final38,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",38,0900001669,14 nam
+1670,Do Final40,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",40,0900001670,15 nam
+1671,Hoang Final41,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",41,0900001671,16 nam
+1672,Trinh Final42,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",42,0900001672,17 nam
+1673,Vu Final43,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",43,0900001673,18 nam
+1674,Bui Final44,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",44,0900001674,19 nam
+1675,Phan Final45,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",45,0900001675,20 nam
+1676,Dang Final46,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",46,0900001676,21 nam
+1677,Bui Final47,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",47,0900001677,22 nam
+1678,Nguyen Final48,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",48,0900001678,23 nam
+1679,Tran Final49,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",49,0900001679,24 nam
+1680,Le Final50,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",50,0900001680,5 nam
+1681,Pham Final51,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",51,0900001681,6 nam
+1682,Hoang Final53,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",53,0900001682,7 nam
+1683,Trinh Final54,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",54,0900001683,8 nam
+1684,Vu Final55,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",55,0900001684,9 nam
+1685,Bui Final56,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",56,0900001685,10 nam
+1686,Phan Final57,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",57,0900001686,11 nam
+1687,Dang Final58,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",58,0900001687,12 nam
+1688,Bui Final59,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",59,0900001688,13 nam
+1689,Nguyen Final60,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",60,0900001689,14 nam
+1690,Tran Final61,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",61,0900001690,15 nam
+1691,Le Final62,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",62,0900001691,16 nam
+1692,Pham Final63,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",63,0900001692,17 nam
+1693,Hoang Final65,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",65,0900001693,18 nam
+1694,Trinh Final66,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",66,0900001694,19 nam
+1695,Vu Final67,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",67,0900001695,20 nam
+1696,Bui Final68,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",68,0900001696,21 nam
+1697,Phan Final69,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",69,0900001697,22 nam
+1698,Dang Final70,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",70,0900001698,23 nam
+1699,Bui Final71,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",71,0900001699,24 nam
+1700,Nguyen Final72,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",72,0900001700,5 nam
+1701,Tran Final73,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",73,0900001701,6 nam
+1702,Le Final74,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",74,0900001702,7 nam
+1703,Pham Final75,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",75,0900001703,8 nam
+1704,Do Final76,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",76,0900001704,9 nam
+1705,Trinh Final78,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",78,0900001705,10 nam
+1706,Vu Final79,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",79,0900001706,11 nam
+1707,Bui Final80,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",80,0900001707,12 nam
+1708,Phan Final81,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",81,0900001708,13 nam
+1709,Dang Final82,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",82,0900001709,14 nam
+1710,Bui Final83,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",83,0900001710,15 nam
+1711,Nguyen Final84,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",84,0900001711,16 nam
+1712,Tran Final85,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",85,0900001712,17 nam
+1713,Le Final86,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",86,0900001713,18 nam
+1714,Pham Final87,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",87,0900001714,19 nam
+1715,Do Final88,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",88,0900001715,20 nam
+1716,Trinh Final90,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",90,0900001716,21 nam
+1717,Vu Final91,Ung buou,"khoi u,chay mau,gay sut,met moi,con ho lien tuc,dau tuc nguc,sot khong ro nguyen nhan",91,0900001717,22 nam
+1718,Bui Final92,Tim mach,"dau nguc,hoi hop,tim dap nhanh,kho tho khi grang suc,chong mat,yeu,met moi,phu chan",92,0900001718,23 nam
+1719,Phan Final93,Noi tong quat,"dau da day,op nong,tieu chay,day hoi,gay yeu,bieng an,buon non,chan an",93,0900001719,24 nam
+1720,Dang Final94,Nhi,"sot cao,non,tieu chay,quay khoc,phat ban,ho,ngat mui,viem hong",94,0900001720,5 nam
+1721,Bui Final95,San phu khoa,"dau bung duoi,ra khi hu,chay mau bat thuong,kho chiu o vung bung duoi,tieu buot,met moi",95,0900001721,6 nam
+1722,Nguyen Final96,Tai Mui Hong,"dau tai,nghet mui,viem hong,chay mau mui,hac he,so mui,u tai,hong giong",96,0900001722,7 nam
+1723,Tran Final97,Da lieu,"ngua da,mun,phat ban,mun nuoc,man do,troc vay,mun trung ca,mun mu",97,0900001723,8 nam
+1724,Le Final98,Than kinh,"dau dau,te tay,mat ngu,chong mat,run tay,yeu chan,mat tri nho,giat mat",98,0900001724,9 nam
+1725,Pham Final99,Tiet nieu,"tieu buot,tieu dem,buon tieu,mau trong nuoc tieu,dau ha vi,buon tieu lien tuc",99,0900001725,10 nam
+1726,Do Final100,Tieu hoa,"dau bung,tieu chay,tao bon,op nong,chan an,buon non,day bung",100,0900001726,11 nam
