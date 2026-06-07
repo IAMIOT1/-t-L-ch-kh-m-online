@@ -267,7 +267,6 @@ if clinics and doctors:
     st.markdown("---")
     st.header("2. Kết quả tìm kiếm & Bản đồ lộ trình")
     st.write("📍 **Xác định vị trí hiện tại của bạn:**")
-    st.caption("💡 Mẹo: Bạn có thể click chuột trực tiếp vào bất kỳ vị trí nào trên bản đồ dưới đây để thay đổi vị trí thực tế của mình. Hệ thống sẽ tự động tìm phòng khám gần nhất và vẽ lại lộ trình!")
     # Hiển thị phòng khám gần nhất công khai số km
     st.info(f"📍 **Phòng khám gần nhất với bạn:** {nearest_clinic['name']} (Khoảng cách thực tế: {dist:.2f} km)")
     
