@@ -262,66 +262,45 @@ if clinics and doctors:
     nearest_clinic, dist = find_nearest_clinic(home_lat, home_lng, clinics)
 
 # ==============================================================================
-    # 2. KẾT QUẢ TÌM KIẾM & BẢN ĐỒ LỘ TRÌNH (TÍNH THEO QUÃNG ĐƯỜNG DI CHUYỂN THỰC TẾ)
+    # 2. KẾT QUẢ TÌM KIẾM & BẢN ĐỒ LỘ TRÌNH (TỐI ƯU TỐC ĐỘ ⚡)
     # ==============================================================================
     st.markdown("---")
     st.header("2. Kết quả tìm kiếm & Bản đồ lộ trình")
     st.write("📍 **Xác định vị trí và chọn cơ sở khám bệnh:**")
 
-    # Hàm bổ trợ gọi nhanh API OSRM để lấy khoảng cách đường đi thực tế (quãng đường)
-    def get_real_road_distance(lon1, lat1, lon2, lat2):
-        try:
-            url = f"http://router.project-osrm.org/route/v1/driving/{lon1},{lat1};{lon2},{lat2}?overview=false"
-            res = requests.get(url, timeout=2).json()
-            if res.get("code") == "Ok":
-                # Quy đổi từ mét sang km
-                return res["routes"][0]["distance"] / 1000
-        except Exception:
-            pass
-        # Nếu API lỗi hoặc mất mạng, tự động quay về dùng đường chim bay làm phương án dự phòng
-        return haversine_distance(lat1, lon1, lat2, lon2)
+    # Hệ số điều chỉnh quãng đường thực tế (Đường phố thường dài hơn đường chim bay ~1.3 lần)
+    URBAN_FACTOR = 1.3 
 
-    # --- TIẾN HÀNH TÍNH QUÃNG ĐƯỜNG THỰC TẾ VÀ SẮP XẾP ---
-    with st.spinner("🔄 Đang tính toán quãng đường thực tế đến các phòng khám..."):
-        clinics_with_distance = []
-        for c in clinics:
-            # Lấy kinh độ (x) và vĩ độ (y) của phòng khám
-            cx, cy = float(c['x']), float(c['y'])
-            # Gọi API lấy khoảng cách đường đi thực tế
-            real_dist = get_real_road_distance(home_lng, home_lat, cx, cy)
-            
-            # Lưu tạm khoảng cách vào object phòng khám để xử lý
-            c_copy = c.copy()
-            c_copy['real_distance'] = real_dist
-            clinics_with_distance.append(c_copy)
-            
-        # Sắp xếp danh sách từ gần nhất đến xa nhất dựa theo QUÃNG ĐƯỜNG THỰC TẾ
-        sorted_clinics = sorted(clinics_with_distance, key=lambda x: x['real_distance'])
+    # Sắp xếp danh sách phòng khám bằng công thức toán học (Tốc độ tức thì, KHÔNG gọi API)
+    # Cách này giúp danh sách hiện ra ngay lập tức mà không cần chờ đợi
+    sorted_clinics = sorted(
+        clinics, 
+        key=lambda c: haversine_distance(home_lat, home_lng, float(c['y']), float(c['x'])) * URBAN_FACTOR
+    )
 
     # Tạo danh sách hiển thị cho selectbox
     clinic_options = [
-        f"{c['name']} (Quãng đường thực tế: {c['real_distance']:.2f} km - Địa chỉ: {c['address']})" 
+        f"{c['name']} (Ước tính: {(haversine_distance(home_lat, home_lng, float(c['y']), float(c['x'])) * URBAN_FACTOR):.2f} km - Đ/c: {c['address']})" 
         for c in sorted_clinics
     ]
 
-    # Phòng khám có quãng đường ngắn nhất luôn đứng đầu (index = 0)
-    nearest_index = 0
-
-    # Thanh selectbox hiển thị danh sách sắp xếp theo quãng đường thực tế
+    # Thanh selectbox cho phép người dùng chọn
     selected_option = st.selectbox(
-        "🏥 Danh sách đã được sắp xếp theo quãng đường di chuyển thực tế (từ gần đến xa):",
+        "🏥 Danh sách phòng khám (Sắp xếp theo quãng đường ước tính từ gần đến xa):",
         options=clinic_options,
-        index=nearest_index
+        index=0
     )
 
-    # Lấy ra đối tượng phòng khám thực tế đang được chọn
+    # Lấy đối tượng phòng khám được chọn
     chosen_index = clinic_options.index(selected_option)
     current_clinic = sorted_clinics[chosen_index]
 
-    st.info(f"🏥 **Cơ sở đang được chọn:** {current_clinic['name']} (Quãng đường di chuyển: {current_clinic['real_distance']:.2f} km)")
+    # Hiển thị khoảng cách ước tính
+    st.info(f"🏥 **Cơ sở đang được chọn:** {current_clinic['name']} (Khoảng cách ước tính: {(haversine_distance(home_lat, home_lng, float(current_clinic['y']), float(current_clinic['x'])) * URBAN_FACTOR):.2f} km)")
 
-    # 🔥 HIỂN THỊ BẢN ĐỒ: Vẽ lộ trình thực tế bám theo đường phố đến cơ sở được chọn
-    with st.spinner("Đang đồng bộ bản đồ vệ tinh thực tế..."):
+    # 🔥 HIỂN THỊ BẢN ĐỒ: Chỉ khi này mới gọi API OSRM để vẽ vệt chỉ đường chính xác
+    # Vì chỉ gọi cho 1 phòng khám duy nhất, bản đồ sẽ load rất nhanh
+    with st.spinner("Đang đồng bộ bản đồ vệ tinh và vẽ lộ trình thực tế..."):
         map_obj = draw_simulation_map(home_lat, home_lng, current_clinic, sorted_clinics)
         st_data = st_folium(map_obj, width=700, height=450, key="integrated_map_picker")
         
@@ -334,7 +313,7 @@ if clinics and doctors:
             st.session_state['gps_lng'] = click_lng
             st.rerun()
 
-    st.success(f"🗺️ Tọa độ đang chọn: **Vĩ độ (Lat):** {home_lat:.4f} | **Kinh độ (Lng):** {home_lng:.4f}")
+    st.success(f"🗺️ Tọa độ đang chọn: **Vĩ độ:** {home_lat:.4f} | **Kinh độ:** {home_lng:.4f}")
     
     # Bước 2: Tìm bác sĩ phù hợp với triệu chứng TẠI phòng khám được chọn
     matched_doctors = find_doctors_by_symptom(symptom_input, current_clinic['id'], doctors)
