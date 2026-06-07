@@ -261,6 +261,9 @@ if clinics and doctors:
     # Bước 1: Tìm phòng khám gần nhất dựa trên tọa độ đã xác định để làm gợi ý mặc định
     nearest_clinic, dist = find_nearest_clinic(home_lat, home_lng, clinics)
 
+# ==============================================================================
+    # 2. KẾT QUẢ TÌM KIẾM & BẢN ĐỒ LỘ TRÌNH (ĐÃ SỬA LỖI MẤT BẢN ĐỒ)
+    # ==============================================================================
     st.markdown("---")
     st.header("2. Kết quả tìm kiếm & Bản đồ lộ trình")
     st.write("📍 **Xác định vị trí và chọn cơ sở khám bệnh:**")
@@ -289,16 +292,12 @@ if clinics and doctors:
     current_dist = haversine_distance(home_lat, home_lng, float(current_clinic['y']), float(current_clinic['x']))
     st.info(f"📍 **Cơ sở đang được chọn:** {current_clinic['name']} (Khoảng cách di chuyển: ~{current_dist:.2f} km)")
 
-    # Bước 2: Tìm bác sĩ phù hợp với triệu chứng TẠI phòng khám được chọn
-    matched_doctors = find_doctors_by_symptom(symptom_input, current_clinic['id'], doctors)
-    
-    # Tạo bản đồ tích hợp hiển thị lộ trình và lắng nghe sự kiện click thay đổi vị trí
+    # 🔥 ĐƯA BẢN ĐỒ RA NGOÀI: Luôn luôn vẽ lộ trình đường đi tới phòng khám được chọn
     with st.spinner("Đang đồng bộ bản đồ vệ tinh thực tế..."):
-        map_obj = draw_simulation_map(home_lat, home_lng, nearest_clinic, clinics)
-        # Chỉ gọi duy nhất 1 bản đồ hiển thị ở đây và bắt sự kiện click chuột
+        map_obj = draw_simulation_map(home_lat, home_lng, current_clinic, clinics)
         st_data = st_folium(map_obj, width=700, height=450, key="integrated_map_picker")
         
-    # Nếu người dùng click vào một điểm bất kỳ trên bản đồ, ghi nhận tọa độ mới và reload lại lộ trình
+    # Lắng nghe sự kiện click thay đổi vị trí trên bản đồ
     if st_data and st_data.get("last_clicked"):
         click_lat = st_data["last_clicked"]["lat"]
         click_lng = st_data["last_clicked"]["lng"]
@@ -309,8 +308,11 @@ if clinics and doctors:
 
     st.success(f"🗺️ Tọa độ đang chọn: **Vĩ độ (Lat):** {home_lat:.4f} | **Kinh độ (Lng):** {home_lng:.4f}")
     
+    # Bước 2: Tìm bác sĩ phù hợp với triệu chứng TẠI phòng khám được chọn
+    matched_doctors = find_doctors_by_symptom(symptom_input, current_clinic['id'], doctors)
+
     if not matched_doctors:
-        st.warning(f"❌ Không tìm thấy bác sĩ phù hợp với triệu chứng '{symptom_input}' tại phòng khám gần nhất.")
+        st.warning(f"❌ Không tìm thấy bác sĩ phù hợp với triệu chứng '{symptom_input}' tại {current_clinic['name']}. Vui lòng thử nhập triệu chứng khác hoặc chọn phòng khám khác.")
     else:
         selected_doctor = matched_doctors[0]
         phone_num = selected_doctor.get('phone', 'Chưa cập nhật')
