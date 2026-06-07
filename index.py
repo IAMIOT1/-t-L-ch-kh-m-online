@@ -236,11 +236,22 @@ if clinics and doctors:
     
     
 
-    # Khởi tạo giá trị mặc định trong Session State nếu chưa từng chọn (Mặc định ở Hà Nội)
+    # Khởi tạo giá trị mặc định tạm thời trong Session State nếu chưa nhận được GPS
     if 'gps_lat' not in st.session_state: 
         st.session_state['gps_lat'] = 21.0285 
     if 'gps_lng' not in st.session_state: 
         st.session_state['gps_lng'] = 105.8542
+
+    # --- SỬ DỤNG THƯ VIỆN ĐỂ XIN QUYỀN VÀ TRÍCH XUẤT GPS THỰC TẾ ---
+    from streamlit_js_eval import get_geolocation
+    
+    st.markdown("### 🛰️ Đang đồng bộ định vị GPS từ trình duyệt...")
+    location = get_geolocation()
+
+    # Nếu trình duyệt trả về tọa độ thành công, cập nhật ngay vào hệ thống
+    if location and 'coords' in location:
+        st.session_state['gps_lat'] = float(location['coords']['latitude'])
+        st.session_state['gps_lng'] = float(location['coords']['longitude'])
 
     home_lat = st.session_state['gps_lat']
     home_lng = st.session_state['gps_lng']
