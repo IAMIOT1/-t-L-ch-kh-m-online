@@ -386,33 +386,40 @@ if clinics and doctors:
         components.html(clock_html, height=150)
         
 
-# 1. Chọn ngày
+# --- CẤU HÌNH CHỌN NGÀY VÀ GIỜ ---
 desired_date = st.date_input("📅 Chọn ngày khám:")
 desired_date_str = desired_date.strftime("%Y-%m-%d")
 
-# 2. Chọn chế độ
 mode = st.radio("Chế độ chọn giờ:", ["Chọn giờ có sẵn", "Tự nhập giờ"])
 
 desired_time = None 
 
 if mode == "Chọn giờ có sẵn":
-    desired_time = st.selectbox("⏰ Khung giờ:", ["08:00", "09:00", "10:00", "14:00", "15:00"])
+    # Danh sách giờ có sẵn
+    option = st.selectbox("⏰ Khung giờ:", ["08:00", "09:00", "10:00", "14:00", "15:00"])
+    desired_time = option
     st.success(f"Đã chọn: {desired_time}")
 else:
-    # Bỏ tham số step đi, người dùng có thể chọn bất kỳ phút nào
-    selected_time_obj = st.time_input("⏰ Chọn thời gian (07:00 - 18:00):", time(8, 0))
+    # Người dùng tự chọn giờ, không dùng step để cho phép chọn linh hoạt
+    selected_time_obj = st.time_input("⏰ Chọn thời gian (07:00 - 18:00):", value=time(8, 0))
     
-    # Kiểm tra ràng buộc
+    # Kiểm tra ràng buộc giờ hành chính
     if selected_time_obj < time(7, 0) or selected_time_obj > time(18, 0):
         st.error("❌ Vui lòng chọn khung giờ từ 07:00 đến 18:00!")
+        desired_time = None # Vô hiệu hóa nút đặt lịch nếu chọn sai giờ
     else:
         desired_time = selected_time_obj.strftime("%H:%M")
         st.success(f"Đã chọn: {desired_time}")
 
-# 3. Tiến hành đặt lịch
+# --- TIẾN HÀNH ĐẶT LỊCH ---
+# Nút chỉ xuất hiện và hoạt động khi desired_time hợp lệ
 if desired_time:
     if st.button("🏥 TIẾN HÀNH ĐẶT LỊCH"):
-        st.write(f"Đang tiến hành đặt lịch lúc {desired_time} ngày {desired_date_str}...")
+        # Đưa logic xử lý đặt lịch của bạn vào đây
+        # Ví dụ: is_free = check_and_schedule(...)
+        st.info(f"Đang xử lý đặt lịch: {desired_date_str} lúc {desired_time}...")
+        
+        # Thêm logic gọi hàm đặt lịch tại đây để đồng bộ với hệ thống của bạn
 
         # Đã loại bỏ chữ f để tránh lỗi xử lý dấu ngoặc nhọn của JavaScript
         validation_js = """
