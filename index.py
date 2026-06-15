@@ -13,6 +13,7 @@ from email.mime.base import MIMEBase
 from email import encoders
 from datetime import datetime, timedelta
 import pytz
+from datetime import datetime, time 
 
 def send_real_email(receiver_email, clinic_name, doctor_name, experience, phone, time, date):
     sender_email = "toinguyen7126@gmail.com"
@@ -391,7 +392,7 @@ if clinics and doctors:
     if mode == "Chọn giờ có sẵn":
         desired_time = st.selectbox("⏰ Khung giờ:", ["08:00", "09:00", "10:00", "14:00", "15:00"])
     else:
-        selected_time_obj = st.time_input("⏰ Chọn thời gian:", datetime.time(8, 0))
+        selected_time_obj = st.time_input("⏰ Chọn thời gian:", time(8, 0))
         desired_time = selected_time_obj.strftime("%H:%M")
 
         # Đã loại bỏ chữ f để tránh lỗi xử lý dấu ngoặc nhọn của JavaScript
