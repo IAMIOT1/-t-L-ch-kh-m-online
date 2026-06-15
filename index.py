@@ -45,36 +45,45 @@ def send_real_email(receiver_email, clinic_name, doctor_name, experience, phone,
     """
     message.attach(MIMEText(html_content, "html", "utf-8"))
 
-    # --- TẠO FILE LỊCH .ICS ---
+# --- TẠO FILE LỊCH .ICS VỚI MÚI GIỜ CHUẨN ---
     dt_start = datetime.strptime(f"{date} {time}", "%Y-%m-%d %H:%M")
     dt_end = dt_start + timedelta(hours=1)
     
-    def format_ics(dt): return dt.strftime('%Y%m%dT%H%M00Z')
+    # Định dạng theo chuẩn không cần chữ 'Z'
+    fmt = '%Y%m%dT%H%M00' 
     
-    # Nội dung file .ics
     ics_content = f"""BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Dai Nam University//Appointment//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:Asia/Ho_Chi_Minh
+BEGIN:STANDARD
+TZOFFSETFROM:+0700
+TZOFFSETTO:+0700
+TZNAME:ICT
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 SUMMARY:Lịch khám tại {clinic_name}
-DTSTART:{format_ics(dt_start)}
-DTEND:{format_ics(dt_end)}
-DESCRIPTION:Lịch hẹn với BS. {doctor_name}.
+DTSTART;TZID=Asia/Ho_Chi_Minh:{dt_start.strftime(fmt)}
+DTEND;TZID=Asia/Ho_Chi_Minh:{dt_end.strftime(fmt)}
+DESCRIPTION:Lịch hẹn với BS. {doctor_name}. Vui lòng đến đúng giờ.
 BEGIN:VALARM
-TRIGGER:-PT10S
+TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:Nhac lich kham
+DESCRIPTION:Nhắc nhở: Lịch khám của bạn sắp bắt đầu!
 END:VALARM
 END:VEVENT
 END:VCALENDAR"""
 
-    # --- ĐÍNH KÈM FILE .ICS VỚI UTF-8 CHUẨN ---
-    # Chuyển chuỗi thành bytes UTF-8 để không bị lỗi ký tự
+    # --- ĐÍNH KÈM FILE VÀ GỬI ---
     ics_bytes = ics_content.encode('utf-8')
-    
     part = MIMEBase('text', 'calendar', name='appointment.ics')
     part.set_payload(ics_bytes)
-    part.add_header('Content-Type', 'text/calendar; charset=utf-8; name=appointment.ics')
+    part.add_header('Content-Type', 'text/calendar; charset=utf-8; method=PUBLISH; name=appointment.ics')
     part.add_header('Content-Disposition', 'attachment; filename="appointment.ics"')
     encoders.encode_base64(part)
     message.attach(part)
