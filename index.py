@@ -390,10 +390,16 @@ if clinics and doctors:
         mode = st.radio("Chế độ chọn giờ:", ["Chọn giờ có sẵn", "Tự nhập giờ"])
 
     if mode == "Chọn giờ có sẵn":
-        desired_time = st.selectbox("⏰ Khung giờ:", ["08:00", "09:00", "10:00", "14:00", "15:00"])
+        desired_time = st.selectbox("⏰ Khung giờ:", ["08:00", "09:00", "10:00", "14:00", "15:00", "16:00", "17:00", "18:00"])
     else:
-        selected_time_obj = st.time_input("⏰ Chọn thời gian:", time(8, 0))
-        desired_time = selected_time_obj.strftime("%H:%M")
+        selected_time_obj = st.time_input("⏰ Chọn thời gian (07:00 - 18:00):", time(8, 0))
+
+        # Kiểm tra ngay sau khi người dùng chọn
+        if selected_time_obj < time(7, 0) or selected_time_obj > time(18, 0):
+            st.error("❌ Vui lòng chọn khung giờ từ 07:00 đến 18:00!")
+        else:
+            desired_time = selected_time_obj.strftime("%H:%M")
+            st.success(f"Đã chọn: {desired_time}")
 
         # Đã loại bỏ chữ f để tránh lỗi xử lý dấu ngoặc nhọn của JavaScript
         validation_js = """
