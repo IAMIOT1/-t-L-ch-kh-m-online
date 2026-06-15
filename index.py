@@ -72,7 +72,7 @@ DTSTART;TZID=Asia/Ho_Chi_Minh:{dt_start.strftime(fmt)}
 DTEND;TZID=Asia/Ho_Chi_Minh:{dt_end.strftime(fmt)}
 DESCRIPTION:Lịch hẹn với BS. {doctor_name}. Vui lòng đến đúng giờ.
 BEGIN:VALARM
-TRIGGER:-PT15M
+TRIGGER:-PT10S
 ACTION:DISPLAY
 DESCRIPTION:Nhắc nhở: Lịch khám của bạn sắp bắt đầu!
 END:VALARM
