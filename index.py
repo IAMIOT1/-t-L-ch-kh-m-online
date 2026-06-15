@@ -14,7 +14,7 @@ from email import encoders
 from datetime import datetime, timedelta
 import pytz
 from datetime import datetime, time 
-
+from streamlit_js_eval import get_geolocation
 def send_real_email(receiver_email, clinic_name, doctor_name, experience, phone, time, date):
     sender_email = "toinguyen7126@gmail.com"
     sender_password = "japg eyvh ontl dliw"
@@ -284,7 +284,7 @@ if clinics and doctors:
         st.session_state['gps_lng'] = 105.8542
 
     # --- SỬ DỤNG THƯ VIỆN ĐỂ XIN QUYỀN VÀ TRÍCH XUẤT GPS THỰC TẾ ---
-    from streamlit_js_eval import get_geolocation
+
     
     st.markdown("### 🛰️ Đang đồng bộ định vị GPS từ trình duyệt...")
     location = get_geolocation()
@@ -403,108 +403,75 @@ if clinics and doctors:
 desired_date = st.date_input("📅 Chọn ngày khám:")
 desired_date_str = desired_date.strftime("%Y-%m-%d")
 
-mode = st.radio("Chế độ chọn giờ:", ["Chọn giờ có sẵn", "Tự nhập giờ"])
+mode = st.radio("Chế độ chọn giờ:", ["Chọn giờ có sẵn", "Tự nhập giờ"], key="mode_selector")
 
 desired_time = None 
 
 if mode == "Chọn giờ có sẵn":
-    # Danh sách giờ có sẵn
     option = st.selectbox("⏰ Khung giờ:", ["08:00", "09:00", "10:00", "14:00", "15:00"])
     desired_time = option
     st.success(f"Đã chọn: {desired_time}")
 else:
-    # Cho phép nhập thủ công
     time_input = st.text_input("⏰ Nhập thời gian (Ví dụ: 08:30):", placeholder="HH:MM")
-    
     if time_input:
         try:
-            # Kiểm tra định dạng HH:MM
             h, m = map(int, time_input.split(':'))
             if 0 <= h < 24 and 0 <= m < 60:
                 selected_time = time(h, m)
-                
-                # Kiểm tra giờ hành chính
                 if time(7, 0) <= selected_time <= time(18, 0):
                     desired_time = selected_time.strftime("%H:%M")
                     st.success(f"Đã chọn: {desired_time}")
                 else:
                     st.error("❌ Vui lòng nhập giờ trong khoảng 07:00 - 18:00!")
             else:
-                st.error("❌ Giờ không hợp lệ! Hãy nhập theo định dạng HH:MM")
+                st.error("❌ Giờ không hợp lệ!")
         except:
-            st.error("❌ Sai định dạng! Vui lòng nhập theo kiểu HH:MM (Ví dụ: 09:30)")
+            st.error("❌ Sai định dạng! Vui lòng nhập theo kiểu HH:MM")
 
-
-        # Đã loại bỏ chữ f để tránh lỗi xử lý dấu ngoặc nhọn của JavaScript
-        validation_js = """
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const buttons = document.querySelectorAll('button[kind="primary"]');
-            buttons.forEach(button => {
-                if (button.textContent.includes('TIẾN HÀNH ĐẶT LỊCH')) {
-                    button.addEventListener('click', function(e) {
-                        // Kiểm tra trực tiếp tại Client
-                    });
-                }
-            });
-        });
-        </script>
-        """
-        components.html(validation_js, height=0)
-
-        if st.button("🏥 TIẾN HÀNH ĐẶT LỊCH"):
-            from datetime import datetime
-            import pytz
+# --- NÚT ĐẶT LỊCH (Chỉ xuất hiện khi đã chọn giờ hợp lệ) ---
+if desired_time:
+    if st.button("🏥 TIẾN HÀNH ĐẶT LỊCH", key="btn_confirm_booking"):
+        from datetime import datetime
+        import pytz
+        
+        # Kiểm tra thời gian
+        vietnam_tz = pytz.timezone('Asia/Ho_Chi_Minh')
+        current_datetime = datetime.now(vietnam_tz).replace(tzinfo=None)
+        selected_datetime = datetime.strptime(f"{desired_date_str} {desired_time}", "%Y-%m-%d %H:%M")
+        
+        if selected_datetime < current_datetime:
+            st.error("❌ Khung giờ đã qua! Vui lòng chọn thời gian trong tương lai.")
+        else:
+            is_free = check_and_schedule(selected_doctor['id'], desired_date_str, desired_time, appointments)
             
-            vietnam_tz = pytz.timezone('Asia/Ho_Chi_Minh')
-            current_datetime = datetime.now(vietnam_tz).replace(tzinfo=None)
-            selected_datetime = datetime.strptime(f"{desired_date_str} {desired_time}", "%Y-%m-%d %H:%M")
-            
-            if selected_datetime < current_datetime:
-                st.error(f"❌ Khung giờ {desired_time} ngày {desired_date_str} đã qua so với thời gian thực! Vui lòng chọn thời gian trong tương lai.")
-            else:
-                is_free = check_and_schedule(selected_doctor['id'], desired_date_str, desired_time, appointments)
+            if is_free:
+                new_app_id = len(appointments) + 1
+                write_appointment_to_csv('appointments.csv', [new_app_id, patient_email, selected_doctor['id'], desired_date_str, desired_time])
                 
-                if is_free:
-                    new_app_id = len(appointments) + 1
-                    write_appointment_to_csv('appointments.csv', [new_app_id, patient_email, selected_doctor['id'], desired_date_str, desired_time])
-                    
-                    send_real_email(
-                        patient_email, 
-                        nearest_clinic['name'], 
-                        selected_doctor['name'], 
-                        selected_doctor['experience'], 
-                        selected_doctor['phone'], 
-                        desired_time, 
-                        desired_date_str
-                    )
-                    
-                    st.session_state['booking_success_email'] = f"""
-                    <div style="background-color: #f8f9fa; padding: 20px; border-left: 5px solid #007bff; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.05);">
-                        <h5 style="color: #007bff; margin-top: 0;">📧 HỆ THỐNG EMAIL TỰ ĐỘNG — GỬI TỚI: {patient_email}</h5>
-                        <p>Xin chào! Lịch hẹn khám bệnh của bạn đã được phê duyệt thành công trên hệ thống và một bản sao đã được gửi tới hòm thư của bạn:</p>
-                        <hr style="border-top: 1px solid #dee2e6;">
-                        <p>🏥 <b>Địa điểm:</b> {nearest_clinic['name']}</p>
-                        <p>👨‍⚕️ <b>Bác sĩ phụ trách:</b> BS. {selected_doctor['name']} ({selected_doctor['experience']})</p>
-                        <p>📞 <b>Hotline liên hệ bác sĩ:</b> {selected_doctor['phone']}</p>
-                        <p>📅 <b>Thời gian:</b> <span style="color: #dc3545; font-weight: bold;">{desired_time} ngày {desired_date_str}</span></p>
-                        <hr style="border-top: 1px solid #dee2e6;">
-                        <p style="font-size: 0.9em; color: #6c757d; font-style: italic;">👉 Vui lòng đến đúng giờ để tiến hành kiểm tra sức khỏe tốt nhất!</p>
-                    </div>
-                    <br>
-                    """
-                    st.session_state['show_balloons'] = True
-                    st.rerun()
-                else:
-                    st.error(f"❌ Khung giờ {desired_time} ngày {desired_date_str} của Bác sĩ {selected_doctor['name']} đã bị trùng lịch!")
-                    suggestions = suggest_alternative_slots(selected_doctor['id'], desired_date_str, appointments)
-                    if suggestions:
-                        st.warning(f"💡 Đề xuất các khung giờ thay thế còn trống trong ngày: {', '.join(suggestions)}")
+                send_real_email(
+                    patient_email, nearest_clinic['name'], selected_doctor['name'], 
+                    selected_doctor['experience'], selected_doctor['phone'], desired_time, desired_date_str
+                )
+                
+                st.session_state['booking_success_email'] = f"""
+                <div style="background-color: #f8f9fa; padding: 20px; border-left: 5px solid #007bff; border-radius: 5px;">
+                    <h5 style="color: #007bff;">📧 XÁC NHẬN ĐẶT LỊCH</h5>
+                    <p>Địa điểm: {nearest_clinic['name']}</p>
+                    <p>Thời gian: <b>{desired_time} ngày {desired_date_str}</b></p>
+                </div>"""
+                st.session_state['show_balloons'] = True
+                st.rerun()
+            else:
+                st.error(f"❌ Khung giờ này đã bị trùng!")
+                suggestions = suggest_alternative_slots(selected_doctor['id'], desired_date_str, appointments)
+                if suggestions:
+                    st.warning(f"💡 Gợi ý: {', '.join(suggestions)}")
 
-    if 'booking_success_email' in st.session_state:
-        if st.session_state.get('show_balloons', False):
-            st.balloons()
-            st.success("✔️ Đặt lịch thành công! Chi tiết lịch hẹn đã được đồng bộ vào hệ thống dữ liệu.")
-            st.session_state['show_balloons'] = False
-            
-        st.markdown(st.session_state['booking_success_email'], unsafe_allow_html=True)
+# --- HIỂN THỊ THÀNH CÔNG ---
+if st.session_state.get('show_balloons', False):
+    st.balloons()
+    st.success("✔️ Đặt lịch thành công!")
+    st.session_state['show_balloons'] = False
+
+if 'booking_success_email' in st.session_state:
+    st.markdown(st.session_state['booking_success_email'], unsafe_allow_html=True)
