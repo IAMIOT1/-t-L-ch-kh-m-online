@@ -400,16 +400,26 @@ if mode == "Chọn giờ có sẵn":
     desired_time = option
     st.success(f"Đã chọn: {desired_time}")
 else:
-    # Người dùng tự chọn giờ, không dùng step để cho phép chọn linh hoạt
-    selected_time_obj = st.time_input("⏰ Chọn thời gian (07:00 - 18:00):", value=time(8, 0))
+    # Cho phép nhập thủ công
+    time_input = st.text_input("⏰ Nhập thời gian (Ví dụ: 08:30):", placeholder="HH:MM")
     
-    # Kiểm tra ràng buộc giờ hành chính
-    if selected_time_obj < time(7, 0) or selected_time_obj > time(18, 0):
-        st.error("❌ Vui lòng chọn khung giờ từ 07:00 đến 18:00!")
-        desired_time = None # Vô hiệu hóa nút đặt lịch nếu chọn sai giờ
-    else:
-        desired_time = selected_time_obj.strftime("%H:%M")
-        st.success(f"Đã chọn: {desired_time}")
+    if time_input:
+        try:
+            # Kiểm tra định dạng HH:MM
+            h, m = map(int, time_input.split(':'))
+            if 0 <= h < 24 and 0 <= m < 60:
+                selected_time = time(h, m)
+                
+                # Kiểm tra giờ hành chính
+                if time(7, 0) <= selected_time <= time(18, 0):
+                    desired_time = selected_time.strftime("%H:%M")
+                    st.success(f"Đã chọn: {desired_time}")
+                else:
+                    st.error("❌ Vui lòng nhập giờ trong khoảng 07:00 - 18:00!")
+            else:
+                st.error("❌ Giờ không hợp lệ! Hãy nhập theo định dạng HH:MM")
+        except:
+            st.error("❌ Sai định dạng! Vui lòng nhập theo kiểu HH:MM (Ví dụ: 09:30)")
 
 # --- TIẾN HÀNH ĐẶT LỊCH ---
 # Nút chỉ xuất hiện và hoạt động khi desired_time hợp lệ
