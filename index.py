@@ -421,15 +421,6 @@ else:
         except:
             st.error("❌ Sai định dạng! Vui lòng nhập theo kiểu HH:MM (Ví dụ: 09:30)")
 
-# --- TIẾN HÀNH ĐẶT LỊCH ---
-# Nút chỉ xuất hiện và hoạt động khi desired_time hợp lệ
-if desired_time:
-    if st.button("🏥 TIẾN HÀNH ĐẶT LỊCH"):
-        # Đưa logic xử lý đặt lịch của bạn vào đây
-        # Ví dụ: is_free = check_and_schedule(...)
-        st.info(f"Đang xử lý đặt lịch: {desired_date_str} lúc {desired_time}...")
-        
-        # Thêm logic gọi hàm đặt lịch tại đây để đồng bộ với hệ thống của bạn
 
         # Đã loại bỏ chữ f để tránh lỗi xử lý dấu ngoặc nhọn của JavaScript
         validation_js = """
