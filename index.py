@@ -385,21 +385,36 @@ if clinics and doctors:
         """
         components.html(clock_html, height=150)
         
-        desired_date = st.date_input("📅 Chọn ngày khám:")
-        desired_date_str = desired_date.strftime("%Y-%m-%d")
-        mode = st.radio("Chế độ chọn giờ:", ["Chọn giờ có sẵn", "Tự nhập giờ"])
+        from datetime import time  # Đảm bảo đã import time ở đầu file
 
-    if mode == "Chọn giờ có sẵn":
-        desired_time = st.selectbox("⏰ Khung giờ:", ["08:00", "09:00", "10:00", "14:00", "15:00", "16:00", "17:00", "18:00"])
+# 1. Chọn ngày
+desired_date = st.date_input("📅 Chọn ngày khám:")
+desired_date_str = desired_date.strftime("%Y-%m-%d")
+
+# 2. Chọn chế độ: Chọn có sẵn hoặc Tự nhập
+mode = st.radio("Chế độ chọn giờ:", ["Chọn giờ có sẵn", "Tự nhập giờ"])
+
+desired_time = None  # Khởi tạo biến lưu kết quả
+
+if mode == "Chọn giờ có sẵn":
+    desired_time = st.selectbox("⏰ Khung giờ:", ["08:00", "09:00", "10:00", "14:00", "15:00"])
+    st.success(f"Đã chọn: {desired_time}")
+else:
+    selected_time = st.text_input("⏰ Nhập khung giờ (HH:MM, 24h):", placeholder="Ví dụ: 08:00")
+    selected_time_obj = datetime.strptime(selected_time, "%H:%M").time()
+    # Kiểm tra ràng buộc thời gian ngay lập tức
+    if selected_time_obj < time(7, 0) or selected_time_obj > time(18, 0):
+        st.error("❌ Vui lòng chọn khung giờ từ 07:00 đến 18:00!")
+        desired_time = None # Không cho đặt lịch nếu giờ sai
     else:
-        selected_time_obj = st.time_input("⏰ Chọn thời gian (07:00 - 18:00):", time(8, 0))
+        desired_time = selected_time_obj.strftime("%H:%M")
+        st.success(f"Đã chọn: {desired_time}")
 
-        # Kiểm tra ngay sau khi người dùng chọn
-        if selected_time_obj < time(7, 0) or selected_time_obj > time(18, 0):
-            st.error("❌ Vui lòng chọn khung giờ từ 07:00 đến 18:00!")
-        else:
-            desired_time = selected_time_obj.strftime("%H:%M")
-            st.success(f"Đã chọn: {desired_time}")
+# 3. Chỉ hiện nút đặt lịch khi đã có giờ hợp lệ
+if desired_time:
+    if st.button("🏥 TIẾN HÀNH ĐẶT LỊCH"):
+        # Gọi hàm đặt lịch của bạn ở đây...
+        st.write(f"Đang tiến hành đặt lịch lúc {desired_time} ngày {desired_date_str}...")
 
         # Đã loại bỏ chữ f để tránh lỗi xử lý dấu ngoặc nhọn của JavaScript
         validation_js = """
