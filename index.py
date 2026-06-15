@@ -19,12 +19,13 @@ def send_real_email(receiver_email, clinic_name, doctor_name, experience, phone,
     sender_email = "toinguyen7126@gmail.com"
     sender_password = "japg eyvh ontl dliw"
     
-    message = MIMEMultipart("mixed") # Đổi sang mixed để đính kèm được file
-    message["Subject"] = f"🏥 [ĐẠI HỌC ĐẠI NAM] - XÁC NHẬN LỊCH HẸN KHÁM THÀNH CÔNG"
+    # Sử dụng MIMEMultipart("mixed") để đính kèm file
+    message = MIMEMultipart("mixed")
+    message["Subject"] = "🏥 [ĐẠI HỌC ĐẠI NAM] - XÁC NHẬN LỊCH HẸN KHÁM THÀNH CÔNG"
     message["From"] = sender_email
     message["To"] = receiver_email
 
-    # --- TẠO NỘI DUNG HTML ---
+    # --- TẠO NỘI DUNG HTML (Đã ép UTF-8) ---
     html_content = f"""
     <html>
       <body>
@@ -37,21 +38,20 @@ def send_real_email(receiver_email, clinic_name, doctor_name, experience, phone,
             <p>📞 <b>Hotline bác sĩ:</b> {phone}</p>
             <p>📅 <b>Thời gian:</b> <span style="color: #dc3545; font-weight: bold;">{time} ngày {date}</span></p>
             <hr>
-            <p style="color: #6c757d; font-style: italic;">👉 Đã đính kèm file lịch bên dưới. Mở file để thêm vào Google Calendar và nhận thông báo nhắc trước 1 tiếng!</p>
+            <p style="color: #6c757d; font-style: italic;">👉 Đã đính kèm file lịch bên dưới.</p>
         </div>
       </body>
     </html>
     """
     message.attach(MIMEText(html_content, "html", "utf-8"))
 
-    # --- TẠO FILE LỊCH .ICS (NHẮC TRƯỚC 10 GIÂY) ---
-    # Chuyển đổi date/time sang định dạng datetime
+    # --- TẠO FILE LỊCH .ICS ---
     dt_start = datetime.strptime(f"{date} {time}", "%Y-%m-%d %H:%M")
     dt_end = dt_start + timedelta(hours=1)
     
-    # Định dạng chuỗi cho iCalendar
     def format_ics(dt): return dt.strftime('%Y%m%dT%H%M00Z')
     
+    # Nội dung file .ics
     ics_content = f"""BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Dai Nam University//Appointment//EN
@@ -59,20 +59,24 @@ BEGIN:VEVENT
 SUMMARY:Lịch khám tại {clinic_name}
 DTSTART:{format_ics(dt_start)}
 DTEND:{format_ics(dt_end)}
-DESCRIPTION:Lịch hẹn với BS. {doctor_name}. Vui lòng đến đúng giờ.
+DESCRIPTION:Lịch hẹn với BS. {doctor_name}.
 BEGIN:VALARM
-TRIGGER:-PT10S
+TRIGGER:-PT1M
 ACTION:DISPLAY
-DESCRIPTION:Nhắc nhở: Lịch khám của bạn bắt đầu sau 10 giây nữa!
+DESCRIPTION:Nhac lich kham
 END:VALARM
 END:VEVENT
 END:VCALENDAR"""
 
-    # --- ĐÍNH KÈM FILE .ICS VÀO EMAIL ---
-    part = MIMEBase('application', 'calendar; name=appointment.ics')
-    part.set_payload(ics_content)
-    encoders.encode_base64(part)
+    # --- ĐÍNH KÈM FILE .ICS VỚI UTF-8 CHUẨN ---
+    # Chuyển chuỗi thành bytes UTF-8 để không bị lỗi ký tự
+    ics_bytes = ics_content.encode('utf-8')
+    
+    part = MIMEBase('text', 'calendar', name='appointment.ics')
+    part.set_payload(ics_bytes)
+    part.add_header('Content-Type', 'text/calendar; charset=utf-8; name=appointment.ics')
     part.add_header('Content-Disposition', 'attachment; filename="appointment.ics"')
+    encoders.encode_base64(part)
     message.attach(part)
 
     # --- GỬI EMAIL ---
