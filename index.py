@@ -61,7 +61,7 @@ DTSTART:{format_ics(dt_start)}
 DTEND:{format_ics(dt_end)}
 DESCRIPTION:Lịch hẹn với BS. {doctor_name}.
 BEGIN:VALARM
-TRIGGER:-PT1M
+TRIGGER:-PT10S
 ACTION:DISPLAY
 DESCRIPTION:Nhac lich kham
 END:VALARM
