@@ -386,7 +386,13 @@ if clinics and doctors:
         
         desired_date = st.date_input("📅 Chọn ngày khám:")
         desired_date_str = desired_date.strftime("%Y-%m-%d")
-        desired_time = st.selectbox("⏰ Chọn khung giờ mong muốn:", ["08:00", "09:00", "10:00", "11:00", "14:00", "15:00", "16:00"], index=1)
+        mode = st.radio("Chế độ chọn giờ:", ["Chọn giờ có sẵn", "Tự nhập giờ"])
+
+    if mode == "Chọn giờ có sẵn":
+        desired_time = st.selectbox("⏰ Khung giờ:", ["08:00", "09:00", "10:00", "14:00", "15:00"])
+    else:
+        selected_time_obj = st.time_input("⏰ Chọn thời gian:", datetime.time(8, 0))
+        desired_time = selected_time_obj.strftime("%H:%M")
 
         # Đã loại bỏ chữ f để tránh lỗi xử lý dấu ngoặc nhọn của JavaScript
         validation_js = """
